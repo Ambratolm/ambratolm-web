@@ -1,0 +1,19 @@
+---
+name: films
+title: Films
+description: Live and Animation clips and movies.
+categories: video
+tags: film,movie,cinema,clip,serie,tv,youtube,animation,art
+icon: fas fa-film
+image: films.jpg
+links:
+  - title: Student First Series
+    url: http://www.mediafire.com/folder/nx777jx0279to/STUDENT_FIRST
+    description: Series about a good student who gets in trouble few weeks before his final graduation exam involving himself in a problem of his best friend and thus putting his career into a cruel challenge.
+    icon: fas fa-film
+    download: true
+  - title: Confrontation Movies
+    url: http://www.mediafire.com/folder/xwdxcxarodfg8/CONFRONTATION
+    description: Short movie series about an eternal fight between two super powerful rivals.
+    icon: fas fa-film
+    download: true

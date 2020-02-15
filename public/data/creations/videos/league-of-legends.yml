@@ -1,0 +1,17 @@
+---
+name: league-of-legends
+title: League of Legends Content
+description: League of Legends videos.
+categories: video
+tags: League of Legends,YouTube
+icon: fas fa-gamepad
+image: league-of-legends.jpg
+links:
+- title: Playlist on Youtube
+  url: https://www.youtube.com/playlist?list=PLsPDvHe4E0Z9-qTt19zZ8RRHPe4WYfXIH
+  description: Contains all of my League of Legends videos.
+  icon: fab fa-youtube
+- title: Videos on Twitch
+  url: https://www.twitch.tv/ambratolm/videos
+  description: Contains all of my imported youtube League of Legends videos.
+  icon: fab fa-twitch

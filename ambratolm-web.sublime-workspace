@@ -1,0 +1,1562 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"has-text-g",
+				"has-text-grey-light \tBulma CSS Class"
+			],
+			[
+				"has-text-gr",
+				"has-text-grey-light\tabc"
+			],
+			[
+				"has-text-ligh",
+				"has-text-grey-light\tabc"
+			],
+			[
+				"is-cente",
+				"is-center \tBulma CSS Class"
+			],
+			[
+				"media",
+				"media-right \tBulma CSS Class"
+			],
+			[
+				"creationN",
+				"creationsNames\tabc"
+			],
+			[
+				"is-size-",
+				"is-size-4 \tBulma CSS Class"
+			],
+			[
+				"cente",
+				"is-centered \tBulma CSS Class"
+			],
+			[
+				"con",
+				"container \tBulma CSS Class"
+			],
+			[
+				"lar",
+				"is-large \tBulma CSS Class"
+			],
+			[
+				"cate",
+				"category\tabc"
+			],
+			[
+				"is-le",
+				"is-left \tBulma CSS Class"
+			],
+			[
+				"is-left",
+				"is-pulled-left \tBulma CSS Class"
+			],
+			[
+				"card-fo",
+				"card-footer\t(main.scss)"
+			],
+			[
+				"has-text-wh",
+				"has-text-white-ter \tBulma CSS Class"
+			],
+			[
+				"has-back",
+				"has-background-primary \tBulma CSS Class"
+			],
+			[
+				"is-",
+				"is-128x128 \tBulma CSS Class"
+			],
+			[
+				"has-text-da",
+				"has-text-dark \tBulma CSS Class"
+			],
+			[
+				"pro",
+				"profiles\tabc"
+			],
+			[
+				"ca",
+				"categories\tabc"
+			],
+			[
+				"arr",
+				"array\tabc"
+			],
+			[
+				"categ",
+				"categories\tabc"
+			],
+			[
+				"cat",
+				"category\tabc"
+			],
+			[
+				"crea",
+				"creation\t(data.js)"
+			],
+			[
+				"me",
+				"message\t(data.js)"
+			],
+			[
+				"getcr",
+				"getCreationsNames\t(CreationsService.js)"
+			],
+			[
+				"res",
+				"response\tabc"
+			],
+			[
+				"cre",
+				"creations\tabc"
+			],
+			[
+				"Crea",
+				"Creations\tabc"
+			],
+			[
+				"im",
+				"import\tabc"
+			],
+			[
+				"web",
+				"websites\tabc"
+			],
+			[
+				"col",
+				"column \tBulma CSS Class"
+			],
+			[
+				"colu",
+				"columns \tBulma CSS Class"
+			],
+			[
+				"Main",
+				"MainFooter\t(MainFooter.vue)"
+			],
+			[
+				"is-fix",
+				"is-fixed-top \tBulma CSS Class"
+			],
+			[
+				"has-",
+				"has-background-primary \tBulma CSS Class"
+			],
+			[
+				"comp",
+				"component\t(Creations.vue)"
+			],
+			[
+				"over",
+				"overflow-y\tproperty"
+			],
+			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"imag",
+				"image\tabc"
+			],
+			[
+				"webs",
+				"websites\tabc"
+			],
+			[
+				"curren",
+				"currentCategory\tabc"
+			],
+			[
+				"vide",
+				"video-sharing\tabc"
+			],
+			[
+				"fa-user",
+				"fa-user-circle\tabc"
+			],
+			[
+				"websi",
+				"websiteImage\tabc"
+			],
+			[
+				"has-text-grey-",
+				"has-text-grey-light \tBulma CSS Class"
+			],
+			[
+				"has-text-white-",
+				"has-text-white-ter \tBulma CSS Class"
+			],
+			[
+				"has-text-white",
+				"has-text-white-bis \tBulma CSS Class"
+			],
+			[
+				"is-f",
+				"is-fluid \tBulma CSS Class"
+			],
+			[
+				"is-rou",
+				"is-rounded \tBulma CSS Class"
+			],
+			[
+				"bold",
+				"has-text-weight-bold \tBulma CSS Class"
+			],
+			[
+				"tag",
+				"div.tag"
+			],
+			[
+				"is-fu",
+				"is-fullwidth \tBulma CSS Class"
+			],
+			[
+				"cont",
+				"content \tBulma CSS Class"
+			],
+			[
+				"sec",
+				"section \tBulma CSS Class"
+			],
+			[
+				"has-background-black-",
+				"has-background-black-ter\tabc"
+			],
+			[
+				"has-background-black",
+				"has-background-black-bis\tabc"
+			],
+			[
+				"column",
+				"div.column"
+			],
+			[
+				"is-one-",
+				"is-one-fifth \tBulma CSS Class"
+			],
+			[
+				"cl",
+				"class\tabc"
+			],
+			[
+				"custom-",
+				"custom-absolute\tabc"
+			],
+			[
+				"is-roun",
+				"is-toggle-rounded \tBulma CSS Class"
+			],
+			[
+				"data",
+				"database\tabc"
+			],
+			[
+				"for",
+				"for-j"
+			],
+			[
+				"cr",
+				"creations\tabc"
+			],
+			[
+				"has-te",
+				"has-text-grey \tBulma CSS Class"
+			],
+			[
+				"creationsb",
+				"creationsByTab\tabc"
+			],
+			[
+				"filterby",
+				"filterByQuery\tabc"
+			],
+			[
+				"is-12",
+				"is-128x128 \tBulma CSS Class"
+			],
+			[
+				"is-size",
+				"is-size-3 \tBulma CSS Class"
+			],
+			[
+				"hero-",
+				"hero-foot \tBulma CSS Class"
+			],
+			[
+				"has-background-b",
+				"has-background-black \tBulma CSS Class"
+			],
+			[
+				"has-background-bla",
+				"has-background-black-bis\tabc"
+			],
+			[
+				"mar",
+				"margin\tproperty"
+			],
+			[
+				"is-hidden-de",
+				"is-hidden-desktop-only \tBulma CSS Class"
+			],
+			[
+				"is-hidden-",
+				"is-hidden-mobile \tBulma CSS Class"
+			],
+			[
+				"is-hidd",
+				"is-hidden-tablet \tBulma CSS Class"
+			],
+			[
+				"is-full",
+				"is-full-desktop \tBulma CSS Class"
+			],
+			[
+				"ima",
+				"image \tBulma CSS Class"
+			],
+			[
+				"is-cen",
+				"is-centered\tabc"
+			],
+			[
+				"is-fl",
+				"is-fluid \tBulma CSS Class"
+			],
+			[
+				"filter",
+				"filter\t( callbackfn: Function, thisArg?: any ): Array Array"
+			],
+			[
+				"arra",
+				"Array_isArray\t( arg: any ): boolean Array"
+			],
+			[
+				"vue",
+				"vuex\tVue component"
+			],
+			[
+				"console",
+				"console_log"
+			],
+			[
+				"is-fulls",
+				"is-full-widescreen \tBulma CSS Class"
+			],
+			[
+				"is-ful",
+				"is-fullheight \tBulma CSS Class"
+			],
+			[
+				"has-b",
+				"has-background-primary \tBulma CSS Class"
+			],
+			[
+				"hero",
+				"hero \tBulma CSS Class"
+			],
+			[
+				"text",
+				"has-text-danger \tBulma CSS Class"
+			],
+			[
+				"Json",
+				"JSON_parse\t( json: string ): any JSON"
+			],
+			[
+				"we",
+				"websites.js"
+			],
+			[
+				"img",
+				"images\tabc"
+			],
+			[
+				"navbar-",
+				"navbar-tabs \tBulma CSS Class"
+			],
+			[
+				"ass",
+				"assets/"
+			],
+			[
+				"image",
+				"card-image \tBulma CSS Class"
+			],
+			[
+				"one",
+				"is-one-quarter \tBulma CSS Class"
+			],
+			[
+				"Math_r",
+				"Math_random\t(): number Math"
+			],
+			[
+				"animate",
+				"animatecss-zoomInRight\tzoomInRight - Zooming Entrances"
+			],
+			[
+				"anima",
+				"animatecss-hinge\thinge - Specials"
+			],
+			[
+				"anim",
+				"animatecss-hinge\thinge - Specials"
+			],
+			[
+				"size",
+				"is-size-5 \tBulma CSS Class"
+			],
+			[
+				"card",
+				"card-footer \tBulma CSS Class"
+			],
+			[
+				"card-",
+				"card-content \tBulma CSS Class"
+			],
+			[
+				"cotn",
+				"content \tBulma CSS Class"
+			],
+			[
+				"has-background-",
+				"has-background-black-bis \tBulma CSS Class"
+			],
+			[
+				"has-bac",
+				"has-background-light \tBulma CSS Class"
+			],
+			[
+				"ambratolm-logo",
+				"ambratolm-logo-dark.png\tw:512 h:90"
+			],
+			[
+				"is-siz",
+				"is-size-7 \tBulma CSS Class"
+			],
+			[
+				"is",
+				"is-10 \tBulma CSS Class"
+			],
+			[
+				"is-cent",
+				"is-centered \tBulma CSS Class"
+			],
+			[
+				"center",
+				"align-items-sm-center \tBootstrap 4 Class"
+			],
+			[
+				"has-ad",
+				"has-addons-centered \tBulma CSS Class"
+			],
+			[
+				"foot",
+				"footer \tBulma CSS Class"
+			],
+			[
+				"has-text",
+				"has-text-centered \tBulma CSS Class"
+			],
+			[
+				"is-fullheig",
+				"is-fullheight \tBulma CSS Class"
+			],
+			[
+				"is-fullh",
+				"is-fullheight \tBulma CSS Class"
+			],
+			[
+				"year",
+				"getFullYear\tmethod"
+			],
+			[
+				"date",
+				"Date\t(): Date Date"
+			],
+			[
+				"ite",
+				"item\t(data-table.component.ts)"
+			],
+			[
+				"setv",
+				"setValue\tmethod"
+			],
+			[
+				"valu",
+				"patchValue\tmethod"
+			],
+			[
+				"upd",
+				"updateLink\t(admin-creation.component.ts)"
+			],
+			[
+				"bg-",
+				"bg-white \tBootstrap 4 Class"
+			],
+			[
+				"rep",
+				"replace\tmethod"
+			],
+			[
+				"time",
+				"toTimeString\tmethod"
+			],
+			[
+				"val",
+				"valid\tproperty"
+			],
+			[
+				"tite",
+				"titles\tabc"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/C.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/C.sublime-build",
+				"Run"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"emmet rel",
+				"Emmet: Reload Extensions"
+			],
+			[
+				"reload",
+				"Emmet: Reload Extensions"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"lsp: ena",
+				"LSP: Enable Language Server Globally"
+			],
+			[
+				"server",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"LSP: Enable Language Server",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"ayu",
+				"ayu: Activate theme"
+			],
+			[
+				"thee",
+				"UI: Select Theme"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"thme",
+				"BracketHighlighter: Enable Debug Mode"
+			],
+			[
+				"scheme",
+				"UI: Select Color Scheme"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"vue",
+				"Set Syntax: Vue Component"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"set syntax: vue",
+				"Set Syntax: Vue Component"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"vue com",
+				"Set Syntax: Vue Component"
+			],
+			[
+				"babel",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"vue compo",
+				"Set Syntax: Vue Component"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"eslint",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"emo",
+				"Emoji: Insert Emoji"
+			],
+			[
+				"package control: ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"package control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"package control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"kil",
+				"Angular CLI: kill serve"
+			],
+			[
+				"angular",
+				"Angular CLI: serve"
+			],
+			[
+				"serve",
+				"Angular CLI: kill serve"
+			],
+			[
+				"angular htttp",
+				"Snippet: Angular 2 HTTP Get Snippet"
+			],
+			[
+				"angular sni",
+				"Snippet: Angular 2 Pipe Snippet"
+			],
+			[
+				"disabl",
+				"Package Control: Disable Package"
+			],
+			[
+				"remove pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"package re",
+				"Package Control: Remove Channel"
+			],
+			[
+				"package control:",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"isn",
+				"Package Control: Install Package"
+			],
+			[
+				"sche",
+				"UI: Select Color Scheme"
+			],
+			[
+				"sch",
+				"UI: Select Color Scheme"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"aty",
+				"ayu: Activate theme"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"ay",
+				"ayu: Activate theme"
+			],
+			[
+				"set syntax: text",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"git",
+				"Set Syntax: Git Ignore"
+			],
+			[
+				"sidebare",
+				"Side Bar: Refresh"
+			],
+			[
+				"setting",
+				"Preferences: Settings"
+			],
+			[
+				"sublimelin",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"BracketHighlighter: settings",
+				"BracketHighlighter: Settings"
+			],
+			[
+				"BracketHighlighter: ",
+				"BracketHighlighter: Quick Start Guide"
+			],
+			[
+				"BracketHighlighter: to",
+				"BracketHighlighter: Toggle High Visibility Mode"
+			],
+			[
+				"bracke",
+				"BracketHighlighter: Toggle High Visibility Mode"
+			],
+			[
+				"settings",
+				"Preferences: Settings"
+			],
+			[
+				"brack",
+				"BracketHighlighter: Documentation"
+			],
+			[
+				"ali",
+				"Preferences: Alignment File Settings – User"
+			],
+			[
+				"setti",
+				"Preferences: Settings"
+			],
+			[
+				"ui",
+				"UI: Select Theme"
+			],
+			[
+				"sett",
+				"Preferences: Settings"
+			],
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"BracketHighlighter",
+				"BracketHighlighter: Settings"
+			],
+			[
+				"pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"terminal",
+				"Terminal: Open"
+			],
+			[
+				"termi",
+				"Terminal: Open"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"javascr",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"them",
+				"UI: Select Theme"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"thm",
+				"UI: Select Theme"
+			],
+			[
+				"package control: remove package",
+				"Package Control: Remove Package"
+			],
+			[
+				"the",
+				"UI: Select Theme"
+			],
+			[
+				"a fi",
+				"A File Icon: Settings"
+			],
+			[
+				"sublimelinter",
+				"SublimeLinter: Toggle Highlights"
+			],
+			[
+				"sublimeli",
+				"SublimeLinter: Toggle Highlights"
+			],
+			[
+				"prefere",
+				"Preferences: Settings"
+			],
+			[
+				"copy",
+				"File: Copy Path"
+			],
+			[
+				"package setti",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"readme",
+				"ReadmePlease"
+			],
+			[
+				"readem",
+				"ReadmePlease"
+			],
+			[
+				"plugin",
+				"SublimeLinter: Reload SublimeLinter and its Plugins"
+			],
+			[
+				"subl",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"p",
+				"Package Control: Install Package"
+			],
+			[
+				"jso",
+				"Set Syntax: JSON"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"lint",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"error",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"npm",
+				"npm: Install Saved Packages"
+			],
+			[
+				"packag\t",
+				"Package Control: Install Package"
+			],
+			[
+				"node",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"Snippet: ",
+				"Snippet: success"
+			],
+			[
+				"package co",
+				"Package Control: Install Package"
+			],
+			[
+				"sublime",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"sublimel",
+				"SublimeLinter: Toggle Highlights"
+			],
+			[
+				"errorli",
+				"TypeScript: Show Error List"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"color pic",
+				"Color Picker: Insert Color"
+			],
+			[
+				"intall",
+				"Package Control: Install Package"
+			],
+			[
+				"package inst",
+				"Package Control: Install Package"
+			],
+			[
+				"package con",
+				"Package Control: Remove Package"
+			],
+			[
+				"package en",
+				"Package Control: Enable Package"
+			],
+			[
+				"package disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"package control in",
+				"Package Control: Install Package"
+			],
+			[
+				"package contr",
+				"Package Control: Remove Package"
+			],
+			[
+				"package ",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 444.0
+	},
+	"console":
+	{
+		"height": 290.0,
+		"history":
+		[
+			"exit",
+			"clear",
+			"clea",
+			"cls",
+			"cd",
+			"cls()",
+			"clear()",
+			"cls",
+			"a / 2",
+			"a = 3",
+			"example.js",
+			"npm -v",
+			"npm",
+			"clear",
+			"clear()",
+			"clear",
+			"cls",
+			"cd",
+			"npm -v",
+			"tsc",
+			"tsc x.ts",
+			"color_pick",
+			"color_picker"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web"
+	],
+	"file_history":
+	[
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/.gitignore",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/images/artworks.yml",
+		"/C/Users/Abdelhakim/Desktop/newdata.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/audios/music.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/documents/wracurd-art-book.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/artworks.yml",
+		"/C/Users/Abdelhakim/Mes applications/@ My Applications/Game Projects/phaser-game-intro/main.js",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/darkina.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/double-ball-zero.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/earthector.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/peppo-jump.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/thistle-walls.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/cocoboy.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/burger-eater.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/dist/data/creations/thistle-walls.yaml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/dist/data/creations/peppo-jump.yaml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/dist/data/creations/double-ball-zero.yaml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/dist/data/creations/darkina.yaml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/dist/data/creations/cocoboy.yaml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/burger-eater.yaml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/dist/data/creations/taptop.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/taptop.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/profiles.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/videos.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/wracurd-art-book.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/windows-games.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/windows-apps.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/web-games.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/voice-over.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/games.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/rpg-videos.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/programs.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/league-of-legends.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/web-apps.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/program-codes.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/photos.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/notes.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/music.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/graphics.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/flower-in-pain.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/films.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/views/Creations.vue",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/Generating",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/dist/data/profiles.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/animations.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/categories.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/@generate-creations-yml.bat",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/documents.yml",
+		"/C/Users/Abdelhakim/Documents/@ My Documents/Projects & Professions/Screenwriting/Screenwriting.txt",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/main.scss",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/dist/data/creations/wracurd-art-book.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/main.js",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/components/TheFooter.vue",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/dist/data/creations/league-of-legends-videos.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/views/Home.vue",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/services/creations.js",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/books.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/art-videos.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/android-games.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/sounds.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/video-edits.yml",
+		"/C/Users/Abdelhakim/AppData/Roaming/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/services/profiles.js",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/services/websites.js",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/services/categories-manager.js",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/services/creations-manager.js",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/services/contact-manager.js",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/components/TheNavBar.vue",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/styles/custom-bulma.scss",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/services/utils.js",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/App.vue",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/services/CategoriesService.js",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/services/CreationsService.js",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/services/UtilitiesService.js",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/components/MainNav.vue",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/components/MainFooter.vue",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/utils/ajax.js",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/utils/data.js",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/utils/CreationService.js",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/core",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/store/index.js",
+		"/C/Users/Abdelhakim/Downloads/PORNFIDELITY - Blonde Goldie Bubble Butt Carwash Creampie - XVIDEOS.COM.ts",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/video-edits.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/windows-games",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/web-pages.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/league-of-legends-videos.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/views/About.vue",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/components/NavBar.vue",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/components/Navigation.vue",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/websites.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/utils/animate.js",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/ambratolm-web.sublime-project",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/package.json",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/node_modules/@fortawesome/fontawesome-free/scss/_variables.scss",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/my-project-artwork.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/styles/slate.bulmaswatch.min.css",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/styles/main.scss",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/style.scss",
+		"/C/Users/Abdelhakim/Mes applications/@ My Applications/Software Projects/Ambratolm Website/amb_v1.2_(angularjs_firebase_auth)/Ambratolm.ml/assets/scripts/amb.js",
+		"/C/Users/Abdelhakim/Mes applications/@ My Applications/Software Projects/Ambratolm Website/amb_v1.1_(angularjs)/ambratolm.ml/application/app.js",
+		"/C/Users/Abdelhakim/Mes applications/@ My Applications/Software Projects/Ambratolm Website/amb_v3.0/ambratolm-web-app/src/app/@core/ip.service.ts",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/router/index.js",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/utils/database.js",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/components/CreationCard.vue",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/components/CategoriesTabs.vue",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/utils/filter.js",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/creations.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/_creations.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/_____creations.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/#creations.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/contact.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/faq.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/babel.config.js",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/c-1.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/c-2.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/c-7.yml",
+		"/C/Users/Abdelhakim/Mes applications/@ My Applications/Software Projects/Ambratolm Website/amb_v2.0 (angularjs_webpack)/ambratolm-website/src/services/animate.service.js",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/index.html",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/c-6.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/c-5.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/c-4.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/c-3.yml",
+		"/C/Users/Abdelhakim/Desktop/Ambratolm Home/assets/styles/debug.css",
+		"/C/Users/Abdelhakim/Desktop/Ambratolm Home/assets/styles/custom.css",
+		"/C/Users/Abdelhakim/Mes applications/@ My Applications/Software Projects/Ambratolm Website/amb_v3.0/ambratolm-web-app/package.json",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/components/example.vue",
+		"/C/Users/Abdelhakim/Desktop/Ambratolm Home/index.html"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 433.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"fas fa-link",
+			"Page on Itch",
+			"Page on itch",
+			"Page on Itch",
+			"tags: android",
+			"tags: android,web,windows,2d,arcade",
+			"io",
+			"Thistle Walls",
+			"taptop",
+			"TapTop",
+			"taptop",
+			"TapTop",
+			"taptop",
+			"TapTop",
+			"taptop",
+			"TapTop",
+			"taptop",
+			"TapTop",
+			"taptop",
+			"bruger-eater",
+			"taptop",
+			"TapTop",
+			"taptop",
+			"youtube",
+			"light",
+			"animated",
+			" animated",
+			"animated",
+			"\"",
+			"currentCategory",
+			"custom-overflow",
+			"media",
+			"descr",
+			"tag",
+			"is-size",
+			"is-size-",
+			"subtitle",
+			"title",
+			"is-",
+			"is-7",
+			"is-size-7",
+			"v-if",
+			"creationsnames",
+			"v-if",
+			"icon",
+			"tab",
+			"img",
+			"currentCategory",
+			"card",
+			"contactSvc",
+			"b",
+			"creationsMg",
+			"categoriesMg",
+			"-manager",
+			"websites",
+			"websiteImage",
+			"creationImage",
+			"self.get",
+			".get",
+			"get",
+			"self.get",
+			"self.",
+			"getCreationsNames",
+			"categories",
+			"creMng",
+			"catMng",
+			"crtm",
+			"ctgm",
+			"categoriesManager",
+			"creationsManager",
+			"filterB",
+			"this.creations",
+			"this.creations, ",
+			"creations",
+			"creations = [], ",
+			"creations",
+			"category",
+			"creations = [], ",
+			"Main",
+			"MainNav",
+			"data.",
+			"core",
+			"data.",
+			"categoryName",
+			"data.",
+			"CreationService",
+			".length",
+			".name",
+			"v-for",
+			" has-text-centered",
+			"button",
+			"profile",
+			"a",
+			", MainNav",
+			"\"",
+			"custom-margin",
+			"custom-absolute",
+			"custom-height",
+			"\"\"",
+			"online",
+			"fab fa-...",
+			"# ==================================================",
+			"-",
+			"- ",
+			"image, ",
+			"...",
+			"publish",
+			"categories: ...",
+			"description: ...",
+			"...",
+			"title: Facebook",
+			"website",
+			"Is",
+			"currentCategoryIs",
+			"currentCategory === 'all'",
+			"currentTag || currentQuery",
+			"currentTag ||\n                    currentQuery",
+			"Profiles",
+			"fas fa-user-circle",
+			"facebook",
+			"Facebook",
+			"facebook",
+			"YouTube is",
+			"tab",
+			"Community",
+			"fab fa-user",
+			"program",
+			"ribbon"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Searching"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 37.0
+	},
+	"input":
+	{
+		"height": 147.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 71.0
+	},
+	"output.SublimeLinter Messages":
+	{
+		"height": 180.0
+	},
+	"output.diagnostics":
+	{
+		"height": 0.0
+	},
+	"output.doc":
+	{
+		"height": 186.0
+	},
+	"output.errorlist":
+	{
+		"height": 180.0
+	},
+	"output.exec":
+	{
+		"height": 122.0
+	},
+	"output.find_results":
+	{
+		"height": 198.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.textarea":
+	{
+		"height": 198.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 169.0
+	},
+	"pinned_build_system": "Packages/User/C.sublime-build",
+	"project": "ambratolm-web.sublime-project",
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"cocob",
+				"public\\data\\creations\\cocoboy.yml"
+			],
+			[
+				"pepp",
+				"public\\data\\creations\\peppo-jump.yml"
+			],
+			[
+				"thistle",
+				"public\\data\\creations\\thistle-walls.yml"
+			],
+			[
+				"profiles",
+				"dist\\data\\profiles.yml"
+			],
+			[
+				"le",
+				"public\\data\\creations\\league-of-legends.yml"
+			],
+			[
+				"wracurd",
+				"dist\\data\\creations\\wracurd-art-book.yml"
+			],
+			[
+				"wrac",
+				"dist\\data\\creations\\wracurd-art-book.yml"
+			],
+			[
+				"wr",
+				"dist\\data\\creations\\wracurd-art-book.yml"
+			],
+			[
+				"wracu",
+				"dist\\data\\creations\\wracurd-art-book.yml"
+			],
+			[
+				"tap",
+				"dist\\data\\creations\\taptop.yml"
+			],
+			[
+				"leagu",
+				"dist\\data\\creations\\league-of-legends-videos.yml"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\Abdelhakim\\Desktop\\js-dev-env\\project.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 245.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}

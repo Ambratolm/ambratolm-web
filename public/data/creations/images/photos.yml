@@ -1,0 +1,13 @@
+---
+name: photos
+title: Photos
+description: Taken Photos and Pictures.
+categories: image
+tags: photo,picture,art
+icon: fas fa-photo
+image: photos.jpg
+links:
+  - title: Gallery on M~PiXo
+    url: http://mpixo.blogspot.com
+    description: Gallery of taken photos.
+    icon: fab fa-blogger

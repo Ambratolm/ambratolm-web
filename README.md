@@ -1,24 +1,8 @@
-# ambratolm-web
+# Ambratolm Web
 
-## Project setup
-```
-npm install
-```
+Official Website and Web Application for Ambratolm. It contains :
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+- Directory of Websites owned by Ambratolm
+- Directory of Ambratolm Profiles in Social Media Websites
+- Directory of Ambratolm Creations
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
