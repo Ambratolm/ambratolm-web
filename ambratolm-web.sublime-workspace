@@ -4,6 +4,66 @@
 		"selected_items":
 		[
 			[
+				"has-back",
+				"has-background-light \tBulma CSS Class"
+			],
+			[
+				"currentc",
+				"currentCreations\tabc"
+			],
+			[
+				"left",
+				"has-text-left \tBulma CSS Class"
+			],
+			[
+				"hero-",
+				"hero-video \tBulma CSS Class"
+			],
+			[
+				"is-fu",
+				"is-full \tBulma CSS Class"
+			],
+			[
+				"is-f",
+				"is-full \tBulma CSS Class"
+			],
+			[
+				"is-full",
+				"is-full \tBulma CSS Class"
+			],
+			[
+				"cate",
+				"categories\tabc"
+			],
+			[
+				"currentCategoryo",
+				"currentCategoryObj"
+			],
+			[
+				"currenc",
+				"currentCreations\tabc"
+			],
+			[
+				"hero",
+				"hero-body \tBulma CSS Class"
+			],
+			[
+				"card-hea",
+				"card-header-icon \tBulma CSS Class"
+			],
+			[
+				"card-header",
+				"card-header-title \tBulma CSS Class"
+			],
+			[
+				"current",
+				"currentCategory\tabc"
+			],
+			[
+				"cat",
+				"categories\tabc"
+			],
+			[
 				"has-text-g",
 				"has-text-grey-light \tBulma CSS Class"
 			],
@@ -44,10 +104,6 @@
 				"is-large \tBulma CSS Class"
 			],
 			[
-				"cate",
-				"category\tabc"
-			],
-			[
 				"is-le",
 				"is-left \tBulma CSS Class"
 			],
@@ -62,10 +118,6 @@
 			[
 				"has-text-wh",
 				"has-text-white-ter \tBulma CSS Class"
-			],
-			[
-				"has-back",
-				"has-background-primary \tBulma CSS Class"
 			],
 			[
 				"is-",
@@ -90,10 +142,6 @@
 			[
 				"categ",
 				"categories\tabc"
-			],
-			[
-				"cat",
-				"category\tabc"
 			],
 			[
 				"crea",
@@ -196,10 +244,6 @@
 				"has-text-white-bis \tBulma CSS Class"
 			],
 			[
-				"is-f",
-				"is-fluid \tBulma CSS Class"
-			],
-			[
 				"is-rou",
 				"is-rounded \tBulma CSS Class"
 			],
@@ -210,10 +254,6 @@
 			[
 				"tag",
 				"div.tag"
-			],
-			[
-				"is-fu",
-				"is-fullwidth \tBulma CSS Class"
 			],
 			[
 				"cont",
@@ -284,10 +324,6 @@
 				"is-size-3 \tBulma CSS Class"
 			],
 			[
-				"hero-",
-				"hero-foot \tBulma CSS Class"
-			],
-			[
 				"has-background-b",
 				"has-background-black \tBulma CSS Class"
 			],
@@ -310,10 +346,6 @@
 			[
 				"is-hidd",
 				"is-hidden-tablet \tBulma CSS Class"
-			],
-			[
-				"is-full",
-				"is-full-desktop \tBulma CSS Class"
 			],
 			[
 				"ima",
@@ -354,10 +386,6 @@
 			[
 				"has-b",
 				"has-background-primary \tBulma CSS Class"
-			],
-			[
-				"hero",
-				"hero \tBulma CSS Class"
 			],
 			[
 				"text",
@@ -486,39 +514,29 @@
 			[
 				"setv",
 				"setValue\tmethod"
-			],
-			[
-				"valu",
-				"patchValue\tmethod"
-			],
-			[
-				"upd",
-				"updateLink\t(admin-creation.component.ts)"
-			],
-			[
-				"bg-",
-				"bg-white \tBootstrap 4 Class"
-			],
-			[
-				"rep",
-				"replace\tmethod"
-			],
-			[
-				"time",
-				"toTimeString\tmethod"
-			],
-			[
-				"val",
-				"valid\tproperty"
-			],
-			[
-				"tite",
-				"titles\tabc"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "src/views/Creations.vue",
+			"settings":
+			{
+				"buffer_size": 17782,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": " <span\n  v-show=\"\n    currentTag ||\n      currentQuery ||\n      currentCategory === category.name\n  \"\n  class=\"tag is-rounded\"\n  v-show=\"currentTag || currentQuery\"\n  class=\"tag is-rounded is-small\"\n   :class=\"{\n     'is-success has-text-weight-bold':\n       (currentTag || currentQuery) &&\n      currentCreationsRelative(category.name).length,\n    'is-info is-light': !(currentTag || currentQuery)\n      currentCreationsRelative(category.name).length\n   }\"\n >\n   {{ currentCreationsRelative(category.name).length }}\n </span>\n</span>",
+			"settings":
+			{
+				"buffer_size": 533,
+				"line_ending": "Windows",
+				"name": "<span"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -1091,12 +1109,49 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web"
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/views"
 	],
 	"file_history":
 	[
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/.gitignore",
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/views/Creations.vue",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/videos/#video.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/programs/#program.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/games/#game.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/documents/document.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/services/creations.js",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/components/TheNavBar.vue",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/main.scss",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/styles/custom-bulma.scss",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/views/Home.vue",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/categories.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/documents/documents.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/videos/videos.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/games/games.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/programs/programs.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/games/game-name.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/games/randattack.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/games/machine-thermique.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/games/kaps-kips-man-tm-up-game.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/games/amasin.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/games/fusion-tests.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/games/fusion-game.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/games/double-ball.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/games/cat-meow.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/games/cf-platformer.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/games/roundleak.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/games/peppo-jump.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/games/earthector.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/games/double-ball-zero.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/games/darkina.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/games/burger-eater.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/games/thistle-walls.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/games/taptop.yml",
+		"/C/Users/Abdelhakim/Desktop/ambratolm-web/.gitignore",
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/images/artworks.yml",
 		"/C/Users/Abdelhakim/Desktop/newdata.yml",
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/audios/music.yml",
@@ -1137,21 +1192,16 @@
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/graphics.yml",
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/flower-in-pain.yml",
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/films.yml",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/views/Creations.vue",
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/Generating",
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/dist/data/profiles.yml",
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/animations.yml",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/categories.yml",
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/@generate-creations-yml.bat",
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/documents.yml",
 		"/C/Users/Abdelhakim/Documents/@ My Documents/Projects & Professions/Screenwriting/Screenwriting.txt",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/main.scss",
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/dist/data/creations/wracurd-art-book.yml",
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/main.js",
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/components/TheFooter.vue",
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/dist/data/creations/league-of-legends-videos.yml",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/views/Home.vue",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/services/creations.js",
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/books.yml",
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/art-videos.yml",
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/android-games.yml",
@@ -1163,8 +1213,6 @@
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/services/categories-manager.js",
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/services/creations-manager.js",
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/services/contact-manager.js",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/components/TheNavBar.vue",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/styles/custom-bulma.scss",
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/services/utils.js",
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/App.vue",
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/services/CategoriesService.js",
@@ -1196,37 +1244,11 @@
 		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/style.scss",
 		"/C/Users/Abdelhakim/Mes applications/@ My Applications/Software Projects/Ambratolm Website/amb_v1.2_(angularjs_firebase_auth)/Ambratolm.ml/assets/scripts/amb.js",
 		"/C/Users/Abdelhakim/Mes applications/@ My Applications/Software Projects/Ambratolm Website/amb_v1.1_(angularjs)/ambratolm.ml/application/app.js",
-		"/C/Users/Abdelhakim/Mes applications/@ My Applications/Software Projects/Ambratolm Website/amb_v3.0/ambratolm-web-app/src/app/@core/ip.service.ts",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/router/index.js",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/utils/database.js",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/components/CreationCard.vue",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/components/CategoriesTabs.vue",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/utils/filter.js",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/creations.yml",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/_creations.yml",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/_____creations.yml",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/#creations.yml",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/contact.yml",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/faq.yml",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/babel.config.js",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/c-1.yml",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/c-2.yml",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/c-7.yml",
-		"/C/Users/Abdelhakim/Mes applications/@ My Applications/Software Projects/Ambratolm Website/amb_v2.0 (angularjs_webpack)/ambratolm-website/src/services/animate.service.js",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/index.html",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/c-6.yml",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/c-5.yml",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/c-4.yml",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/public/data/creations/c-3.yml",
-		"/C/Users/Abdelhakim/Desktop/Ambratolm Home/assets/styles/debug.css",
-		"/C/Users/Abdelhakim/Desktop/Ambratolm Home/assets/styles/custom.css",
-		"/C/Users/Abdelhakim/Mes applications/@ My Applications/Software Projects/Ambratolm Website/amb_v3.0/ambratolm-web-app/package.json",
-		"/C/Users/Abdelhakim/Desktop/ambratolm-web/src/components/example.vue",
-		"/C/Users/Abdelhakim/Desktop/Ambratolm Home/index.html"
+		"/C/Users/Abdelhakim/Mes applications/@ My Applications/Software Projects/Ambratolm Website/amb_v3.0/ambratolm-web-app/src/app/@core/ip.service.ts"
 	],
 	"find":
 	{
-		"height": 37.0
+		"height": 59.0
 	},
 	"find_in_files":
 	{
@@ -1241,6 +1263,45 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"creations",
+			"-",
+			"currentCreationsRe",
+			"currentCreationRe",
+			"entries",
+			"is-full-mobile",
+			"column is-full",
+			"card",
+			"h2",
+			"Right",
+			"slideInRi",
+			"tag",
+			"h1",
+			"figure",
+			"\"",
+			" + \"s\"",
+			"card",
+			"router-link",
+			"navbarIsActive",
+			"column",
+			"is-four-fifths",
+			"h1",
+			"h3",
+			"img(",
+			"currentCategoryObj",
+			"s.",
+			"assets/videos/",
+			"assets/images/",
+			"randa",
+			"game-name",
+			"kaps-kips-man-tm-up-game",
+			"fusion-tests",
+			"tests",
+			"Tests",
+			"tests",
+			"amasin",
+			"Amasin",
+			"amasin",
+			"Amasin",
 			"fas fa-link",
 			"Page on Itch",
 			"Page on itch",
@@ -1329,46 +1390,7 @@
 			"CreationService",
 			".length",
 			".name",
-			"v-for",
-			" has-text-centered",
-			"button",
-			"profile",
-			"a",
-			", MainNav",
-			"\"",
-			"custom-margin",
-			"custom-absolute",
-			"custom-height",
-			"\"\"",
-			"online",
-			"fab fa-...",
-			"# ==================================================",
-			"-",
-			"- ",
-			"image, ",
-			"...",
-			"publish",
-			"categories: ...",
-			"description: ...",
-			"...",
-			"title: Facebook",
-			"website",
-			"Is",
-			"currentCategoryIs",
-			"currentCategory === 'all'",
-			"currentTag || currentQuery",
-			"currentTag ||\n                    currentQuery",
-			"Profiles",
-			"fas fa-user-circle",
-			"facebook",
-			"Facebook",
-			"facebook",
-			"YouTube is",
-			"tab",
-			"Community",
-			"fab fa-user",
-			"program",
-			"ribbon"
+			"v-for"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1387,8 +1409,291 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/views/Creations.vue",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17782,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3586,
+								3586
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
+							],
+							"syntax": "Packages/Vue Syntax Highlight/Vue Component.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2239.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 533,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								451,
+								349
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<span",
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
+							],
+							"default_dir": "C:\\Users\\Abdelhakim\\Desktop\\ambratolm-web\\src\\views",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],

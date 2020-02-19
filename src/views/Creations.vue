@@ -1,9 +1,12 @@
 <template>
   <div id="creations">
-    <section class="hero is-primary">
-      <div class="hero-body">
-        <div class="has-text-centered animated slideInDown">
-          <b-field>
+    <div class="hero video is-primary">
+      <div class="hero-body animated fadeIn">
+        <div class="container has-text-centered">
+          <h1 class="title animated slideInRight">
+            Creations by Ambratolm
+          </h1>
+          <b-field class="animated slideInLeft">
             <b-input
               v-model="currentQuery"
               :placeholder="`Search ${creations.length} creations`"
@@ -15,13 +18,15 @@
           </b-field>
         </div>
       </div>
-      <div v-if="categories.length" class="hero-foot">
-        <nav class="tabs is-boxed is-centered">
+      <div class="hero-foot">
+        <nav v-if="categories.length" class="tabs is-boxed is-centered">
           <ul>
             <li
               v-for="category in categories"
               :key="category.name"
-              :class="{ 'is-active': currentCategory === category.name }"
+              :class="{
+                'is-active': currentCategory === category.name
+              }"
             >
               <a
                 @click="currentCategory = category.name"
@@ -45,8 +50,11 @@
                       'is-success has-text-weight-bold':
                         (currentTag || currentQuery) &&
                         currentCreationsRelative(category.name).length,
-                      'is-info is-light': !(currentTag || currentQuery)
+                      'is-primary':
+                        !(currentTag || currentQuery) &&
+                        currentCreationsRelative(category.name).length
                     }"
+                    style="margin-left: 5px;"
                   >
                     {{ currentCreationsRelative(category.name).length }}
                   </span>
@@ -56,10 +64,58 @@
           </ul>
         </nav>
       </div>
-    </section>
+    </div>
     <section class="section">
       <div class="container">
         <div class="tags is-centered">
+          <transition
+            enter-active-class="animated bounceInRight"
+            leave-active-class="animated bounceOutLeft"
+          >
+            <div
+              v-if="currentCategory !== 'all' && currentCategoryObj"
+              class="tag is-medium"
+              :class="{
+                'is-success':
+                  currentCreations.length && (currentTag || currentQuery),
+                'is-primary':
+                  currentCreationsRelative(currentCategory).length &&
+                  !(currentTag || currentQuery)
+              }"
+            >
+              <div class="icon">
+                <i :class="currentCategoryObj.icon"></i>
+              </div>
+              <span class="is-capitalized">
+                {{ currentCategoryObj.title }}
+              </span>
+              <button
+                v-if="currentCategory !== 'all'"
+                @click="currentCategory = 'all'"
+                class="delete"
+              ></button>
+            </div>
+          </transition>
+          <transition
+            enter-active-class="animated bounceInRight"
+            leave-active-class="animated bounceOutLeft"
+          >
+            <div
+              v-if="currentQuery"
+              class="tag is-medium"
+              :class="{
+                'is-success': currentCreationsRelative(currentCategory).length
+              }"
+            >
+              <div class="icon">
+                <i class="fas fa-search"></i>
+              </div>
+              <span class="is-capitalized">
+                {{ currentQuery }}
+              </span>
+              <button @click="currentQuery = ''" class="delete"></button>
+            </div>
+          </transition>
           <transition
             enter-active-class="animated bounceInLeft"
             leave-active-class="animated bounceOutRight"
@@ -79,146 +135,50 @@
             </div>
           </transition>
           <transition
-            enter-active-class="animated bounceInRight"
-            leave-active-class="animated bounceOutLeft"
+            enter-active-class="animated bounceInLeft"
+            leave-active-class="animated bounceOutRight"
           >
             <div
-              v-if="currentQuery"
-              class="tag is-medium"
-              :class="{
-                'is-success': currentCreationsRelative(currentCategory).length
-              }"
+              v-if="!currentCreations.length"
+              class="tag is-danger is-medium"
             >
               <div class="icon">
-                <i class="fas fa-search"></i>
+                <i class="far fa-times-circle"></i>
               </div>
-              <span class="is-capitalized">{{ currentQuery }}</span>
-              <button @click="currentQuery = ''" class="delete"></button>
+              <span class="is-capitalized">No entries</span>
             </div>
           </transition>
         </div>
-        <transition
-          enter-active-class="animated fadeIn"
-          leave-active-class="animated fadeOut"
-        >
-          <div
-            v-if="!currentCreations.length"
-            class="notification has-text-centered has-text-grey-light"
-          >
-            <b-icon pack="far" icon="times-circle" size="is-medium"></b-icon>
-            <div class="has-text-weight-bold">No Entries</div>
-          </div>
-        </transition>
         <div v-if="creations.length">
           <transition-group
             enter-active-class="animated bounceInUp"
             leave-active-class="animated bounceOutDown custom-absolute"
             tag="div"
-            class="columns is-multiline  is-centered"
+            class="columns is-multiline is-centered"
           >
+            <div
+              key="category"
+              class="column is-one-quarter-tablet is-full-mobile"
+            >
+              <CategoryCard
+                :category="currentCategoryObj"
+                :current-tag="currentTag"
+                @set-tag="currentTag = $event"
+              />
+            </div>
             <div
               v-for="creation in currentCreations"
               :key="creation.name"
               class="column is-one-quarter-tablet is-full-mobile"
             >
-              <div
-                class="card custom-bulma-card-equal-height custom-card-hover"
-              >
-                <figure class="card-image image">
-                  <img :src="img(creation.image)" :alt="creation.title" />
-                </figure>
-                <div class="card-content">
-                  <h1 class="title is-5">
-                    <span class="">
-                      <span class="icon">
-                        <i :class="creation.icon"></i>
-                      </span>
-                      <text-highlight :queries="currentQuery">
-                        {{ creation.title }}
-                      </text-highlight>
-                    </span>
-                  </h1>
-                  <div class="tags custom-overflow">
-                    <a
-                      v-for="category in arr(creation.categories)"
-                      :key="category"
-                      @click="currentCategory = category"
-                      class="tag is-light is-capitalized"
-                      :class="{
-                        'is-primary': currentCategory === category
-                      }"
-                    >
-                      {{ category }}
-                    </a>
-                  </div>
-                  <p class="subtitle is-6 custom-overflow">
-                    <text-highlight :queries="currentQuery">
-                      {{ creation.description }}
-                    </text-highlight>
-                  </p>
-                  <div class="custom-overflow">
-                    <article
-                      v-for="(link, index) in creation.links"
-                      :key="index"
-                      class="media"
-                      style="margin-bottom: 0;"
-                    >
-                      <div class="media-left" style="margin: 0 10px 0 0;">
-                        <span class="icon is-medium">
-                          <i :class="link.icon" class="fa-lg"></i>
-                        </span>
-                      </div>
-                      <div class="media-content">
-                        <div class="content">
-                          <a
-                            :href="link.url"
-                            :title="link.title"
-                            target="_blank"
-                            class="title is-6"
-                          >
-                            <text-highlight :queries="currentQuery">
-                              {{ link.title }}
-                            </text-highlight>
-                            <span
-                              v-if="link.download"
-                              title="Download Link"
-                              class="tag is-rounded"
-                            >
-                              <span class="icon is-small">
-                                <i class="fas fa-download"></i>
-                              </span>
-                            </span>
-                          </a>
-                          <br />
-                          <p class="subtitle is-7">
-                            <text-highlight :queries="currentQuery">
-                              {{ link.description }}
-                            </text-highlight>
-                          </p>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <div
-                    class="card-footer-item"
-                    style="justify-content: flex-start;"
-                  >
-                    <div class="tags custom-overflow">
-                      <a
-                        v-for="tag in arr(creation.tags)"
-                        @click="currentTag = tag"
-                        :key="tag"
-                        class="tag is-light is-capitalized"
-                        :class="{ 'is-primary': tag === currentTag }"
-                      >
-                        {{ tag }}
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <CreationCard
+                :creation="creation"
+                :current-category="currentCategory"
+                :current-tag="currentTag"
+                :current-query="currentQuery"
+                @set-category="currentCategory = $event"
+                @set-tag="currentTag = $event"
+              />
             </div>
           </transition-group>
         </div>
@@ -233,11 +193,17 @@ import TextHighlight from "vue-text-highlight";
 import utils from "@/services/utils";
 import categoriesSvc from "@/services/categories";
 import creationsSvc from "@/services/creations";
+import CategoryCard from "@/components/CategoryCard";
+import CreationCard from "@/components/CreationCard";
 
 Vue.component("text-highlight", TextHighlight);
 
 export default {
   name: "creations",
+  components: {
+    CategoryCard,
+    CreationCard
+  },
   created() {
     const self = this;
     categoriesSvc
