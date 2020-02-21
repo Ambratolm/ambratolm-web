@@ -1,5 +1,5 @@
 <template>
-  <div id="main-footer">
+  <div id="the-footer">
     <footer class="footer">
       <div class="columns is-multiline is-centered has-text-centered">
         <div class="column is-one-third">

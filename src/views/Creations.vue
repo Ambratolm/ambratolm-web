@@ -1,12 +1,16 @@
 <template>
   <div id="creations">
-    <div class="hero video is-primary">
+    <div class="hero is-primary">
       <div class="hero-body animated fadeIn">
         <div class="container has-text-centered">
-          <h1 class="title animated slideInRight">
-            Creations by Ambratolm
+          <h1 class="title animated pulse infinite slower">
+            <span>Ambratolm</span>
+            <span class="icon is-large">
+              <i class="fas fa-copyright"></i>
+            </span>
+            <span>Creations</span>
           </h1>
-          <b-field class="animated slideInLeft">
+          <b-field position="is-centered">
             <b-input
               v-model="currentQuery"
               :placeholder="`Search ${creations.length} creations`"
@@ -16,6 +20,23 @@
             >
             </b-input>
           </b-field>
+          <!-- <b-field position="is-centered">
+            <p class="control">
+              <button class="button">
+                <b-icon icon="crown"></b-icon>
+              </button>
+            </p>
+            <p class="control">
+              <button class="button">
+                <b-icon icon="crow"></b-icon>
+              </button>
+            </p>
+            <p class="control">
+              <button class="button">
+                <b-icon icon="info"></b-icon>
+              </button>
+            </p>
+          </b-field> -->
         </div>
       </div>
       <div class="hero-foot">
@@ -67,120 +88,81 @@
     </div>
     <section class="section">
       <div class="container">
-        <div class="tags is-centered">
-          <transition
-            enter-active-class="animated bounceInRight"
-            leave-active-class="animated bounceOutLeft"
-          >
-            <div
-              v-if="currentCategory !== 'all' && currentCategoryObj"
-              class="tag is-medium"
-              :class="{
-                'is-success':
-                  currentCreations.length && (currentTag || currentQuery),
-                'is-primary':
-                  currentCreationsRelative(currentCategory).length &&
-                  !(currentTag || currentQuery)
-              }"
-            >
-              <div class="icon">
-                <i :class="currentCategoryObj.icon"></i>
+        <div class="columns is-multiline is-centered">
+          <CategoryCard
+            :category="currentCategoryObj"
+            :current-tag="currentTag"
+            @set-tag="currentTag = $event"
+            class="column is-3 is-full-mobile"
+          />
+          <div v-if="creations.length" class="column is-9 is-full-mobile">
+            <div class="columns is-multiline is-centered">
+              <div class="column is-full is-full-mobile">
+                <FilterTags
+                  v-show="filterIsUsed"
+                  :current-creations="currentCreations"
+                  :current-category="currentCategory"
+                  :current-tag="currentTag"
+                  :current-query="currentQuery"
+                  :current-category-obj="currentCategoryObj"
+                  :current-creations-relative="currentCreationsRelative"
+                  @set-category="currentCategory = $event"
+                  @set-tag="currentTag = $event"
+                  @set-query="currentQuery = $event"
+                />
+                <b-pagination
+                  v-show="
+                    currentCreationsRelative(currentCategory).length > perPage
+                  "
+                  :total="currentCreationsRelative(currentCategory).length"
+                  :current.sync="currentPage"
+                  :per-page="perPage"
+                  range-before="5"
+                  range-after="5"
+                  order="is-centered"
+                  icon-prev="chevron-left"
+                  icon-next="chevron-right"
+                >
+                </b-pagination>
+                <transition
+                  enter-active-class="animated bounceInUp"
+                  leave-active-class="animated bounceOutDown"
+                >
+                  <div
+                    v-if="!currentCreations.length"
+                    class="box has-text-centered has-text-grey-light"
+                  >
+                    <div>
+                      <span class="icon is-medium">
+                        <i class="far fa-times-circle fa-2x"></i>
+                      </span>
+                    </div>
+                    <div class="is-capitalized has-text-weight-bold">
+                      No entries
+                    </div>
+                  </div>
+                </transition>
+                <transition-group
+                  enter-active-class="animated bounceInUp"
+                  leave-active-class="animated bounceOutDown custom-absolute"
+                  tag="div"
+                  class="columns"
+                >
+                  <CreationCard
+                    v-for="creation in currentCreations"
+                    :key="creation.name"
+                    :creation="creation"
+                    :current-category="currentCategory"
+                    :current-tag="currentTag"
+                    :current-query="currentQuery"
+                    @set-category="currentCategory = $event"
+                    @set-tag="currentTag = $event"
+                    class="column is-one-third-tablet is-full-mobile"
+                  />
+                </transition-group>
               </div>
-              <span class="is-capitalized">
-                {{ currentCategoryObj.title }}
-              </span>
-              <button
-                v-if="currentCategory !== 'all'"
-                @click="currentCategory = 'all'"
-                class="delete"
-              ></button>
             </div>
-          </transition>
-          <transition
-            enter-active-class="animated bounceInRight"
-            leave-active-class="animated bounceOutLeft"
-          >
-            <div
-              v-if="currentQuery"
-              class="tag is-medium"
-              :class="{
-                'is-success': currentCreationsRelative(currentCategory).length
-              }"
-            >
-              <div class="icon">
-                <i class="fas fa-search"></i>
-              </div>
-              <span class="is-capitalized">
-                {{ currentQuery }}
-              </span>
-              <button @click="currentQuery = ''" class="delete"></button>
-            </div>
-          </transition>
-          <transition
-            enter-active-class="animated bounceInLeft"
-            leave-active-class="animated bounceOutRight"
-          >
-            <div
-              v-if="currentTag"
-              class="tag is-medium"
-              :class="{
-                'is-success': currentCreationsRelative(currentCategory).length
-              }"
-            >
-              <div class="icon">
-                <i class="fas fa-tag"></i>
-              </div>
-              <span class="is-capitalized">{{ currentTag }}</span>
-              <button @click="currentTag = ''" class="delete"></button>
-            </div>
-          </transition>
-          <transition
-            enter-active-class="animated bounceInLeft"
-            leave-active-class="animated bounceOutRight"
-          >
-            <div
-              v-if="!currentCreations.length"
-              class="tag is-danger is-medium"
-            >
-              <div class="icon">
-                <i class="far fa-times-circle"></i>
-              </div>
-              <span class="is-capitalized">No entries</span>
-            </div>
-          </transition>
-        </div>
-        <div v-if="creations.length">
-          <transition-group
-            enter-active-class="animated bounceInUp"
-            leave-active-class="animated bounceOutDown custom-absolute"
-            tag="div"
-            class="columns is-multiline is-centered"
-          >
-            <div
-              key="category"
-              class="column is-one-quarter-tablet is-full-mobile"
-            >
-              <CategoryCard
-                :category="currentCategoryObj"
-                :current-tag="currentTag"
-                @set-tag="currentTag = $event"
-              />
-            </div>
-            <div
-              v-for="creation in currentCreations"
-              :key="creation.name"
-              class="column is-one-quarter-tablet is-full-mobile"
-            >
-              <CreationCard
-                :creation="creation"
-                :current-category="currentCategory"
-                :current-tag="currentTag"
-                :current-query="currentQuery"
-                @set-category="currentCategory = $event"
-                @set-tag="currentTag = $event"
-              />
-            </div>
-          </transition-group>
+          </div>
         </div>
       </div>
     </section>
@@ -195,6 +177,7 @@ import categoriesSvc from "@/services/categories";
 import creationsSvc from "@/services/creations";
 import CategoryCard from "@/components/CategoryCard";
 import CreationCard from "@/components/CreationCard";
+import FilterTags from "@/components/FilterTags";
 
 Vue.component("text-highlight", TextHighlight);
 
@@ -202,7 +185,8 @@ export default {
   name: "creations",
   components: {
     CategoryCard,
-    CreationCard
+    CreationCard,
+    FilterTags
   },
   created() {
     const self = this;
@@ -220,6 +204,8 @@ export default {
       currentCategory: "all",
       currentTag: "",
       currentQuery: "",
+      currentPage: 1,
+      perPage: 3,
       creations: [],
       categories: []
     };
@@ -228,10 +214,19 @@ export default {
     currentCreations() {
       return creationsSvc
         .filter(this.creations)
-        .byAll(this.currentCategory, this.currentTag, this.currentQuery);
+        .byAll(this.currentCategory, this.currentTag, this.currentQuery)
+        .slice(
+          (this.currentPage - 1) * this.perPage,
+          (this.currentPage - 1) * this.perPage + this.perPage
+        );
     },
     currentCategoryObj() {
       return categoriesSvc.find(this.categories).byName(this.currentCategory);
+    },
+    filterIsUsed() {
+      return (
+        this.currentCategory !== "all" || this.currentTag || this.currentQuery
+      );
     }
   },
   methods: {
@@ -264,12 +259,15 @@ export default {
   },
   watch: {
     currentCategory(newValue) {
+      this.currentPage = 1;
       localStorage.currentCategory = newValue;
     },
     currentTag(newValue) {
+      this.currentPage = 1;
       localStorage.currentTag = newValue;
     },
     currentQuery(newValue) {
+      this.currentPage = 1;
       localStorage.currentQuery = newValue;
     }
   }
@@ -280,19 +278,5 @@ export default {
 .column {
   transition: all 1s;
   display: inline-block;
-}
-.custom-absolute {
-  position: absolute;
-}
-.custom-overflow {
-  max-height: 200px;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-.custom-card-hover {
-  transition: box-shadow 0.5s;
-}
-.custom-card-hover:hover {
-  box-shadow: 0 0 10px #888888;
 }
 </style>

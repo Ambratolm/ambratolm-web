@@ -19,34 +19,29 @@
       <div class="hero-foot">
         <nav class="tabs is-boxed is-centered">
           <ul>
-            <li :class="{ 'is-active': tab === 'websites' }">
-              <a @click="tab = 'websites'">
+            <li
+              v-for="tab in tabs"
+              :key="tab"
+              :class="{ 'is-active': tab === currentTab }"
+            >
+              <a @click="currentTab = tab">
                 <span class="icon is-small">
-                  <i class="fas fa-globe"></i>
+                  <i v-if="tab === 'websites'" class="fas fa-globe"></i>
+                  <i v-if="tab === 'profiles'" class="fas fa-user"></i>
                 </span>
                 <span>
-                  <span>Websites </span>
+                  <span class="is-capitalized">{{ tab }}</span>
                   <span
-                    v-show="tab === 'websites'"
-                    class="tag is-info is-light is-rounded"
+                    v-show="tab === currentTab"
+                    class="tag is-primary is-rounded"
+                    style="margin-left: 5px;"
                   >
-                    {{ websites.length }}
-                  </span>
-                </span>
-              </a>
-            </li>
-            <li :class="{ 'is-active': tab === 'profiles' }">
-              <a @click="tab = 'profiles'">
-                <span class="icon is-small">
-                  <i class="fas fa-user"></i>
-                </span>
-                <span>
-                  <span>Profiles </span>
-                  <span
-                    v-show="tab === 'profiles'"
-                    class="tag is-info is-light is-rounded"
-                  >
-                    {{ profiles.length }}
+                    <span v-if="tab === 'websites'">
+                      {{ websites.length }}
+                    </span>
+                    <span v-if="tab === 'profiles'">
+                      {{ profiles.length }}
+                    </span>
                   </span>
                 </span>
               </a>
@@ -56,102 +51,24 @@
       </div>
     </section>
     <section class="section">
-      <div v-show="tab === 'websites'" class="container">
+      <div v-show="currentTab === 'websites'" class="container">
         <div v-if="websites.length" class="columns is-multiline is-centered">
-          <div
+          <WebsiteCard
             v-for="(website, index) in websites"
             :key="index"
             class="column is-one-quarter"
-          >
-            <div
-              class="card custom-bulma-card-equal-height animated bounceInUp"
-            >
-              <div class="has-ribbon-bottom has-ribbon-left">
-                <figure class="card-image image">
-                  <img :src="img(website.image)" :alt="website.title" />
-                </figure>
-                <div class="ribbon is-small is-capitalized">
-                  <span>
-                    <span class="icon">
-                      <i class="fas fa-globe"></i>
-                    </span>
-                    <span>{{ website.language }}</span>
-                  </span>
-                </div>
-              </div>
-              <div class="card-content">
-                <h1 class="title is-size-6">
-                  <span class="icon">
-                    <i :class="website.icon"></i>
-                  </span>
-                  {{ website.title }}
-                </h1>
-                <p class="subtitle is-size-7">
-                  {{ website.description }}
-                </p>
-              </div>
-              <footer class="card-footer">
-                <div class="card-footer-item">
-                  <a
-                    :href="website.url"
-                    :title="website.url"
-                    class="button is-fullwidth"
-                    target="_blank"
-                  >
-                    <span class="icon">
-                      <i class="fas fa-external-link-alt"></i>
-                    </span>
-                    <span>Open Website </span>
-                  </a>
-                </div>
-              </footer>
-            </div>
-          </div>
+            :website="website"
+          />
         </div>
       </div>
-      <div v-show="tab === 'profiles'" class="container">
+      <div v-show="currentTab === 'profiles'" class="container">
         <div v-if="profiles.length" class="columns is-multiline is-centered">
-          <div
+          <ProfileCard
             v-for="(profile, index) in profiles"
             :key="index"
+            :profile="profile"
             class="column is-one-quarter"
-          >
-            <div
-              class="card custom-bulma-card-equal-height animated bounceInUp"
-            >
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-left">
-                    <span class="icon is-large">
-                      <i :class="profile.icon" class="fa-3x"></i>
-                    </span>
-                  </div>
-                  <div class="media-content">
-                    <p class="title is-5">{{ profile.title }}</p>
-                    <p class="subtitle is-6">@{{ profile.username }}</p>
-                  </div>
-                </div>
-                <p class="subtitle is-size-7">
-                  {{ profile.description }}
-                </p>
-              </div>
-              <footer class="card-footer">
-                <div class="card-footer-item">
-                  <a
-                    :href="profile.url"
-                    :title="profile.url"
-                    class="button is-fullwidth"
-                    target="_blank"
-                  >
-                    <span class="icon">
-                      <i class="fas fa-external-link-alt"></i>
-                    </span>
-                    <span>Open Page</span>
-                  </a>
-                </div>
-              </footer>
-            </div>
-          </div>
+          />
         </div>
       </div>
     </section>
@@ -159,12 +76,18 @@
 </template>
 
 <script>
-import utils from "@/services/utils";
+// import utils from "@/services/utils";
 import websitesSvc from "@/services/websites";
 import profilesSvc from "@/services/profiles";
+import WebsiteCard from "@/components/WebsiteCard";
+import ProfileCard from "@/components/ProfileCard";
 
 export default {
   name: "home",
+  components: {
+    WebsiteCard,
+    ProfileCard
+  },
   created() {
     const self = this;
     websitesSvc
@@ -181,24 +104,21 @@ export default {
   },
   data() {
     return {
-      tab: "websites",
+      currentTab: "websites",
+      tabs: ["websites", "profiles"],
       websites: [],
       profiles: []
     };
   },
-  methods: {
-    img(filename) {
-      return utils.img(filename, "default.jpg", "websites");
-    }
-  },
+  methods: {},
   mounted() {
-    if (localStorage.tab) {
-      this.tab = localStorage.tab;
+    if (localStorage.currentTab) {
+      this.currentTab = localStorage.currentTab;
     }
   },
   watch: {
-    tab(newValue) {
-      localStorage.tab = newValue;
+    currentTab(newValue) {
+      localStorage.currentTab = newValue;
     }
   }
 };

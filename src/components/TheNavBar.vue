@@ -1,5 +1,5 @@
 <template>
-  <div id="main-nav">
+  <div id="the-nav">
     <nav class="navbar is-primary is-radiusless">
       <div class="container">
         <div class="navbar-brand">

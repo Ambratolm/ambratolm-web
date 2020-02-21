@@ -1,27 +1,48 @@
-import Vue from "vue";
-import App from "./App.vue";
-import router from "./router";
-import store from "./store";
 //==============================================================================
+// ■ VueJS-Main (main.js)
+//------------------------------------------------------------------------------
+//     Application main entry point for scripts.
+//==============================================================================
+
+//------------------------------------------------------------------------------
+// ● VueJS
+//------------------------------------------------------------------------------
+import Vue from "vue";
+Vue.config.productionTip = false;
+Vue.config.devtools = false;
+
+//------------------------------------------------------------------------------
+// ● Vue Root Component
+//------------------------------------------------------------------------------
+import App from "./App.vue";
+
+//------------------------------------------------------------------------------
+// ● VueRouter
+//------------------------------------------------------------------------------
+import router from "./router";
+
+//------------------------------------------------------------------------------
+// ● Vuex
+//------------------------------------------------------------------------------
+import store from "./store";
+
+//------------------------------------------------------------------------------
+// ● Firebase
+//------------------------------------------------------------------------------
 // import firebase from "firebase/app";
 // import "firebase/database";
-//==============================================================================
-// import "@fortawesome/fontawesome-free/js/all";
-// import { library, dom } from "@fortawesome/fontawesome-svg-core";
-// import { fas } from "@fortawesome/free-solid-svg-icons";
-// import { far } from "@fortawesome/free-regular-svg-icons";
-// import { fab } from "@fortawesome/free-brands-svg-icons";
-// import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-// dom.watch();
-// library.add(fas, far, fab);
-// Vue.component("font-awesome-icon", FontAwesomeIcon);
-//==============================================================================
+
+//------------------------------------------------------------------------------
+// ● Buefy
+//------------------------------------------------------------------------------
 import Buefy from "buefy";
 Vue.use(Buefy, {
-  // defaultIconComponent: FontAwesomeIcon,
   defaultIconPack: "fas"
 });
-//==============================================================================
+
+//------------------------------------------------------------------------------
+// ● VueTippy
+//------------------------------------------------------------------------------
 // import VueTippy, { TippyComponent } from "vue-tippy";
 // import "tippy.js/themes/light.css";
 // import "tippy.js/themes/light-border.css";
@@ -41,10 +62,10 @@ Vue.use(Buefy, {
 //   }
 // });
 // Vue.component("tippy", TippyComponent);
-//==============================================================================
-Vue.config.productionTip = false;
-Vue.config.devtools = false;
-//==============================================================================
+
+//------------------------------------------------------------------------------
+// ● Vue Application Initialization
+//------------------------------------------------------------------------------
 new Vue({
   router,
   store,
