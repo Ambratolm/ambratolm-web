@@ -17,20 +17,18 @@ const routes = [
   {
     path: "/creations",
     name: "creations",
-    component: () =>
-      import("../views/Creations.vue")
+    component: () => import("../views/Creations.vue")
   },
   {
     path: "/about",
     name: "about",
-    component: () =>
-      import("../views/About.vue")
+    component: () => import("../views/About.vue")
   }
 ];
 
 const router = new VueRouter({
   routes,
-  linkExactActiveClass: 'is-active'
+  linkExactActiveClass: "is-active"
 });
 
 export default router;

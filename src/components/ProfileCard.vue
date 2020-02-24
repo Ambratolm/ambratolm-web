@@ -44,8 +44,6 @@ export default {
   props: {
     profile: Object
   },
-  methods: {
-
-  }
+  methods: {}
 };
 </script>

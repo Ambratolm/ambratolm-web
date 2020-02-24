@@ -98,7 +98,7 @@
           <div v-if="creations.length" class="column is-9 is-full-mobile">
             <div class="columns is-multiline is-centered">
               <div class="column is-full is-full-mobile">
-                <FilterTags
+                <CreationsFilterTags
                   v-show="filterIsUsed"
                   :current-creations="currentCreations"
                   :current-category="currentCategory"
@@ -173,11 +173,10 @@
 import Vue from "vue";
 import TextHighlight from "vue-text-highlight";
 import utils from "@/services/utils";
-import categoriesSvc from "@/services/categories";
-import creationsSvc from "@/services/creations";
 import CategoryCard from "@/components/CategoryCard";
 import CreationCard from "@/components/CreationCard";
-import FilterTags from "@/components/FilterTags";
+import CreationsFilterTags from "@/components/CreationsFilterTags";
+import { mapGetters } from "vuex";
 
 Vue.component("text-highlight", TextHighlight);
 
@@ -186,18 +185,7 @@ export default {
   components: {
     CategoryCard,
     CreationCard,
-    FilterTags
-  },
-  created() {
-    const self = this;
-    categoriesSvc
-      .get()
-      .categories()
-      .then(categories => (self.categories = categories));
-    creationsSvc
-      .get()
-      .creations()
-      .then(creations => (self.creations = creations));
+    CreationsFilterTags
   },
   data() {
     return {
@@ -205,23 +193,28 @@ export default {
       currentTag: "",
       currentQuery: "",
       currentPage: 1,
-      perPage: 3,
-      creations: [],
-      categories: []
+      perPage: 3
     };
   },
   computed: {
+    ...mapGetters([
+      "categories",
+      "creations",
+      "filterCreationsByAll",
+      "findCategoryByName"
+    ]),
     currentCreations() {
-      return creationsSvc
-        .filter(this.creations)
-        .byAll(this.currentCategory, this.currentTag, this.currentQuery)
-        .slice(
-          (this.currentPage - 1) * this.perPage,
-          (this.currentPage - 1) * this.perPage + this.perPage
-        );
+      return this.filterCreationsByAll(
+        this.currentCategory,
+        this.currentTag,
+        this.currentQuery
+      ).slice(
+        (this.currentPage - 1) * this.perPage,
+        (this.currentPage - 1) * this.perPage + this.perPage
+      );
     },
     currentCategoryObj() {
-      return categoriesSvc.find(this.categories).byName(this.currentCategory);
+      return this.findCategoryByName(this.currentCategory);
     },
     filterIsUsed() {
       return (
@@ -231,13 +224,11 @@ export default {
   },
   methods: {
     currentCreationsRelative(category, tag, query) {
-      return creationsSvc
-        .filter(this.creations)
-        .byAll(
-          category || this.currentCategory,
-          tag || this.currentTag,
-          query || this.currentQuery
-        );
+      return this.filterCreationsByAll(
+        category || this.currentCategory,
+        tag || this.currentTag,
+        query || this.currentQuery
+      );
     },
     img(filename) {
       return utils.img(filename, "default.png", "creations");

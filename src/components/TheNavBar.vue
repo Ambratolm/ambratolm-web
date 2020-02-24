@@ -38,16 +38,6 @@
               </span>
               <span>Creations</span>
             </router-link>
-            <!-- Temp:Work in progress -->
-            <span class="navbar-item animated pulse infinite slower">
-              <span class="has-text-warning">
-                <span class="icon">
-                  <i class="fas fa-cog fa-spin"></i>
-                </span>
-                <span class="has-text-weight-bold">Work in progress...</span>
-              </span>
-            </span>
-            <!-- /Temp:Work in progress -->
           </div>
           <div class="navbar-end">
             <router-link to="/about" class="navbar-item">
@@ -67,7 +57,7 @@
 import animate from "@/services/animate";
 
 export default {
-  name: "MainNav",
+  name: "TheNavBar",
   data() {
     return {
       navbarIsActive: false

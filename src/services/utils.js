@@ -9,11 +9,11 @@ export default {
     const errorName = "error.png";
     let path = baseDirName;
     path += dirName ? `/${dirName}` : "";
-    path += name ? `/${name}` : (defName ? `/${defName}` : `/${emptyName}`);
+    path += name ? `/${name}` : defName ? `/${defName}` : `/${emptyName}`;
     let file = "";
     try {
       file = require(`@/${path}`);
-    } catch(e) {
+    } catch (e) {
       console.error(e.message);
       file = require(`@/${baseDirName}/${errorName}`);
     }
@@ -25,21 +25,22 @@ export default {
     const errorName = "placeholder-muted.mp4";
     let path = baseDirName;
     path += dirName ? `/${dirName}` : "";
-    path += name ? `/${name}` : (defName ? `/${defName}` : `/${emptyName}`);
+    path += name ? `/${name}` : defName ? `/${defName}` : `/${emptyName}`;
     let file = "";
     try {
       file = require(`@/${path}`);
-    } catch(e) {
+    } catch (e) {
       console.error(e.message);
       file = require(`@/${baseDirName}/${errorName}`);
     }
     return file;
   },
   shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+    let resultArray = [...array];
+    for (let i = resultArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [resultArray[i], resultArray[j]] = [resultArray[j], resultArray[i]];
     }
-    return array;
+    return resultArray;
   }
 };

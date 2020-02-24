@@ -6,10 +6,11 @@
           <p class="heading">Contact</p>
           <div class="buttons is-centered">
             <a
-              v-for="(contactLink, index) in contactLinks"
+              v-for="(contactLink, index) in randomContactLinks"
               :key="index"
               :href="contactLink.url"
-              :title="contactLink.title"
+              :content="contactLink.title"
+              v-tippy="{ arrow: true, placement: 'bottom' }"
               target="_blank"
             >
               <span class="icon is-large has-text-dark">
@@ -30,10 +31,11 @@
           <p class="heading">Profiles</p>
           <div class="buttons is-centered">
             <a
-              v-for="(profile, index) in profiles.slice(0, contactLinks.length)"
+              v-for="(profile, index) in randomProfiles"
               :key="index"
               :href="profile.url"
-              :title="profile.title"
+              :content="profile.title"
+              v-tippy="{ arrow: true, placement: 'bottom' }"
               target="_blank"
             >
               <span class="icon is-large has-text-dark">
@@ -56,34 +58,20 @@
 
 <script>
 import utils from "@/services/utils";
-import contactSvc from "@/services/contact";
-import profilesSvc from "@/services/profiles";
 
 export default {
-  name: "MainFooter",
-  created() {
-    const self = this;
-    contactSvc
-      .get()
-      .contactLinks()
-      .then(contactLinks => {
-        self.contactLinks = contactLinks;
-        utils.shuffle(self.contactLinks);
-      });
-    profilesSvc
-      .get()
-      .profiles()
-      .then(profiles => {
-        self.profiles = profiles;
-        utils.shuffle(self.profiles);
-      });
+  name: "TheFooter",
+  props: {
+    contactLinks: Array,
+    profiles: Array
   },
-  data() {
-    return {
-      contactLinks: [],
-      profiles: []
-    };
-  },
-  methods: {}
+  computed: {
+    randomContactLinks() {
+      return utils.shuffle(this.contactLinks);
+    },
+    randomProfiles() {
+      return utils.shuffle(this.profiles).slice(0, this.contactLinks.length);
+    }
+  }
 };
 </script>

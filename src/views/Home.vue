@@ -64,7 +64,7 @@
       <div v-show="currentTab === 'profiles'" class="container">
         <div v-if="profiles.length" class="columns is-multiline is-centered">
           <ProfileCard
-            v-for="(profile, index) in profiles"
+            v-for="(profile, index) in randomProfiles"
             :key="index"
             :profile="profile"
             class="column is-one-quarter"
@@ -77,10 +77,10 @@
 
 <script>
 // import utils from "@/services/utils";
-import websitesSvc from "@/services/websites";
-import profilesSvc from "@/services/profiles";
 import WebsiteCard from "@/components/WebsiteCard";
 import ProfileCard from "@/components/ProfileCard";
+import utils from "@/services/utils";
+import { mapGetters } from "vuex";
 
 export default {
   name: "home",
@@ -88,29 +88,18 @@ export default {
     WebsiteCard,
     ProfileCard
   },
-  created() {
-    const self = this;
-    websitesSvc
-      .get()
-      .websites()
-      .then(websites => (self.websites = websites));
-    profilesSvc
-      .get()
-      .profiles()
-      .then(profiles => {
-        self.profiles = profiles;
-        self.profiles.reverse();
-      });
-  },
   data() {
     return {
       currentTab: "websites",
-      tabs: ["websites", "profiles"],
-      websites: [],
-      profiles: []
+      tabs: ["websites", "profiles"]
     };
   },
-  methods: {},
+  computed: {
+    ...mapGetters(["websites", "profiles"]),
+    randomProfiles() {
+      return utils.shuffle(this.profiles);
+    }
+  },
   mounted() {
     if (localStorage.currentTab) {
       this.currentTab = localStorage.currentTab;

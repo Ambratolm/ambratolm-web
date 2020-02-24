@@ -8,9 +8,7 @@
         v-if="currentCategory !== 'all' && currentCategoryObj"
         class="tag is-medium"
         :class="{
-          'is-success':
-            currentCreations.length &&
-            (currentTag || currentQuery),
+          'is-success': currentCreations.length && (currentTag || currentQuery),
           'is-primary':
             currentCreationsRelative(currentCategory).length &&
             !(currentTag || currentQuery)
@@ -37,8 +35,7 @@
         v-if="currentQuery"
         class="tag is-medium"
         :class="{
-          'is-success': currentCreationsRelative(currentCategory)
-            .length
+          'is-success': currentCreationsRelative(currentCategory).length
         }"
       >
         <div class="icon">
@@ -47,10 +44,7 @@
         <span class="is-capitalized">
           {{ currentQuery }}
         </span>
-        <button
-          @click="$emit('set-query', '');"
-          class="delete"
-        ></button>
+        <button @click="$emit('set-query', '')" class="delete"></button>
       </div>
     </transition>
     <transition
@@ -61,8 +55,7 @@
         v-if="currentTag"
         class="tag is-medium"
         :class="{
-          'is-success': currentCreationsRelative(currentCategory)
-            .length
+          'is-success': currentCreationsRelative(currentCategory).length
         }"
       >
         <div class="icon">
@@ -79,7 +72,7 @@
 // import utils from "@/services/utils";
 
 export default {
-  name: "FilterTags",
+  name: "CreationsFilterTags",
   props: {
     currentCreations: Array,
     currentCategory: String,
@@ -88,8 +81,6 @@ export default {
     currentCategoryObj: Object,
     currentCreationsRelative: Function
   },
-  methods: {
-
-  }
+  methods: {}
 };
 </script>
