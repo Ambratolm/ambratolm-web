@@ -1,0 +1,20 @@
+---
+name: music
+title: Music
+description: Background Music.
+categories: audio
+tags: music,bgm,ost,soundtrack
+icon: fas fa-music
+image: music.jpg
+links:
+  - title: Music on SoundCloud
+    url: https://soundcloud.com/ambratolm
+    description: Contains my music albums and playlists.
+    categories: audio
+    icon: fab fa-soundcloud
+  - title: Music on Youtube
+    url: https://www.youtube.com/channel/UC90YiMGgUMGFsfzHXt2bLsQ
+    description: Contains videos with my music.
+    categories: audio
+    icon: fab fa-youtube
+  #

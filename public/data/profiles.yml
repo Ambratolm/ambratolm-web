@@ -1,0 +1,403 @@
+---
+#===============================================================================
+- title: GitHub
+  username: ambratolm
+  url: https://github.com/ambratolm
+  description: GitHub is a Web-based Git repository hosting service.
+  categories: program
+  icon: fab fa-github
+#===============================================================================
+- title: Stack Overflow
+  username: '10682020'
+  url: https://stackoverflow.com/users/10682020/ambratolm
+  description: Stack Overflow is a developers community for learning and sharing.
+  categories: program
+  icon: fab fa-stack-overflow
+#===============================================================================
+- title: itch.io
+  username: ambratolm
+  url: https://ambratolm.itch.io
+  description: itch.io is a video-games marketplace and community.
+  categories: game
+  icon: fab fa-itch-io
+#===============================================================================
+- title: Game Jolt
+  username: ambratolm
+  url: https://gamejolt.com/@ambratolm
+  description: Game Jolt is a video-games marketplace and community.
+  categories: game
+  icon: fas fa-circle
+#===============================================================================
+- title: Gamejolt (Portfolio Page)
+  username: ambratolm
+  url: https://ambratolm.gamejolt.io
+  description: Game Jolt is a video-games marketplace and community.
+  categories: game
+  icon: fas fa-circle
+#===============================================================================
+- title: Indiexpo
+  username: Elhafid Games
+  url: https://www.indiexpo.net/fr/search?search%5Bauthor%5D=Elhafid+Games
+  description: Indiexpo is a video-games distribution platform for creators and advertisers.
+  categories: game
+  icon: fas fa-circle
+#===============================================================================
+- title: SoundCloud
+  username: ambratolm
+  url: https://soundcloud.com/ambratolm
+  description: SoundCloud is an audio distribution platform and music sharing platform for uploading, promoting, and sharing audio.
+  categories: audio
+  icon: fab fa-soundcloud
+#===============================================================================
+- title: Youtube (Music Channel)
+  username: UC90YiMGgUMGFsfzHXt2bLsQ
+  url: https://www.youtube.com/channel/UC90YiMGgUMGFsfzHXt2bLsQ
+  description: YouTube is a video-sharing platform.
+  categories: audio
+  icon: fab fa-youtube
+#===============================================================================
+- title: The Artist Union
+  username: ambratolm
+  url: https://theartistunion.com/ambratolm
+  description: The Artist Union is an artists platform for music marketing.
+  categories: audio
+  icon: fas fa-circle
+#===============================================================================
+- title: Bandcamp
+  username: ambratolm
+  url: https://ambratolm.bandcamp.com
+  description: Bandcamp is a selling platform for music.
+  categories: audio
+  icon: fab fa-bandcamp
+#===============================================================================
+- title: Logamp
+  username: ambratolm
+  url: https://logamp.com/ambratolm
+  description: Logamp is a sharing platform for music, art, and literature.
+  categories: audio, image
+  icon: fas fa-circle
+#===============================================================================
+- title: YouTube
+  username: ambratolm
+  url: https://youtube.com/ambratolm
+  description: YouTube is a video-sharing platform.
+  categories: video
+  icon: fab fa-youtube
+#===============================================================================
+- title: Facebook (Videos)
+  username: ambratolm2
+  url: https://facebook.com/ambratolm2/videos
+  description: Facebook is a social media and social networking service.
+  categories: video
+  icon: fab fa-facebook
+#===============================================================================
+- title: Twitch
+  username: ambratolm
+  url: https://twitch.tv/ambratolm
+  description: Twitch is a video live streaming service.
+  categories: video
+  icon: fab fa-twitch
+#===============================================================================
+- title: Dailymotion
+  username: ambratolm
+  url: https://www.dailymotion.com/Ambratolm
+  description: Dailymotion is a video-sharing platform.
+  categories: video
+  icon: fab fa-dailymotion
+#===============================================================================
+- title: Vimeo
+  username: ambratolm
+  url: https://vimeo.com/ambratolm
+  description: Vimeo is a video platform for video viewing services.
+  categories: video
+  icon: fab fa-vimeo
+#===============================================================================
+- title: Metacafe
+  username: ambratolm
+  url: https://www.metacafe.com/channels/ambratolm
+  description: Metacafe is a video-sharing platform.
+  categories: video
+  icon: fas fa-circle
+#===============================================================================
+- title: Instagram
+  username: ambratolm
+  url: https://instagram.com/ambratolm
+  description: Instagram is a photo and video-sharing social networking service.
+  categories: image
+  icon: fab fa-instagram
+#===============================================================================
+- title: Pinterest
+  username: ambratolm
+  url: https://www.pinterest.com/ambratolm
+  description: Pinterest is a social media platform for saving and discovering informations on the Web using images.
+  categories: image
+  icon: fab fa-pinterest
+#===============================================================================
+- title: Imgur
+  username: ambratolm
+  url: https://ambratolm.imgur.com
+  description: Imgur is an image hosting service and image sharing community.
+  categories: image
+  icon: fas fa-circle
+#===============================================================================
+- title: Flickr
+  username: ambratolm
+  url: https://www.flickr.com/photos/ambratolm
+  description: Flickr is an image and video hosting service.
+  categories: image
+  icon: fab fa-flickr
+#===============================================================================
+- title: Suar
+  username: ambratolm
+  url: https://suar.me/u/ambratolm
+  description: Suar is an image hosting and sharing service.
+  categories: image
+  icon: fas fa-circle
+#===============================================================================
+- title: DeviantArt
+  username: ambratolm
+  url: https://deviantart.com/ambratolm
+  description: DeviantArt is a community for artwork, videography, and photography.
+  categories: image
+  icon: fab fa-deviantart
+#===============================================================================
+- title: ArtStation
+  username: ambratolm
+  url: https://artstation.com/ambratolm
+  description: ArtStation is a showcase platform for art.
+  categories: image
+  icon: fab fa-artstation
+#===============================================================================
+- title: Bēhance
+  username: ambratolm
+  url: https://www.behance.net/ambratolm
+  description: Bēhance is a social media platform for creative works.
+  categories: image
+  icon: fab fa-behance
+#===============================================================================
+- title: Dribbble
+  username: ambratolm
+  url: https://dribbble.com/Ambratolm
+  description: Dribbble is a self-promotion and networking platform for digital designers.
+  categories: image
+  icon: fab fa-dribbble
+#===============================================================================
+- title: Pixiv
+  username: '35570648'
+  url: https://www.pixiv.net/member.php?id=35570648
+  description: Pixiv is an artists community.
+  categories: image
+  icon: fas fa-circle
+#===============================================================================
+- title: Mangaido
+  username: ambratolm
+  url: https://mangaido.com/en/u/ambratolm
+  description: Mangaido is an art platform for manga publication and translation.
+  categories: image
+  icon: fas fa-circle
+#===============================================================================
+- title: WebToon
+  username: ambratolm
+  url: https://www.webtoons.com/search?searchMode=AUTHOR&keyword=Ambratolm
+  description: WebToon is a digital comics publishing platform.
+  categories: image,document
+  icon: fas fa-circle
+#===============================================================================
+- title: Tapas
+  username: ambratolm
+  url: https://tapas.io/ambratolm
+  description: Tapas is a digital comics publishing platform.
+  categories: image,document
+  icon: fas fa-circle
+#===============================================================================
+- title: BeComics
+  username: ambratolm
+  url: http://www.becomics.com/profile/5e39c7d2b93927094b871b27
+  description: BeComics is a digital comics publishing platform.
+  categories: image,document
+  icon: fas fa-circle
+#===============================================================================
+- title: Tumblr
+  username: ambratolm
+  url: https://ambratolm.tumblr.com
+  description: Tumblr is a microblogging and social networking platform.
+  categories: image,document
+  icon: fab fa-tumblr
+#===============================================================================
+- title: Reddit
+  username: ambratolm
+  url: https://www.reddit.com/user/Ambratolm
+  description: Reddit is a social news aggregation, web content rating, and discussion platform.
+  categories: document, image
+  icon: fab fa-reddit
+#===============================================================================
+- title: Facebook
+  username: ambratolm2
+  url: https://facebook.com/ambratolm2
+  description: Facebook is a social media and social networking service.
+  categories: document,image,video
+  icon: fab fa-facebook
+#===============================================================================
+- title: Twitter
+  username: ambratolm
+  url: https://twitter.com/ambratolm
+  description: Twitter is a microblogging and social networking service.
+  categories: document,image
+  icon: fab fa-twitter
+#===============================================================================
+- title: LinkedIn
+  username: ambratolm
+  url: https://www.linkedin.com/in/ambratolm
+  description: LinkedIn is a business and employment-oriented service.
+  categories: document
+  icon: fab fa-linkedin
+#===============================================================================
+- title: about.me
+  username: ambratolm
+  url: https://about.me/ambratolm
+  description: about.me is a personal web hosting service.
+  categories: document
+  icon: fas fa-circle
+#===============================================================================
+- title: Blogger
+  username: '11842963546009788883'
+  url: https://www.blogger.com/profile/11842963546009788883
+  description: Blogger is a blog-publishing service.
+  categories: document
+  icon: fab fa-blogger
+#===============================================================================
+- title: Lulu
+  username: ambratolm
+  url: http://www.lulu.com/spotlight/ambratolm
+  description: Lulu is a print-on-demand, self-publishing, and distribution platform.
+  categories: document
+  icon: fas fa-circle
+#===============================================================================
+- title: Fiverr
+  username: ambratolm
+  url: https://fiverr.com/ambratolm
+  description: Fiverr is a marketplace for freelance services.
+  categories: image
+  icon: fas fa-circle
+  fund: true
+#===============================================================================
+- title: Zeerk
+  username: ambratolm
+  url: https://zeerk.com/user/Ambratolm
+  description: Zeerk is a marketplace for freelance services.
+  categories: image
+  icon: fas fa-circle
+  fund: true
+#===============================================================================
+- title: Khamsat
+  username: ambratolm
+  url: https://khamsat.com/user/ambratolm
+  description: Khamsat is a marketplace for freelance services.
+  categories: image
+  icon: fas fa-circle
+  fund: true
+#===============================================================================
+- title: Upwork
+  username: ambratolm
+  url: https://www.upwork.com/o/profiles/users/_~0114fea700c8e1d4fc
+  description: Upwork is a freelancing platform.
+  categories: ''
+  icon: fas fa-circle
+#===============================================================================
+- title: Fine Art America
+  username: ambratolm
+  url: https://fineartamerica.com/profiles/abdelhakim-elhafid
+  description: Fine Art America is an art marketplace and print-on-demand platform.
+  categories: image
+  icon: fas fa-circle
+  fund: true
+#===============================================================================
+- title: ArtPal
+  username: ambratolm
+  url: https://www.artpal.com/ambratolm
+  description: ArtPal is an art marketplace and print-on-demand platform.
+  categories: image
+  icon: fas fa-circle
+  fund: true
+#===============================================================================
+- title: Redbubble
+  username: ambratolm
+  url: https://www.redbubble.com/people/ambratolm
+  description: Redbubble is a marketplace for print-on-demand art based products.
+  categories: image
+  icon: fas fa-circle
+  fund: true
+#===============================================================================
+- title: eBay
+  username: ambratolm
+  url: https://www.ebay.com/usr/ambratolm
+  description: eBay is a commerce platform.
+  categories: ''
+  icon: fab fa-ebay
+#===============================================================================
+- title: Etsy
+  username: jzlkws2z
+  url: https://www.etsy.com/shop/ambratolm
+  description: Etsy is a commerce platform focused on handmade or vintage items and craft supplies.
+  categories: ''
+  icon: fab fa-etsy
+#===============================================================================
+- title: Patreon
+  username: ambratolm
+  url: https://www.patreon.com/Ambratolm
+  description: Patreon is a membership platform that provides business tools for creators to run a subscription content service.
+  categories: image
+  icon: fab fa-patreon
+  fund: true
+#===============================================================================
+- title: Ko-fi
+  username: ambratolm
+  url: https://ko-fi.com/ambratolm
+  description: Ko-fi is a service that provides tools for creators to get donations and monthly support.
+  categories: ''
+  icon: fas fa-circle
+  fund: true
+#===============================================================================
+- title: PayPal.Me
+  username: ambratolm
+  url: https://www.paypal.me/ambratolm
+  description: PayPal is a financial service for online payments. PayPal.Me is a faster and easier way to get paid through PayPal.
+  categories: ''
+  icon: fab fa-paypal
+  fund: true
+#===============================================================================
+# - title: ...
+#   username: ambratolm
+#   url: ...
+#   description: ...
+#   categories: ...
+#   icon: fas fa-circle
+#===============================================================================
+# - title: ...
+#   username: ambratolm
+#   url: ...
+#   description: ...
+#   categories: ...
+#   icon: fas fa-circle
+#===============================================================================
+# - title: ...
+#   username: ambratolm
+#   url: ...
+#   description: ...
+#   categories: ...
+#   icon: fas fa-circle
+#===============================================================================
+# - title: ...
+#   username: ambratolm
+#   url: ...
+#   description: ...
+#   categories: ...
+#   icon: fas fa-circle
+#===============================================================================
+# - title: ...
+#   username: ambratolm
+#   url: ...
+#   description: ...
+#   categories: ...
+#   icon: fas fa-circle
+#===============================================================================

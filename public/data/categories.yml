@@ -1,0 +1,94 @@
+---
+- name: "all"
+  title: "All"
+  subtitle: All creations by Ambratolm
+  description: "I make Programs, Games, Audios, Videos, Images, and Documents"
+  icon: "fas fa-asterisk"
+  image: ""
+  video: ""
+
+- name: program
+  title: Program
+  subtitle: Applications and Source Codes
+  description:
+    I make Programs. Program is series of coded software instructions to
+    control the operation of a computer or other machine
+  icon: fas fa-laptop
+  image: program.jpg
+  video: program.mp4
+  links:
+    - title: Ambratolm Lab
+      url: https://ambratolm.ml/lab
+      description: Program projects and experimentations.
+      icon: fas fa-flask
+    - title: Repositories on GitHub
+      url: https://github.com/ambratolm
+      description: Published open source programs.
+      icon: fab fa-github
+
+- name: game
+  title: Game
+  subtitle: Video-games and entertainment applications
+  description:
+    I make Video Games. Video Game is game played by electronically manipulating
+    images produced by a computer program on a television screen or other display
+    screen
+  icon: fas fa-gamepad
+  image: game.jpg
+  video: game.mp4
+  links:
+    - title: Games on itch.io
+      url: https://ambratolm.itch.io
+      description: Games store page.
+      icon: fab fa-itch-io
+    - title: Games on GameJolt
+      url: https://ambratolm.gamejolt.io
+      description: Games store page.
+      icon: fas fa-link
+
+- name: audio
+  title: Audio
+  subtitle: Sounds, Voices and Music
+  description:
+    I make Audios. Audio is sound, especially when recorded, transmitted,
+    or reproduced. Music is vocal or instrumental sounds (or both) combined in such
+    a way as to produce beauty of form, harmony, and expression of emotion
+  icon: fas fa-volume-up
+  image: audio.png
+  video: audio.mp4
+  embed: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/116672289&color=%2367515c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true
+
+- name: video
+  title: Video
+  subtitle: Video edits and motion productions
+  description:
+    I make Videos. Video is recording, reproducing, or broadcasting of
+    moving visual images
+  icon: fas fa-video
+  image: video.jpg
+  video: video.mp4
+  links:
+    - title: Videos on YouTube
+      url: https://youtube.com/ambratolm
+      description: Contains my video edits.
+      icon: fab fa-youtube
+
+- name: image
+  title: Image
+  subtitle: Pictures and Photos
+  description:
+    I make Images. Image is representation of the external form of a person
+    or thing in art
+  icon: fas fa-image
+  image: image.png
+  video: image.mp4
+
+- name: document
+  title: Document
+  substring: Articles, topics, tutotrials, summaries and Books
+  description:
+    I make Documents. Document is piece of written, printed, or electronic
+    matter that provides information or evidence or that serves as an official record
+  icon: fas fa-file-alt
+  image: document.jpg
+  video: document.mp4

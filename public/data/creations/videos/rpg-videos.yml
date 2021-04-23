@@ -1,0 +1,17 @@
+---
+name: rpg-videos
+title: RPG Videos
+description: RPG styled Stories & Conversations.
+categories: video
+tags: rpg,game,youtube
+icon: fas fa-video
+image: rpg-videos.jpg
+links:
+- title: Playlist on Youtube
+  url: https://www.youtube.com/playlist?list=PLsPDvHe4E0Z9K-5yLrOFViObbBd7R1CIk
+  description: Contains all of my rpg videos.
+  icon: fab fa-youtube
+- title: Playlist on Twitch
+  url: https://www.twitch.tv/collections/HUmqy8A9ShXkog
+  description: Contains all of my imported youtube rpg videos.
+  icon: fab fa-twitch

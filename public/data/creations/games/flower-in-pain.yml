@@ -1,0 +1,34 @@
+---
+name: flower-in-pain
+title: Flower in Pain
+description: Free 2D enigmatic-adventure and puzzle video-game for Windows.
+categories: game
+tags: pc,windows,2d,rpg,puzzle,adventure
+icon: fab fa-windows
+image: flower-in-pain.png
+links:
+  - title: Official Website
+    url: http://flowerinpain.blogspot.com
+    description: Official Website containing all informations about the game.
+    icon: fas fa-link
+  - title: Page on Ambratolm CF
+    url: http://elhafid-project.blogspot.com/2014/01/flower-in-pain-game-project-screen-shots.html
+    description: Ambratolm CF is my gallery of Drawings and Graphics used in my various Creative Projects.
+    icon: fas fa-link
+  - title: Page on Oniromancie
+    url: http://www.rpg-maker.fr/jeux-675-flower-in-pain.html
+    description: Oniromancie is a french game making community.
+    icon: fas fa-link
+  - title: Page on The Daily Cick
+    url: https://www.create-games.com/download.asp?id=8929
+    description: The Daily Cick is a game making community.
+    icon: fas fa-link
+  # - title: Page on Tashiro World
+  #   url: http://www.tashiroworld.com/fr/jeux-independants/flower-in-pain
+  #   description: Tashiro World is a game making community.
+  #   icon: fas fa-link
+  - title: Download
+    url: https://docs.google.com/file/d/0B0DuWGurSUq_WGNucXNyREk5X00
+    description: Download the game from Google Drive Server.
+    icon: fab fa-windows
+    download: true

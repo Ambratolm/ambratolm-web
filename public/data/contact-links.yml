@@ -1,0 +1,26 @@
+---
+
+- title: Google
+  url: https://www.google.com/search?q=Ambratolm
+  description: Search me on Google
+  icon: fab fa-google
+
+- title: Gmail
+  url: mailto:ambratolm@gmail.com
+  description: Send me an email
+  icon: fas fa-envelope
+
+- title: Facebook
+  url: https://www.facebook.com/ambratolm3
+  description: Check my profile on Facebook
+  icon: fab fa-facebook
+
+- title: Discord
+  url: https://discord.gg/Cj7EDxb
+  description: Join my server on Discord
+  icon: fab fa-discord
+
+- title: Skype
+  url: skype:ambratolm?userinfo
+  description: Check my profile on Skype
+  icon: fab fa-skype
