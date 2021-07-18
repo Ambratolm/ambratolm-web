@@ -7,7 +7,7 @@
 
 Ambratolm's Official Website.
 
-🌐 [**View Live Web Application**](https://ambratolm.ml)
+🌐 [**View Live Website**](https://ambratolm.ml)
 
 ![Screenshot](screenshot.jpg?raw=true)
 
