@@ -1,0 +1,67 @@
+{
+	"id" : "programs",
+	"title" : "PROGRAMS",
+	"description" : "Applications, Softwares, Source Codes",
+	"icon" : "fas fa-laptop",
+	"banner" : "programs.mp4",
+	"profiles" : [
+		{
+			"icon" : "fab fa-github",
+			"title" : "Github",
+			"description" : "Github Profile Page (Github.com/Ambratolm)",
+			"url" : "https://github.com/ambratolm"
+		}
+	],
+	"entries" : [
+		{
+			"poly" : "true",
+			"title" : "Source Codes",
+			"description" : "Open source computer development projects and tutorials.",
+			"tags" : [ "C", "C#", ".NET", "ASP.NET", "DevExpress", "PHP", "HTML", "CSS", "Bootstrap", "JavaScript", "JQuery", "AngularJS", "XML", "SQL", "SQL Server", "MySQL" ],
+			"icon" : "fas fa-code",
+			"thumbnail" : "codes.png",
+			"links" : [
+				{
+					"icon" : "fab fa-github",
+					"title" : "Repositories on Github",
+					"url" : "https://github.com/Ambratolm?tab=repositories"
+				},
+				{
+					"icon" : "fab fa-blogger",
+					"title" : "Programming Exercises",
+					"url" : "https://tdi-get.blogspot.com"
+				}
+			]
+		},
+		{
+			"poly" : "true",
+			"title" : "Applications",
+			"description" : "Variety computer software applications.",
+			"tags" : [ "Windows", "Web", "Android" ],
+			"icon" : "fas fa-laptop",
+			"thumbnail" : "apps.png",
+			"links" : [
+				{
+					"icon" : "fas fa-link",
+					"title" : "0.1 Example",
+					"url" : "https://ambratolm.ml/0.1"
+				},
+				{
+					"icon" : "fas fa-link",
+					"title" : "Shop Example",
+					"url" : "https://ambratolm.ml/0.1/shop"
+				},
+				{
+					"icon" : "fas fa-link",
+					"title" : "Rand Example",
+					"url" : "https://ambratolm.ml/0.1/rand"
+				},
+				{
+					"icon" : "fas fa-link",
+					"title" : "Rand Example (Alternative)",
+					"url" : "https://ambratolm.000webhostapp.com"
+				}
+			]
+		}
+	]
+}

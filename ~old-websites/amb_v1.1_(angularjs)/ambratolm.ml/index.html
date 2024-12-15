@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="ambratolmApp">
+	<head>
+		<!-- Title -------------------------------------------------- -->
+		<title ng-bind="website.title"></title>
+		<!-- Metadata -------------------------------------------------- -->
+		<meta charset="utf-8">
+		<meta name="description" content="{{ website.description }}">
+		<meta name="keywords" content="{{ website.keywords }}">
+		<meta name="author" content="{{ website.author }}">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon -------------------------------------------------- -->
+		<link rel="shortcut icon" type="image/png" ng-href="{{ website.favicon }}">
+		<!-- CSS Libraries -------------------------------------------------- -->
+		<link type="text/css" rel="stylesheet" href="assets/styles/bootstrap.min.css">
+		<!-- JS Libraries -------------------------------------------------- -->
+		<script type="text/javascript" src="assets/scripts/jquery.min.js"></script>
+		<script type="text/javascript" src="assets/scripts/fontawesome.all.min.js"></script>
+		<script type="text/javascript" src="assets/scripts/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="assets/scripts/clipboard.min.js"></script>
+		<script type="text/javascript" src="assets/scripts/angular.min.js"></script>
+		<script type="text/javascript" src="assets/scripts/angular-route.min.js"></script>
+		<script type="text/javascript" src="assets/scripts/angular-resource.min.js"></script>
+		<script type="text/javascript" src="assets/scripts/angular-sanitize.min.js"></script>
+		<script type="text/javascript" src="assets/scripts/angular-animate.min.js"></script>
+		<script type="text/javascript" src="assets/scripts/ngclipboard.min.js"></script>
+		<!-- Application Main -------------------------------------------------- -->
+		<script type="text/javascript" src="application/app.js"></script>
+		<!-- Application Pages -------------------------------------------------- -->
+		<script type="text/javascript" src="application/pages/home.js"></script>
+		<script type="text/javascript" src="application/pages/creations.js"></script>
+		<script type="text/javascript" src="application/pages/admin.js"></script>
+		<!-- Application Components -------------------------------------------------- -->
+		<script type="text/javascript" src="application/components/navbar.js"></script>
+		<script type="text/javascript" src="application/components/footer.js"></script>
+	</head>
+	<body>
+		<!-- View -------------------------------------------------- -->
+		<ng-view></ng-view>
+	</body>
+</html>

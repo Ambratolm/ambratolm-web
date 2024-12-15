@@ -1,0 +1,97 @@
+{
+	"id" : "games",
+	"title" : "GAMES",
+	"description" : "Video-Games, Video-Game Projects, Source Codes",
+	"icon" : "fas fa-gamepad",
+	"banner" : "games.mp4",
+	"profiles" : [
+		{
+			"icon" : "fas fa-user-circle",
+			"title" : "Itch",
+			"description" : "Itch Profile Page (Ambratolm.Itch.io)",
+			"url" : "https://ambratolm.itch.io"
+		},
+		{
+			"icon" : "fas fa-user-circle",
+			"title" : "Gamejolt",
+			"description" : "Gamejolt Profile Page (Ambratolm.Gamejolt.io)",
+			"url" : "https://ambratolm.gamejolt.io"
+		}
+	],
+	"entries" : [
+		{
+			"poly" : "true",
+			"title" : "Video-Games",
+			"description" : "Variety computer video-games.",
+			"tags" : [ "Windows", "Web", "Android" ],
+			"icon" : "fas fa-gamepad",
+			"thumbnail" : "games.png",
+			"links" : [
+				{
+					"icon" : "fas fa-user-circle",
+					"title" : "Gamestore on Itch",
+					"url" : "https://ambratolm.itch.io/"
+				},
+				{
+					"icon" : "fas fa-user-circle",
+					"title" : "Gamestore on Gamejolt",
+					"url" : "https://gamejolt.com/@ambratolm/games"
+				}
+			]
+		},
+		{
+			"title" : "Flower in Pain",
+			"description" : "Free 2D enigmatic-adventure and puzzle video-game for Windows.",
+			"tags" : [ "Windows", "2D", "RPG", "Puzzle", "Adventure" ],
+			"icon" : "fab fa-windows",
+			"thumbnail" : "flowerinpain.png",
+			"links" : [
+				{
+					"icon" : "fas fa-link",
+					"title" : "Official Page",
+					"url" : "http://flowerinpain.blogspot.com"
+				},
+				{
+					"icon" : "fas fa-link",
+					"title" : "Official Page on My Project's Artwork",
+					"url" : "http://elhafid-project.blogspot.com/2014/01/flower-in-pain-game-project-screen-shots.html"
+				},
+				{
+					"icon" : "fas fa-link",
+					"title" : "Page on Oniromancie",
+					"url" : "http://www.rpg-maker.fr/jeux-675-flower-in-pain.html"
+				},
+				{
+					"icon" : "fas fa-link",
+					"title" : "Page on The Daily Cick",
+					"url" : "https://www.create-games.com/download.asp?id=8929"
+				},
+				{
+					"icon" : "fas fa-link",
+					"title" : "Page on Tashiro World",
+					"url" : "http://www.tashiroworld.com/fr/jeux-independants/flower-in-pain"
+				},
+				{
+					"download" : "true",
+					"icon" : "fas fa-download",
+					"title" : "Download",
+					"url" : "https://docs.google.com/file/d/0B0DuWGurSUq_WGNucXNyREk5X00"
+				}
+			]
+		},
+		{
+			"title" : "TapTop",
+			"description" : "Free 2D arcade video-game for Android.",
+			"tags" : [ "Android", "2D", "Arcade" ],
+			"icon" : "fab fa-android",
+			"thumbnail" : "taptop.png",
+			"links" : [
+				{
+					"icon" : "fas fa-link",
+					"title" : "Page on Itch",
+					"url" : "https://ambratolm.itch.io/taptop"
+				}
+			]
+		}
+	]
+}

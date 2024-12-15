@@ -1,0 +1,25 @@
+{
+	"id" : "faq",
+	"title" : "GENERAL FAQ",
+	"description" : "Answers to frequently asked questions.",
+	"icon" : "fas fa-question-circle",
+	"banner" : "token.mp4",
+	"entries" : [
+		{
+			"question" : "Who are you ?",
+			"answer" : "I am Ambratolm.\nI will create my own world."
+		},
+		{
+			"question" : "What is your goal ?",
+			"answer" : "Making cool things for cool multimedias.\nPrograms, games, audio, videos, images and documents.\n"
+		},
+		{
+			"question" : "What are your latest creations ?",
+			"answer" : "Created in 2018 :\n• Android Mobile Games.\n• League of Legends Videos and Images."
+		},
+		{
+			"question" : "What are you making currently ?",
+			"answer" : "Making this Website while Learning more about\nWeb development using HTML, CSS, XML and JS."
+		}
+	]
+}

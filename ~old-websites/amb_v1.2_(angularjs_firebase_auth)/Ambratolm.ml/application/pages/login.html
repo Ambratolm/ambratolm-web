@@ -1,0 +1,74 @@
+<!-- ================================================== -->
+<!-- ♦ Login View -->
+<!-- ================================================== -->
+
+<!-- -------------------------------------------------- -->
+<!-- ♦ Navbar -->
+<!-- -------------------------------------------------- -->
+<amb-navbar></amb-navbar>
+
+<!-- -------------------------------------------------- -->
+<!-- ♦ Container -->
+<!-- -------------------------------------------------- -->
+<div class="container-fluid px-5 mb-5" style="margin-top: 100px;">
+	<!-- -------------------------------------------------- -->
+	<!-- ♦ Row -->
+	<!-- -------------------------------------------------- -->
+	<div class="row">
+		<!-- -------------------------------------------------- -->
+		<!-- ♦ Left Column -->
+		<!-- -------------------------------------------------- -->
+		<div class="col-sm-5">
+			<form name="loginForm" class="form" novalidate="">
+				<h3 class="font-weight-light"><i class="fas fa-sign-in-alt"></i> Sign in</h3>
+				<hr>
+				<div ng-if="loginMessage" class="alert alert-dark border border-dark">
+					<i class="fas fa-info-circle"></i>&nbsp;&nbsp; {{ loginMessage }}
+				</div>
+				<div class="form-group input-group">
+					<div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-envelope"></i></span></div>
+					<input type="name" name="email" ng-model="user.email" placeholder="Email" class="form-control" required>
+				</div>
+				<div class="form-group input-group">
+					<div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-key"></i></span></div>
+					<input type="password" name="password" ng-model="user.password" placeholder="Password" class="form-control" required>
+				</div>
+				<button type="submit" class="btn btn-dark" ng-click="login()">
+					<i class="fas fa-sign-in-alt"></i> Log in
+				</button>
+			</form>
+		</div>
+		<!-- -------------------------------------------------- -->
+		<!-- ♦ Right Column -->
+		<!-- -------------------------------------------------- -->
+		<div class="col-sm-7">
+			<form name="registerForm" class="form" novalidate="">
+				<h3 class="font-weight-light"><i class="fas fa-user-plus"></i> Sign up</h3>
+				<hr>
+				<div ng-if="registerMessage" class="alert alert-dark border border-dark">
+					<i class="fas fa-info-circle"></i>&nbsp;&nbsp; {{ registerMessage }}
+				</div>
+				<div class="form-group input-group">
+					<div class="input-group-append"><span class="input-group-text"><i class="fas fa-user"></i></span></div>
+					<input type="name" name="name" ng-model="user.name" placeholder="Name" class="form-control" required>
+				</div>
+				<div class="form-group input-group">
+					<div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-envelope"></i></span></div>
+					<input type="name" name="email" ng-model="user.email" placeholder="Email" class="form-control" required>
+				</div>
+				<div class="form-group input-group">
+					<div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-key"></i></span></div>
+					<input type="password" name="password" ng-model="user.password" placeholder="Password" class="form-control" required>
+				</div>
+				<button type="submit" class="btn btn-dark" ng-click="register()">
+					<i class="fas fa-user-plus"></i> Register
+				</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- -------------------------------------------------- -->
+<!-- ♦ Footer -->
+<!-- -------------------------------------------------- -->
+<amb-footer></amb-footer>

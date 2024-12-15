@@ -1,0 +1,228 @@
+[
+    {
+        "title":"Web Pages Examples",
+        "description":"",
+        "categories":[
+            "programs"
+        ],
+        "tags":[
+            "Web",
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "PHP"
+        ],
+        "icon":"fab fa-php",
+        "image":"assets/images/token.png",
+        "links":[
+            {
+                "title":"Ambratolm 0.1 Example",
+                "url":"https://ambratolm.ml/0.1",
+                "description":"First version of Ambratolm Website",
+                "icon":"fas fa-link"
+            },
+            {
+                "title":"ShopShop Example",
+                "url":"https://ambratolm.ml/0.1/shop",
+                "description":"",
+                "icon":"fas fa-link"
+            },
+            {
+                "title":"Random Example",
+                "url":"https://ambratolm.ml/0.1/rand",
+                "description":"",
+                "icon":"fas fa-link"
+            },
+            {
+                "title":"Random Example (Alternative)",
+                "url":"https://ambratolm.000webhostapp.com",
+                "description":"",
+                "icon":"fas fa-link"
+            }
+        ]
+    },
+    {
+        "title":"Flower in Pain",
+        "description":"Free 2D enigmatic-adventure and puzzle video-game for Windows.",
+        "categories":[
+            "games"
+        ],
+        "tags":[
+            "Windows",
+            "2D",
+            "RPG",
+            "Puzzle",
+            "Adventure"
+        ],
+        "icon":"fab fa-windows",
+        "image":"assets/images/flowerinpain.png",
+        "links":[
+            {
+                "title":"Official Page",
+                "url":"http://flowerinpain.blogspot.com",
+                "description":"",
+                "icon":"fas fa-link"
+            },
+            {
+                "title":"Official Page on My Project's Artwork",
+                "url":"http://elhafid-project.blogspot.com/2014/01/flower-in-pain-game-project-screen-shots.html",
+                "description":"",
+                "icon":"fas fa-link"
+            },
+            {
+                "title":"Page on Oniromancie",
+                "url":"http://www.rpg-maker.fr/jeux-675-flower-in-pain.html",
+                "description":"",
+                "icon":"fas fa-link"
+            },
+            {
+                "title":"Page on The Daily Cick",
+                "url":"https://www.create-games.com/download.asp?id=8929",
+                "description":"",
+                "icon":"fas fa-link"
+            },
+            {
+                "title":"Page on Tashiro World",
+                "url":"http://www.tashiroworld.com/fr/jeux-independants/flower-in-pain",
+                "description":"",
+                "icon":"fas fa-link"
+            },
+            {
+                "download":"true",
+                "title":"Download",
+                "url":"https://docs.google.com/file/d/0B0DuWGurSUq_WGNucXNyREk5X00",
+                "description":"",
+                "icon":"fas fa-download"
+            }
+        ]
+    },
+    {
+        "title":"TapTop",
+        "description":"Free 2D arcade video-game for Android.",
+        "categories":[
+            "games"
+        ],
+        "tags":[
+            "Android",
+            "2D",
+            "Arcade"
+        ],
+        "icon":"fab fa-android",
+        "image":"assets/images/taptop.png",
+        "links":[
+            {
+                "title":"Page on Itch",
+                "url":"https://ambratolm.itch.io/taptop",
+                "description":"",
+                "icon":"fas fa-link"
+            }
+        ]
+    },
+    {
+        "title":"",
+        "description":"",
+        "categories":[
+            "audio"
+        ],
+        "tags":[
+            "A",
+            "B",
+            "C"
+        ],
+        "icon":"fas fa-music",
+        "image":"assets/images/token.png",
+        "links":[
+            {
+                "title":"",
+                "url":"",
+                "description":"",
+                "icon":"fas fa-link"
+            }
+        ]
+    },
+    {
+        "title":"League of Legends Videos",
+        "description":"League of Legends video content.",
+        "categories":[
+            "videos"
+        ],
+        "tags":[
+            "League of Legends",
+            "YouTube"
+        ],
+        "icon":"fab fa-youtube",
+        "image":"assets/images/league.png",
+        "links":[
+            {
+                "title":"Playlist on Youtube",
+                "url":"https://www.youtube.com/playlist?list=PLsPDvHe4E0Z9-qTt19zZ8RRHPe4WYfXIH",
+                "description":"",
+                "icon":"fab fa-youtube-square"
+            }
+        ]
+    },
+    {
+        "title":"RPG Videos",
+        "description":"RPG Styled Stories & Conversations.",
+        "categories":[
+            "videos"
+        ],
+        "tags":[
+            "RPG",
+            "YouTube"
+        ],
+        "icon":"fas fa-lol",
+        "image":"assets/images/rpg.png",
+        "links":[
+            {
+                "title":"Playlist on Youtube",
+                "url":"https://www.youtube.com/playlist?list=PLsPDvHe4E0Z9K-5yLrOFViObbBd7R1CIk",
+                "description":"",
+                "icon":"fab fa-youtube-square"
+            }
+        ]
+    },
+    {
+        "title":"My Project's Artwork",
+        "description":"Gallery of Drawings and Graphics used in my various Creative Projects.",
+        "categories":[
+            "images"
+        ],
+        "tags":[
+            "Artwork"
+        ],
+        "icon":"fab fa-blogger",
+        "image":"assets/images/token.png",
+        "links":[
+            {
+                "title":"Gallery on My Project's Artwork",
+                "url":"http://elhafid-project.blogspot.com",
+                "description":"",
+                "icon":"fab fa-blogger"
+            }
+        ]
+    },
+    {
+        "title":"Wracurd Artwork Book",
+        "description":"An artworks compilation book.",
+        "categories":[
+            "images",
+            "documents"
+        ],
+        "tags":[
+            "Artwork",
+            "Book",
+            "Artbook"
+        ],
+        "icon":"fas fa-file",
+        "image":"assets/images/wracurd.png",
+        "links":[
+            {
+                "title":"Book on Lulu",
+                "url":"http://www.lulu.com/shop/ambratolm/wracurd/ebook/product-23263158.html",
+                "description":"",
+                "icon":"fas fa-link"
+            }
+        ]
+    }
+]

@@ -1,0 +1,132 @@
+<!-- ================================================== -->
+<!-- ♦ Login View -->
+<!-- ================================================== -->
+
+<!-- -------------------------------------------------- -->
+<!-- ♦ Navbar -->
+<!-- -------------------------------------------------- -->
+<amb-navbar></amb-navbar>
+
+<!-- -------------------------------------------------- -->
+<!-- ♦ Container -->
+<!-- -------------------------------------------------- -->
+<div class="container-fluid px-5 mb-5" style="margin-top: 100px;">
+	<!-- -------------------------------------------------- -->
+	<!-- ♦ Row -->
+	<!-- -------------------------------------------------- -->
+	<div class="row">
+		<div class="col">
+			<!-- Authentication Required Error Alert -->
+			<div ng-show="refPage.name && refPage.error" class="alert alert-dismissible alert-dark border border-dark fade show" ole="alert">
+				<i class="fas fa-info-circle"></i>&nbsp;&nbsp;
+				<span class="font-weight-bold">Access denied</span> :
+				Sign on is required to access <span class="font-italic">{{ refPage.title }} page</span>.
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			    	<span aria-hidden="true">&times;</span>
+			  	</button>
+			</div>
+			<!-- Authentication Required Error Alert -->
+			<div ng-show="refPage.name && !refPage.error" class="alert alert-dismissible alert-dark border border-dark fade show" ole="alert">
+				<i class="fas fa-info-circle"></i>&nbsp;&nbsp;
+				<span class="font-weight-bold">Sign off</span> :
+				Successfully logged out.
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			    	<span aria-hidden="true">&times;</span>
+			  	</button>
+			</div>
+		</div>
+	</div>
+	<!-- -------------------------------------------------- -->
+	<!-- ♦ Row -->
+	<!-- -------------------------------------------------- -->
+	<div class="row">
+		<!-- -------------------------------------------------- -->
+		<!-- ♦ Left Column -->
+		<!-- -------------------------------------------------- -->
+		<!-- Error message template : The {field} is empty / invalid. -->
+		<div class="col-sm-5">
+			<!-- -------------------------------------------------- -->
+			<!-- ♦ Login Form -->
+			<!-- -------------------------------------------------- -->
+			<form name="loginForm" class="form" novalidate="" ng-submit="login()">
+				<h3 class="font-weight-light">
+					<i class="fas fa-sign-in-alt"></i> Sign in
+				</h3>
+				<hr>
+				<!-- Login Error Alert -->
+				<div ng-show="status.login" class="alert alert-dark border border-dark">
+					<i class="fas fa-info-circle"></i>&nbsp;&nbsp;
+					{{ status.login }}
+				</div>
+				<!-- Login Controls Group -->
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"><i class="fas fa-envelope"></i></span>
+					</div>
+					<input type="email" name="email" ng-model="user.email" placeholder="Email" ng-class="'form-control ' + (user.email || loginForm.email.$touched ? (loginForm.email.$valid ? 'is-valid' : 'is-invalid') : '')" ng-required="true">
+				</div>
+				<!--  -->
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"><i class="fas fa-key"></i></span>
+					</div>
+					<input type="password" name="password" ng-model="user.password" placeholder="Password" ng-class="'form-control ' + (user.password || loginForm.password.$touched ? (loginForm.password.$valid ? 'is-valid' : 'is-invalid') : '')" ng-required="true">
+				</div>
+				<!-- Login Button -->
+				<button type="submit" class="btn btn-dark" ng-disabled="loginForm.$invalid">
+					<i class="fas fa-sign-in-alt"></i> Log in
+				</button>
+			</form>
+		</div>
+		<!-- -------------------------------------------------- -->
+		<!-- ♦ Right Column -->
+		<!-- -------------------------------------------------- -->
+		<div class="col-sm-7">
+			<!-- -------------------------------------------------- -->
+			<!-- ♦ Register Form -->
+			<!-- -------------------------------------------------- -->
+			<form name="registerForm" class="form" novalidate="" ng-submit="register()">
+				<h3 class="font-weight-light">
+					<i class="fas fa-user-plus"></i> Sign up
+				</h3>
+				<hr>
+				<!-- Register Error Alert -->
+				<div ng-show="status.register" class="alert alert-dark border border-dark">
+					<i class="fas fa-info-circle"></i>&nbsp;&nbsp;
+					{{ status.register }}
+				</div>
+				<!-- Register Controls Group -->
+				<div class="form-group input-group">
+					<div class="input-group-append">
+						<span class="input-group-text"><i class="fas fa-user"></i></span>
+					</div>
+					<input type="text" name="name" ng-model="user.name" placeholder="Name" ng-class="'form-control ' + (user.name || registerForm.name.$touched ? (registerForm.name.$valid ? 'is-valid' : 'is-invalid') : '')" ng-required="true">
+				</div>
+				<!--  -->
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"><i class="fas fa-envelope"></i></span>
+					</div>
+					<input type="email" name="email" ng-model="user.email" placeholder="Email" ng-class="'form-control ' + (user.email || registerForm.email.$touched ? (registerForm.email.$valid ? 'is-valid' : 'is-invalid') : '')" ng-required="true">
+				</div>
+				<!--  -->
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"><i class="fas fa-key"></i></span>
+					</div>
+					<input type="password" name="password" ng-model="user.password" placeholder="Password" ng-class="'form-control ' + (user.password || registerForm.password.$touched ? (registerForm.password.$valid ? 'is-valid' : 'is-invalid') : '')" ng-required="true">
+				</div>
+				<!-- Register Button -->
+				<button type="submit" class="btn btn-dark" ng-disabled="registerForm.$invalid">
+					<i class="fas fa-user-plus"></i> Register
+				</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- -------------------------------------------------- -->
+<!-- ♦ Footer -->
+<!-- -------------------------------------------------- -->
+<br><br><br><br><br><br><br>
+<amb-footer></amb-footer>

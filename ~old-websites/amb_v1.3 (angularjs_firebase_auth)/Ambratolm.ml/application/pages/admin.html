@@ -1,0 +1,102 @@
+<!-- ================================================== -->
+<!-- ♦ Admin View -->
+<!-- ================================================== -->
+
+<!-- -------------------------------------------------- -->
+<!-- ♦ Navbar -->
+<!-- -------------------------------------------------- -->
+<amb-navbar></amb-navbar>
+
+<!-- -------------------------------------------------- -->
+<!-- ♦ Container -->
+<!-- -------------------------------------------------- -->
+<div class="container-fluid px-5 mb-5" style="margin-top: 100px;">
+	<!-- -------------------------------------------------- -->
+	<!-- ♦ Row -->
+	<!-- -------------------------------------------------- -->
+	<div class="row">
+		<!-- -------------------------------------------------- -->
+		<!-- ♦ Left Column -->
+		<!-- -------------------------------------------------- -->
+		<div class="col-sm-9">
+				<!-- Pages -->
+				<h3>Pages <span class="badge badge-pill badge-light">{{ pagesCount }}</span> <button type="button" class="btn btn-outline-dark" ng-click="editedPageId = ''"><i class="fas fa-file"></i> New Page</button></h3>
+				  <div class="table-responsive">
+				  	<table id="pages" class="table table-bordered table-hover table-sm">
+				  	  <thead class="thead-light">
+				  	    <tr>
+			  	    	  <th scope="col">#</th>
+			  	    	   <th scope="col">Hash/ID</th>
+				  	      <th scope="col">♦</th>
+				  	      <th scope="col">Name</th>
+				  	      <th scope="col">Title</th>
+				  	      <th scope="col">Description</th>
+				  	      <th scope="col">Is HomePage</th>
+				  	      <th scope="col">[Actions]</th>
+				  	    </tr>
+				  	  </thead>
+				  	  <tbody>
+				  	    <tr ng-repeat="(index, pageItem) in pagesList"
+				  	    	ng-class="editedPageId == pageItem.$id ? 'table-active' : ''">
+				  	      <td>{{ index }}</td>
+				  	      <td tooltip="{{  pageItem.$id }}" data-placement="right">{{ pageItem.$id | limitTo : 7 }}</td>
+				  	      <td><i ng-class="pageItem.icon" title="{{ pageItem.icon }}"></i></td>
+				  	      <td>{{ pageItem.name }}</td>
+				  	      <td>{{ pageItem.title }}</td>
+				  	      <td>{{ pageItem.description }}</td>
+				  	      <td>{{ pageItem.isHomePage ?  "Yes" : "No" }}</td>
+				  	      <td>
+				  	      	<button type="button" class="btn btn-sm btn-outline-danger" ng-click="delete(pageItem.$id)" tooltip="Delete"><i class="fa fa-trash"></i></button>
+				  	      	<button type="button" class="btn btn-sm btn-outline-primary" ng-click="openEdit(pageItem.$id)" tooltip="Edit"><i class="fas fa-edit"></i></button>
+				  	      </td>
+				  	    </tr>
+				  	  </tbody>
+				  	</table>
+				  </div>
+		</div>
+		<!-- -------------------------------------------------- -->
+		<!-- ♦ Right Column -->
+		<!-- -------------------------------------------------- -->
+		<div class="col-sm-3">
+			<h3>{{ editedPageId ? "Edit Page " + editedPageId : "Add New Page" }}</h3>
+			<form name="form" novalidate="" ng-submit="addOrEdit(editedPageId)">
+			  <div class="form-group">
+			    <label for="name">Name</label>
+			    <input ng-model="page.name" type="text" class="form-control" id="name" placeholder="#name">
+			  </div>
+			  <div class="form-group" ">
+			    <label for="title">Title</label>
+			    <input ng-model="page.title" type="text" class="form-control" id="title" placeholder="Title">
+			  </div>
+			  <div class="form-group" ">
+			    <label for="description">Description</label>
+			    <input ng-model="page.description" type="text" class="form-control" id="description" placeholder="Description">
+			  </div>
+			  <div class="form-group" ">
+			    <label for="icon">Icon</label>
+			    <div class="input-group mb-3">
+			      <div class="input-group-prepend">
+			        <span class="input-group-text" id="iconView"><i ng-class='page.icon'></i></span>
+			      </div>
+			      <input ng-model="page.icon" type="text" class="form-control" id="icon" placeholder="Example : fas fa-crown" aria-label="icon" aria-describedby="iconView">
+			    </div>
+			  </div>
+			  <div class="form-group" ">
+			    <div class="form-check">
+			      <input ng-model="page.isHomePage" class="form-check-input" type="checkbox" id="isHomePage">
+			      <label class="form-check-label" for="isHomePage">
+			        Is HomePage
+			      </label>
+			    </div>
+			  </div>
+			  <!-- Save -->
+			  <button type="submit" class="btn btn-dark">{{ editedPageId ? "Update Page" : "Add Page" }}</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- -------------------------------------------------- -->
+<!-- ♦ Footer -->
+<!-- -------------------------------------------------- -->
+<amb-footer></amb-footer>

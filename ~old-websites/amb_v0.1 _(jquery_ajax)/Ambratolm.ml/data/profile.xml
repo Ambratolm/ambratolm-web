@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profile>
+	<name>Ambratolm</name>
+	<title>⋰`*•.¸,∻♛∻,¸.•*´⋱</title>
+	<description>
+		
+	</description>
+	<avatar>resources/avatar.jpg</avatar>
+	<links>
+		<link>
+			<icon>fas fa-envelope</icon>
+			<title>Gmail</title>
+			<url>mailto:ambratolm@gmail.com</url>
+		</link>
+		<link>
+			<icon>fab fa-facebook</icon>
+			<title>Facebook</title>
+			<url>https://www.facebook.com/ambratolm3</url>
+		</link>
+		<link>
+			<icon>fab fa-discord</icon>
+			<title>Discord</title>
+			<url>https://discord.gg/Cj7EDxb</url>
+		</link>
+		<link>
+			<icon>fab fa-skype</icon>
+			<title>Skype</title>
+			<url>skype:ambratolm?userinfo</url>
+		</link>
+	</links>
+</profile>

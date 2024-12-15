@@ -1,0 +1,50 @@
+{
+  "name": "ambratolm-website",
+  "version": "1.0.0",
+  "description": "Ambratolm's website project",
+  "main": "app.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server"
+  },
+  "keywords": [
+    "ambratolm",
+    "ambratolm website",
+    "ambratolm application"
+  ],
+  "author": "Ambratolm",
+  "license": "MIT",
+  "repository": "",
+  "dependencies": {
+    "angular": "^1.7.8",
+    "angular-ui-router": "^1.0.22",
+    "angularfire": "^2.3.0",
+    "animate.css": "^3.7.2",
+    "bootstrap": "^4.3.1",
+    "firebase": "^3.9.0",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.6.2",
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-angularjs-annotate": "^0.10.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.5.0",
+    "file-loader": "^4.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
+  }
+}

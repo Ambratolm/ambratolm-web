@@ -1,0 +1,99 @@
+<!--=========================================================================-->
+<!-- ■ FaviconUrlInput Directive Template -->
+<!--=========================================================================-->
+
+<div class="animated fadeInUp" ng-if="visible">
+	<div class="input-group" ng-form="faviconUrlInputForm">
+		<!--------------------------------------------------------------------->
+		<!-- ● Favicon URL Input (External URL) -->
+		<!--------------------------------------------------------------------->
+		<input
+			name="faviconExternalUrl"
+			type="text"
+			title="Edit favicon URL"
+			placeholder="Favicon External URL"
+			class="form-control"
+			aria-label="Favicon URL"
+			aria-describedby="favicon-addon"
+			ng-model="faviconUrlInput.url"
+			ng-model-options="{ debounce: 500 }"
+		/>
+		<!--------------------------------------------------------------------->
+		<!-- ● Favicon Image Preview (External URL) -->
+		<!--------------------------------------------------------------------->
+		<div class="input-group-append">
+			<span class="input-group-text" id="favicon-addon">
+				<img
+					id="favicon-external-url-preview"
+					title="Favicon"
+					alt="Favicon"
+					width="16px"
+					class="ml-1"
+					ng-src="{{faviconUrlInput.url}}"
+					amb-on-empty-src="{{faviconUrlInput.onEmptySrc}}"
+					amb-on-error-src="{{faviconUrlInput.onErrorSrc}}"
+				/>
+			</span>
+		</div>
+	</div>
+	<!------------------------------------------------------------------------->
+	<!-- ● Favicon Error Message & Actions Buttons -->
+	<!------------------------------------------------------------------------->
+	<div class="container-fluid p-0 mt-2">
+		<div class="row">
+			<!----------------------------------------------------------------->
+			<!-- ● Favicon Error Message -->
+			<!----------------------------------------------------------------->
+			<div class="col-md-7">
+				<div class="text-danger" ng-if="faviconUrlInput.error">
+					<i class="fas fa-link"></i>&nbsp;
+					<span
+						class="small"
+						ng-if="faviconUrlInput.error.invalidUrl"
+					>
+						Invalid URL format
+					</span>
+				</div>
+				<div class="text-muted small">
+					<i class="fas fa-globe"></i>
+					http, https
+				</div>
+			</div>
+			<!----------------------------------------------------------------->
+			<!-- ● Favicon Apply & Cancel Buttons -->
+			<!----------------------------------------------------------------->
+			<div class="col-md-5 pt-2 pt-md-0">
+				<div
+					class="btn-group float-right"
+					role="group"
+					aria-label="ApplyCancel"
+				>
+					<!--------------------------------------------------------->
+					<!-- ● Favicon Apply Button -->
+					<!--------------------------------------------------------->
+					<button
+						type="button"
+						title="Apply"
+						class="btn btn-sm btn-outline-secondary"
+						ng-disabled="!faviconUrlInput.url ||
+							faviconUrlInput.error"
+						ng-click="faviconUrlInput.apply()"
+					>
+						<i class="fas fa-check"></i> Apply
+					</button>
+					<!--------------------------------------------------------->
+					<!-- ● Favicon Cancel Button -->
+					<!--------------------------------------------------------->
+					<button
+						type="button"
+						title="Cancel"
+						class="btn btn-sm btn-outline-secondary"
+						ng-click="faviconUrlInput.cancel()"
+					>
+						<i class="fas fa-times"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

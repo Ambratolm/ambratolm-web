@@ -1,0 +1,67 @@
+<div id="content-header">
+   <h5 id="content-title"></h5>
+   <hr>
+</div>
+
+<div id="content-body"></div>
+
+<div id="content-footer"></div>
+
+<script type="text/javascript">
+	if (pages.current == pages.home.name) {
+		$("#content-title").html('<i class="fas fa-question-circle"></i> GENERAL FAQ');
+        $("#content-date").text('November 20, 2018');
+        $.get("data/faq.xml", function(xml) {
+            var faqEntryId = 0;
+            $("#content-body").append("<div id='content-faq' class='list-group'></div>");
+            $("#content-faq").empty();
+            $(xml).find("entry").each(function() {
+                $("#content-faq").append($([
+	                "<a class='list-group-item list-group-item-action list-group-item-light bg-light' " +
+	                        "data-toggle='collapse' " + "data-target='#faq-entry-" + faqEntryId + "' href='#'>",
+	                        $(this).find("question").text(),
+	                "</a>",
+	                "<p class='collapse show list-group-item' id='faq-entry-" + faqEntryId + "' >",
+	                        $(this).find("answer").text().replace(/\\n/g, "<br>"),
+	                "</p>"
+                ].join("\n")));
+                faqEntryId++;
+            });
+        });
+	} else {
+		$("#content-title").html('<i class="fas fa-folder-open"></i> CREATIONS');
+    	$("#content-date").text("November 20, 2018");
+		$("#content-body").append($([
+			'<div class="container mt-3">',
+				'<div id="content-creations" class=" row border p-5"></div>',
+			'</div>'
+    	].join('\n')));
+		$.get("data/creations.xml", function(xml) {
+			$("#content-creations").empty();
+			var creationsLinksId = 0;
+			$(xml).find(pages.current + " entry").each(function() {
+				$("#content-creations").append('<div class="col-md-12 "></div>').append($([
+				//'<img class="mr-3 img-thumbnail rounded-circle" width="64px" height="64px" src="' + $(this).find("thumbnail").text() + '">',
+			  	'<i class="display-4 mr-3 ' +  $(this).find("icon").first().text() + '"></i>',
+		  		'<div class="media-body">',
+			    	'<h4>' + $(this).find("title").first().text() + '</h4>',
+			    	'<p class="text-justify">' + $(this).find("description").text() + '</p> ',
+			    	'<ul id="creations-links-' + creationsLinksId + '" class="nav nav-pills flex-column"></ul>',
+			  	'</div>',
+				].join('\n')));
+				$("#creations-links").empty();
+				$(this).find("links link").each(function() {
+				 	$("#creations-links-" + creationsLinksId).append($([
+				 		'<li class="nav-item">',
+							'<a class="nav-link" target="_blank" href="' + $(this).find("url").text() + '">',
+								'<i class="' + $(this).find("icon").text() + '"></i>&nbsp;',
+								$(this).find("title").text(),
+							'</a>',
+						'</li>',
+			 		].join("\n")));
+				});
+				creationsLinksId++;
+			});
+		});
+	}
+</script>

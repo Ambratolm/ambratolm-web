@@ -1,0 +1,57 @@
+[
+    {
+        "name":"programs",
+        "title":"Programs",
+        "description":"I make Programs. Program is series of coded software instructions to control the operation of a computer or other machine",
+        "tags":["Program","Application","Software","Code","Script","Programming","Development","Computer","Web","Mobile"],
+        "icon":"fas fa-laptop",
+        "image":"assets/images/programs.png",
+        "video":"assets/videos/programs.mp4"
+    },
+    {
+        "name":"games",
+        "title":"Games",
+        "description":"I make Video Games. Video Game is game played by electronically manipulating images produced by a computer program on a television screen or other display screen",
+        "tags":["Game","Video Game","Interactive","Application","Indie"],
+        "icon":"fas fa-gamepad",
+        "image":"assets/images/games.png",
+        "video":"assets/videos/games.mp4"
+    },
+    {
+        "name":"audio",
+        "title":"Audio",
+        "description":"I make Audio and Music. Audio is sound, especially when recorded, transmitted, or reproduced. Music is vocal or instrumental sounds (or both) combined in such a way as to produce beauty of form, harmony, and expression of emotion",
+        "tags":["Audio","Music","Sound","Record","Effect","Background","SFX","BGM"],
+        "icon":"fas fa-volume-up",
+        "image":"assets/images/audio.png",
+        "video":"assets/videos/audio.mp4",
+        "embed":"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/116672289&color=%2367515c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+    },
+    {
+        "name":"videos",
+        "title":"Videos",
+        "description":"I make Videos. Video is recording, reproducing, or broadcasting of moving visual images",
+        "tags" : ["Video","Record","Effect","Clip","Movie","Film","Serie","Documentary","Course","Tutorial","TV","Cinema","Montage","Edit"],
+        "icon":"fas fa-video",
+        "image":"assets/images/videos.png",
+        "video":"assets/videos/videos.mp4"
+    },
+    {
+        "name":"images",
+        "title":"Images",
+        "description":"I make Images. Image is representation of the external form of a person or thing in art",
+        "tags":["Image","Picture","Photo","Graphic","Design","Drawing","Artwork","Visual","Interface","Color","Comic","Manga"],
+        "icon":"fas fa-image",
+        "image":"assets/images/images.png",
+        "video":"assets/videos/images.mp4"
+    },
+    {
+        "name":"documents",
+        "title":"Documents",
+        "description":"I make Documents. Document is piece of written, printed, or electronic matter that provides information or evidence or that serves as an official record",
+        "tags":["Document","Text","Topic","Article","Note","Writing","Reading","Story","Novel","Book","Library","Comic","Manga"],
+        "icon":"fas fa-file",
+        "image":"assets/images/documents.png",
+        "video":"assets/videos/documents.mp4"
+    }
+]

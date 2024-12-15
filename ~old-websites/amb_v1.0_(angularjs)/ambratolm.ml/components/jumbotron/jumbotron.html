@@ -1,0 +1,27 @@
+<div class="jumbotron border-bottom mt-5 pb-3 pl-5 pr-5 shadow" ng-controller="jumbotronCtrl" ng-switch="current">
+	<div class="row">
+		<div class="col-sm-4">
+			<h1 ng-if="current == 'home'">
+				<img src="assets/images/logo-dark.png" alt="Ambratolm" width="80%">
+			</h1>
+			<h1 ng-if="current != 'home'"><i class="{{ icon }}"></i> {{ title }}</h1>
+			<p ng-if="current == 'home'">Making cool things for cool multimedias.</p>
+			<p ng-if="current != 'home'">{{ description }}</p>
+			<hr>
+			<div class="nav">
+				<a class="btn btn-dark nav-link mr-1 mb-1" href="{{ profile.url }}" target="_blank" tooltip="{{ profile.description }}" data-placement="bottom" ng-repeat="profile in profiles">
+					<i class="{{ profile.icon }}"></i>&nbsp; {{ profile.title }}
+				</a>
+				<a class="btn btn-dark nav-link mr-1 mb-1" href="https://www.google.com/search?q=Ambratolm" target="_blank" data-placement="bottom" ng-if="current == 'home'" tooltip="Search Ambratolm on Google">
+					<i class="fab fa-google"></i>&nbsp; Google
+				</a>
+			</div><br>
+		</div>
+		<!-- <div class="col-sm-4">
+			<iframe ng-if="embed" class="border border-dark rounded bg-secondary shadow" ng-src="{{ embed }}" frameborder="0" width="100%" height="300px"></iframe>
+		</div> -->
+		<div class="col-sm-8">
+			<video ng-if="banner" class="border border-dark rounded bg-secondary shadow" width="100%" height="300px" ng-src="assets/videos/{{ banner }}" type="video/mp4" autoplay loop style="object-fit: cover;"></video>
+		</div>
+	</div>
+</div>

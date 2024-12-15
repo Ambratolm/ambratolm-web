@@ -1,0 +1,11 @@
+<footer class="bg-dark text-light text-center p-3 border-top " ng-controller="footerCtrl">
+	<div class="btn-group text-center">
+		<a class="btn btn-dark text-secondary" href="{{ profile.url }}" target="_blank" tooltip="{{ profile.description }}" data-placement="top" ng-repeat="profile in profiles">
+			<i class="{{ profile.icon }}"></i>&nbsp; {{ profile.title }}
+		</a>
+		<a class="btn btn-dark" href="https://www.google.com/search?q=Ambratolm" target="_blank" data-placement="top" ng-if="current == 'home'" tooltip="Search Ambratolm on Google">
+			<i class="fab fa-google"></i>&nbsp; Google
+		</a>
+	</div>
+	<p class="text-secondary m-0">© Ambratolm {{ copyrightYearRange }}</p>
+</footer>

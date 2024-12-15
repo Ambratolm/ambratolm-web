@@ -1,0 +1,79 @@
+{
+	"id" : "videos",
+	"title" : "VIDEOS",
+	"description" : "Video Records, Clips, Movies, Series, Courses",
+	"icon" : "fas fa-video",
+	"banner" : "videos.mp4",
+	"profiles" : [
+		{
+			"icon" : "fab fa-youtube",
+			"title" : "Youtube",
+			"description" : "Youtube Channel (Youtube.com/Ambratolm)",
+			"url" : "https://youtube.com/ambratolm"
+		},
+		{
+			"icon" : "fab fa-facebook",
+			"title" : "Facebook",
+			"description" : "Facebook Page (Facebook.com/Ambratolm2)",
+			"url" : "https://facebook.com/ambratolm2/videos"
+		},
+		{
+			"icon" : "fab fa-twitch",
+			"title" : "Twitch",
+			"description" : "Twitch Profile (Twitch.tv/Ambratolm)",
+			"url" : "https://twitch.tv/ambratolm"
+		}
+	],
+	"entries" : [
+		{
+			"poly" : "true",
+			"title" : "Videos",
+			"description" : "Variety clips, series and movies.",
+			"icon" : "fas fa-video",
+			"thumbnail" : "videos.png",
+			"links" : [
+				{
+					"icon" : "fab fa-youtube",
+					"title" : "Videos on Youtube",
+					"url" : "https://www.youtube.com/ambratolm/videos"
+				},
+				{
+					"icon" : "fab fa-facebook",
+					"title" : "Videos on Facebook",
+					"url" : "https://facebook.com/ambratolm2/videos"
+				},
+				{
+					"icon" : "fab fa-twitch",
+					"title" : "Videos on Twitch",
+					"url" : "https://twitch.tv/ambratolm/videos"
+				}
+			]
+		},
+		{
+			"title" : "League of Legends Videos",
+			"description" : "League of Legends video content.",
+			"icon" : "fab fa-youtube",
+			"thumbnail" : "league.png",
+			"links" : [
+				{
+					"icon" : "fab fa-youtube-square",
+					"title" : "Playlist on Youtube",
+					"url" : "https://www.youtube.com/playlist?list=PLsPDvHe4E0Z9-qTt19zZ8RRHPe4WYfXIH"
+				}
+			]
+		},
+		{
+			"title" : "RPG Videos",
+			"description" : "RPG Styled Stories & Conversations.",
+			"icon" : "fas fa-lol",
+			"thumbnail" : "rpg.png",
+			"links" : [
+				{
+					"icon" : "fab fa-youtube-square",
+					"title" : "Playlist on Youtube",
+					"url" : "https://www.youtube.com/playlist?list=PLsPDvHe4E0Z9K-5yLrOFViObbBd7R1CIk"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,49 @@
+<div id="jumbotron-header">
+	<h1 id="jumbotron-title"></h1>
+</div>
+
+<div id="jumbotron-body">
+	<p id="jumbotron-description"></p>
+</div>
+
+<div id="jumbotron-footer"></div>
+
+<script type="text/javascript">
+	var title, description;
+	switch(pages.current)
+	{
+		case pages.home.name:
+			title = 'Ambratolm';
+			description = 'Making cool things for cool multimedias.';
+			break;
+		case pages.programs.name:
+			title = '<i class="fas fa-laptop"></i> Programs';
+			description = 'Applications, Software Projects, Source Codes';
+			break;
+		case pages.games.name:
+			title = '<i class="fas fa-gamepad"></i> Games';
+			description = 'Video-Games, Video-Game Projects, Source Codes';
+			break;
+		case pages.audio.name:
+			title = '<i class="fas fa-music"></i> Audio';
+			description = 'Audion, Sounds, Voices, Music';
+			break;
+		case pages.videos.name:
+			title = '<i class="fas fa-video"></i> Videos';
+			description = 'Videos, Clips, Movies, Series, Montages, Courses';
+			break;
+		case pages.images.name:
+			title = '<i class="fas fa-image"></i> Images';
+			description = 'Images, Photos, Graphic Designs, Drawings, Artworks';
+			break;
+		case pages.documents.name:
+			title = '<i class="fas fa-file"></i> Documents';
+			description = 'Text, Documents, Articles, Books';
+			break;
+		default:
+			title = "_";
+			description = "_";
+	}
+	$("#jumbotron-title").html(title);
+	$("#jumbotron-description").text(description);
+</script>

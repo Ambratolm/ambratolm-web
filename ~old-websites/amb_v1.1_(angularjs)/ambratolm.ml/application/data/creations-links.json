@@ -1,0 +1,130 @@
+[
+    {
+        "title":"Github",
+        "url":"https://github.com/ambratolm",
+        "description":"Github Profile Page (Github.com/Ambratolm)",
+        "categories":[
+            "programs"
+        ],
+        "icon":"fab fa-github"
+    },
+    {
+        "title":"Itch",
+        "url":"https://ambratolm.itch.io",
+        "description":"Itch Profile Page (Ambratolm.Itch.io)",
+        "categories":[
+            "games"
+        ],
+        "icon":"fas fa-user-circle"
+    },
+    {
+        "title":"Gamejolt",
+        "url":"https://ambratolm.gamejolt.io",
+        "description":"Gamejolt Profile Page (Ambratolm.Gamejolt.io)",
+        "categories":[
+            "games"
+        ],
+        "icon":"fas fa-user-circle"
+    },
+    {
+        "title":"Soundcloud",
+        "url":"https://soundcloud.com/ambratolm",
+        "description":"Soundcloud Profile Page (Soundcloud.com/Ambratolm)",
+        "categories":[
+            "audio"
+        ],
+        "icon":"fab fa-soundcloud"
+    },
+    {
+        "title":"Youtube",
+        "url":"https://www.youtube.com/channel/UC90YiMGgUMGFsfzHXt2bLsQ",
+        "description":"Youtube Channel (Youtube.com/channel/UC90YiMGgUMGFsfzHXt2bLsQ)",
+        "categories":[
+            "audio"
+        ],
+        "icon":"fab fa-youtube"
+    },
+    {
+        "title":"Youtube",
+        "url":"https://youtube.com/ambratolm",
+        "description":"Youtube Channel (Youtube.com/Ambratolm)",
+        "categories":[
+            "videos"
+        ],
+        "icon":"fab fa-youtube"
+    },
+    {
+        "title":"Facebook",
+        "url":"https://facebook.com/ambratolm2/videos",
+        "description":"Facebook Page (Facebook.com/Ambratolm2)",
+        "categories":[
+            "videos"
+        ],
+        "icon":"fab fa-facebook"
+    },
+    {
+        "title":"Twitch",
+        "url":"https://twitch.tv/ambratolm",
+        "description":"Twitch Profile (Twitch.tv/Ambratolm)",
+        "categories":[
+            "videos"
+        ],
+        "icon":"fab fa-twitch"
+    },
+    {
+        "title":"Instagram",
+        "url":"https://instagram.com/ambratolm",
+        "description":"Instagram Profile (Instagram.com/Ambratolm)",
+        "categories":[
+            "images"
+        ],
+        "icon":"fab fa-instagram"
+    },
+    {
+        "title":"Deviantart",
+        "url":"https://deviantart.com/ambratolm",
+        "description":"Deviantart Profile (Deviantart.com/Ambratolm)",
+        "categories":[
+            "images"
+        ],
+        "icon":"fab fa-deviantart"
+    },
+    {
+        "title":"Artstation",
+        "url":"https://artstation.com/ambratolm",
+        "description":"Artstation Profile (Artstation.com/Ambratolm)",
+        "categories":[
+            "images"
+        ],
+        "icon":"fas fa-user"
+    },
+    {
+        "title":"Behance",
+        "url":"https://www.behance.net/ambratolm",
+        "description":"Behance Profile (Behance.net/Ambratolm)",
+        "categories":[
+            "images"
+        ],
+        "icon":"fab fa-behance"
+    },
+    {
+        "title":"Facebook",
+        "url":"https://facebook.com/ambratolm2",
+        "description":"Facebook Page (Facebook.com/Ambratolm)",
+        "categories":[
+            "documents",
+            "Images"
+        ],
+        "icon":"fab fa-facebook"
+    },
+    {
+        "title":"Twitter",
+        "url":"https://twitter.com/ambratolm",
+        "description":"Twitter Page (Twitter.com/Ambratolm)",
+        "categories":[
+            "documents",
+            "Images"
+        ],
+        "icon":"fab fa-twitter"
+    }
+]

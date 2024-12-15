@@ -1,0 +1,222 @@
+<!--=========================================================================-->
+<!-- ■ WebsiteSettings Page Template -->
+<!----------------------------------------------------------------------------->
+<!-- 		Administration Child Page Template. -->
+<!--=========================================================================-->
+
+<div class="container p-5">
+	<!------------------------------------------------------------------------->
+	<!-- ● Page Heading Title -->
+	<!------------------------------------------------------------------------->
+	<h1>Website Settings</h1>
+	<hr />
+	<!----------------------------------------------------------------------------->
+	<!-- ● Operations Buttonns Row -->
+	<!----------------------------------------------------------------------------->
+	<div class="row justify-content-end pb-3">
+		<div class="col-auto">
+			<!----------------------------------------------------------------->
+			<!-- ● Data Save & Change State Message -->
+			<!----------------------------------------------------------------->
+			<span class="pr-2">
+				<span
+					class="text-danger"
+					ng-if="websiteSettings.state.isChanged && !websiteSettings.state.isSaving"
+				>
+					<i class="fas fa-exclamation-circle"></i>
+					Unsaved changes
+				</span>
+				<span class="text-info" ng-if="websiteSettings.state.isSaving">
+					<span
+						class="spinner-border spinner-border-sm"
+						role="status"
+					>
+						<span class="sr-only">Loading...</span>
+					</span>
+					Saving...
+				</span>
+				<span
+					class="text-success"
+					ng-if="websiteSettings.state.isSaved"
+				>
+					<i class="fas fa-check"></i>
+					Successfully saved
+				</span>
+			</span>
+			<!----------------------------------------------------------------->
+			<!-- ● Save & Undo Buttons Row -->
+			<!----------------------------------------------------------------->
+			<div class="btn-group" role="group" aria-label="SaveUndo">
+				<button
+					type="submit"
+					title="Save website settings changes"
+					class="btn btn-primary"
+					ng-disabled="!websiteSettings.state.isChanged || websiteSettings.state.isSaving"
+					ng-click="websiteSettings.save()"
+				>
+					<i class="fas fa-save"></i>&nbsp;Save
+				</button>
+				<button
+					type="button"
+					title="Undo website settings changes"
+					class="btn btn-primary"
+					ng-disabled="!websiteSettings.state.isChanged || websiteSettings.state.isSaving"
+					ng-click="websiteSettings.undo()"
+				>
+					<i class="fas fa-undo"></i>
+				</button>
+			</div>
+		</div>
+	</div>
+	<!------------------------------------------------------------------------->
+	<!-- ● Form Row -->
+	<!------------------------------------------------------------------------->
+	<div class="row">
+		<div class="col">
+			<!----------------------------------------------------------------->
+			<!-- ● Form -->
+			<!----------------------------------------------------------------->
+			<form
+				name="websiteSettingsForm"
+				class="animated fadeIn"
+				novalidate
+				ng-submit="websiteSettings.save()"
+			>
+				<div class="form-group row">
+					<div class="form-group col-md-6">
+						<!----------------------------------------------------->
+						<!-- ● Website Title -->
+						<!----------------------------------------------------->
+						<label for="title">Title</label>
+						<input
+							id="title"
+							type="text"
+							placeholder="Title"
+							class="form-control"
+							ng-disabled="websiteSettings.state.isSaving"
+							ng-model="websiteSettings.website.title"
+						/>
+					</div>
+					<div class="form-group col-md-6">
+						<!----------------------------------------------------->
+						<!-- ● Website Author -->
+						<!----------------------------------------------------->
+						<label for="author">Author</label>
+						<input
+							id="author"
+							type="text"
+							placeholder="Author"
+							class="form-control"
+							ng-disabled="websiteSettings.state.isSaving"
+							ng-model="websiteSettings.website.author"
+						/>
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="form-group col-md-6">
+						<!----------------------------------------------------->
+						<!-- ● Website Description -->
+						<!----------------------------------------------------->
+						<label for="description">Description</label>
+						<textarea
+							id="description"
+							placeholder="Description"
+							class="form-control"
+							ng-disabled="websiteSettings.state.isSaving"
+							ng-model="websiteSettings.website.description"
+						></textarea>
+					</div>
+					<div class="form-group col-md-6">
+						<!----------------------------------------------------->
+						<!-- ● Website Keywords -->
+						<!----------------------------------------------------->
+						<label for="keywords">Keywords</label>
+						<span class="text-muted small">
+							<i class="fas fa-tags"></i>
+							Separated by commas
+						</span>
+						<textarea
+							id="keywords"
+							placeholder="Keywords"
+							class="form-control"
+							ng-disabled="websiteSettings.state.isSaving"
+							ng-model="websiteSettings.website.keywords"
+						></textarea>
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="form-group col-md-6">
+						<!----------------------------------------------------->
+						<!-- ● Website Favicon -->
+						<!----------------------------------------------------->
+						<label for="favicon">Favicon</label>
+						<div>
+							<!------------------------------------------------->
+							<!-- ● Favicon URL & Upload Buttons -->
+							<!------------------------------------------------->
+							<button
+								title="Set favicon from URL"
+								class="btn btn-sm btn-outline-primary"
+								ng-hide="websiteSettings.state.isSaving"
+								ng-disabled="websiteSettings.isFaviconUrlOption"
+								ng-click="websiteSettings.faviconOption('url')"
+							>
+								<i class="fas fa-link"></i> URL
+							</button>
+							<button
+								title="Import favicon from disk"
+								class="btn btn-sm btn-outline-primary"
+								ng-hide="websiteSettings.state.isSaving"
+								ng-disabled="websiteSettings.isFaviconUploadOption"
+								ng-click="websiteSettings.faviconOption('upload')"
+							>
+								<i class="fas fa-upload"></i> Upload
+							</button>
+							<!--------------------------------------------->
+							<!-- ● Favicon Image -->
+							<!--------------------------------------------->
+							<img
+								id="favicon"
+								title="Favicon"
+								alt="Favicon"
+								width="16px"
+								class="ml-1"
+								ng-src="{{websiteSettings.website.favicon.tempUrl ||
+									websiteSettings.website.favicon.internalUrl ||
+            						websiteSettings.website.favicon.externalUrl}}"
+								amb-on-error-src="{{websiteSettings.onErrorSrc}}"
+								amb-on-empty-src="{{websiteSettings.onEmptySrc}}"
+							/>
+							<span
+								class="text-info small pl-2"
+								ng-if="websiteSettings.faviconFile && websiteSettings.state.isSaving"
+							>
+								<span class="animated flash slower infinite">
+									<i class="fas fa-upload"></i>
+								</span>
+								Uploading...
+								{{websiteSettings.faviconUploadedPercent}}%
+							</span>
+						</div>
+						<!------------------------------------------------->
+						<!-- ● Favicon URL & File Inputs -->
+						<!------------------------------------------------->
+						<div ng-hide="websiteSettings.state.isSaving">
+							<amb-favicon-url-input
+								class="mt-2 d-block"
+								amb-visible="websiteSettings.isFaviconUrlOption"
+								amb-url="websiteSettings.website.favicon.tempUrl"
+							></amb-favicon-url-input>
+							<amb-favicon-file-input
+								class="mt-2 d-block"
+								amb-visible="websiteSettings.isFaviconUploadOption"
+								amb-file="websiteSettings.faviconFile"
+								amb-blob-url="websiteSettings.website.favicon.tempUrl"
+							></amb-favicon-file-input>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

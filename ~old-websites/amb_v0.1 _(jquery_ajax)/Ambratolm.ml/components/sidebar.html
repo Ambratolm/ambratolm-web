@@ -1,0 +1,44 @@
+<div id="sidebar-header">
+	<h5 id="sidebar-title"></h5>
+	<hr>
+</div>
+
+<div id="sidebar-body" class="bg-light rounded border p-3"></div>
+
+<div id="sidebar-footer"></div>
+
+<script type="text/javascript">
+	// if (pages.current == pages.home.name) {
+		$("#sidebar-title").html('<i class="fas fa-user"></i> PROFILE');
+		$("#sidebar-date").text("November 20, 2018");
+		$("#sidebar-body").empty();
+		$.get("data/profile.xml", function(xml) {
+			$("#sidebar-body").append($([
+				'<div id="sidebar-profile">',
+					'<h3 id="profile-name" class="text-center text-primary p-1"></h3>',
+					'<h4 id="profile-title" class="text-center"></h4>',
+					'<img id="profile-avatar" class="img-fluid img-thumbnail rounded-circle mx-auto d-block" width="50%" src="">',
+					'<p id="profile-description" class="text-center"></p>',
+					'<ul id="profile-links" class="nav nav-pills flex-column"></ul>',
+				'</div>'	
+			].join("\n")));
+			$("#profile-name").text($(xml).find("name").text());
+		    $("#profile-title").text($(xml).find("title").first().text());
+		    $("#profile-avatar").attr( "src", $(xml).find("avatar").text());
+		    $("#profile-description").text($(xml).find("description").text());
+		    $("#profile-links").empty();
+		    $(xml).find("link").each(function() {
+			 	$("#profile-links").append($([
+			 		'<li class="nav-item border bg-white">',
+						'<a class="nav-link" target="_blank" href="' + $(this).find("url").text() + '">',
+							'<i class="' + $(this).find("icon").text() + '"></i>&nbsp;',
+							$(this).find("title").text(),
+						'</a>',
+					'</li>',
+		 		].join("\n")));
+			});
+		});
+	// } else {
+		
+	// }
+</script>

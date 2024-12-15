@@ -1,0 +1,100 @@
+<!--=========================================================================-->
+<!-- ■ FaviconFileInput Directive Template -->
+<!----------------------------------------------------------------------------->
+<!-- 		Favicon Internal URL Generator from File Input -->
+<!--=========================================================================-->
+
+<div class="animated fadeInUp" ng-if="visible">
+	<!----------------------------------------------------------------------------->
+	<!-- ● Favicon File Input & Image Preview -->
+	<!----------------------------------------------------------------------------->
+	<div class="input-group">
+		<!------------------------------------------------------------------------->
+		<!-- ● Favicon File Input (Internal URL) -->
+		<!------------------------------------------------------------------------->
+		<amb-file-input
+			class="form-control"
+			amb-label="Choose Image File..."
+			amb-url="faviconFileInput.blobUrl"
+			amb-file="faviconFileInput.file"
+		>
+		</amb-file-input>
+		<!------------------------------------------------------------------------->
+		<!-- ● Favicon Image Preview (Internal URL) -->
+		<!------------------------------------------------------------------------->
+		<div class="input-group-append">
+			<span id="favicon-addon" class="input-group-text">
+				<img
+					id="favicon-internal-url-preview"
+					title="Favicon"
+					alt="Favicon"
+					width="16px"
+					class="ml-1"
+					ng-src="{{faviconFileInput.blobUrl}}"
+					amb-on-empty-src="{{faviconFileInput.onEmptySrc}}"
+					amb-on-error-src="{{faviconFileInput.onErrorSrc}}"
+				/>
+			</span>
+		</div>
+	</div>
+	<!----------------------------------------------------------------------------->
+	<!-- ● Favicon Error Message & Actions Buttons -->
+	<!----------------------------------------------------------------------------->
+	<div class="container-fluid p-0 mt-2">
+		<div class="row">
+			<!--------------------------------------------------------------------->
+			<!-- ● Favicon Error Message -->
+			<!--------------------------------------------------------------------->
+			<div class="col-md-7">
+				<div class="text-danger" ng-if="faviconFileInput.error">
+					<i class="fas fa-file"></i>&nbsp;
+					<span
+						class="small"
+						ng-if="faviconFileInput.error.invalidImageExtension"
+					>
+						Invalid file extension
+					</span>
+				</div>
+				<div class="text-muted small">
+					<i class="fas fa-file-image"></i>
+					*.ico, *.png, *.jph, *.jpeg, *.bmp
+				</div>
+			</div>
+			<!--------------------------------------------------------------------->
+			<!-- ● Favicon Apply & Cancel Buttons -->
+			<!--------------------------------------------------------------------->
+			<div class="col-md-5 pt-2 pt-md-0">
+				<div
+					class="btn-group float-right"
+					role="group"
+					aria-label="ApplyCancel"
+				>
+					<!------------------------------------------------------------->
+					<!-- ● Favicon Apply Button -->
+					<!------------------------------------------------------------->
+					<button
+						type="button"
+						title="Apply"
+						class="btn btn-sm btn-outline-secondary"
+						ng-disabled="!faviconFileInput.file ||
+							faviconFileInput.error"
+						ng-click="faviconFileInput.apply()"
+					>
+						<i class="fas fa-check"></i> Apply
+					</button>
+					<!------------------------------------------------------------->
+					<!-- ● Favicon Cancel Button -->
+					<!------------------------------------------------------------->
+					<button
+						type="button"
+						title="Cancel"
+						class="btn btn-sm btn-outline-secondary"
+						ng-click="faviconFileInput.cancel()"
+					>
+						<i class="fas fa-times"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

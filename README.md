@@ -22,7 +22,7 @@ The initial project was generated using [**Vue CLI**](https://github.com/vuejs/v
 
 ### 🏭 Environment
 
-- Runtime: [**NodeJS**](https://github.com/nodejs)
+- Runtime: [**NodeJS**](https://github.com/nodejs) **12.x**
 - Package Manager: [**NPM**](https://github.com/npm)
 - Editor: [**Sublime Text**](https://www.sublimetext.com)
 

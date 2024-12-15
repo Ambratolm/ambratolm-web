@@ -1,0 +1,70 @@
+<!--=========================================================================-->
+<!-- ■ Administration Page Template -->
+<!--=========================================================================-->
+<!----------------------------------------------------------------------------->
+<!-- ● Global Navbar -->
+<!----------------------------------------------------------------------------->
+<amb-navbar></amb-navbar>
+<!----------------------------------------------------------------------------->
+<!-- ● Navbar -->
+<!----------------------------------------------------------------------------->
+<nav class="navbar navbar-expand-sm navbar-dark bg-secondary">
+    <a title="Administration" class="animated flash navbar-brand" ui-sref="admin">
+        <i class="fas fa-cog"></i> Administration
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#admin-navbar-menu">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div id="admin-navbar-menu" class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item" ng-repeat="section in admin.sections">
+                <a title="{{section.description || section.title}}" class="nav-link" ui-sref="{{section.stateName}}" ui-sref-active="active">
+                    <i ng-class="section.iconClass"></i> {{section.title}}
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!----------------------------------------------------------------------------->
+<!-- ● Jumbotron -->
+<!----------------------------------------------------------------------------->
+<div class="jumbotron jumbotron-fluid" ng-if="admin.isAdminState()">
+    <div class="container">
+        <h1 class="display-4">
+            Administration
+        </h1>
+        <p class="lead">
+            <i class="fa fa-user-secret"></i>&nbsp; This is a private page.<br>
+            <i class="fa fa-lock"></i>&nbsp; Authentication as <strong>administrator</strong> is required.<br>
+            <hr>
+            This page contains private sections that allow the management
+            of the website content.
+        </p>
+    </div>
+</div>
+<!----------------------------------------------------------------------------->
+<!-- ● Sections Cards -->
+<!----------------------------------------------------------------------------->
+<div class="container pb-4" ng-if="admin.isAdminState()">
+    <div class="row">
+        <div class="col-md-4" ng-repeat="section in admin.sections">
+            <div class="card text-center animated bounceInUp">
+                <div class="card-body">
+                    <h1><i ng-class="section.iconClass"></i></h1>
+                    <h3 class="card-title">{{section.title}}</h3>
+                    <p class="card-text">{{section.description}}</p>
+                    <button title="{{section.description || section.title}}" class="btn btn-primary stretched-link" ui-sref="{{section.stateName}}">{{section.title}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------------------------------------------------------------------->
+<!-- ● Child Pages View -->
+<!----------------------------------------------------------------------------->
+<ui-view></ui-view>
+<!----------------------------------------------------------------------------->
+<!-- ● Global Footer -->
+<!----------------------------------------------------------------------------->
+<amb-footer></amb-footer>

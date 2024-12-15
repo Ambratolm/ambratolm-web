@@ -1,0 +1,48 @@
+{
+    "title":"Ambratolm",
+    "description":"Making cool things for cool multimedias",
+    "keywords":[
+        "Ambratolm","Wracurd","Kaps",
+        "Abdelhakim","El hafid","Elhafid",
+        "ECG","Elhafid Companies Group",
+        "Programs","Games","Audio","Videos","Images","Documents"
+    ],
+    "author":"Ambratolm",
+    "copyright":"© Ambratolm 2000 - 0000",
+    "favicon":"assets/images/favicon.png",
+    "logo":"assets/images/logo.png",
+    "logoDark":"assets/images/logo-dark.png",
+    "logoLight":"assets/images/logo-light.png",
+    "avatar":"assets/images/avatar.jpg",
+    "imageToken":"assets/images/token.png",
+    "videoToken":"assets/videos/token.mp4",
+    "pages":[
+        {
+            "name":"home",
+            "title":"Home Page",
+            "description":"Home page of the the website",
+            "icon":"fas fa-crown",
+            "isHomePage":true
+        },
+        {
+            "name":"creations",
+            "title":"My Creations",
+            "description":"Directory of all stuff created by Ambratolm",
+            "icon":"fas fa-copyright"
+        },
+        {
+            "name":"login",
+            "title":"Sign on",
+            "description":"Log in or Register new account",
+            "icon":"fas fa-sign-in-alt",
+            "isAction":true
+        }
+    ],
+    "dataSources":{
+        "contactLinks":"application/data/contact-links.json",
+        "faqEntries":"application/data/faq-entries.json",
+        "creationsLinks":"application/data/creations-links.json",
+        "creationsEntries":"application/data/creations-entries.json",
+        "creationsCategories":"application/data/creations-categories.json"
+    }
+}

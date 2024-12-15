@@ -1,0 +1,51 @@
+<div class="mb-3" ng-controller="contentCtrl">
+	<h5>
+		<i class="{{ icon }}"></i> {{ title }}
+	</h5>
+ 	<hr>
+ 	<div class='list-group' ng-if="current == 'home'">
+ 		<div ng-repeat="faqEntry in entries">
+   			<a class='list-group-item list-group-item-action list-group-item-light bg-light' data-toggle='collapse' data-target='#faq-entry-{{ $index }}' href='#'>
+   				{{ faqEntry.question }}
+   			</a>
+   			<p id='faq-entry-{{ $index }}' class='collapse show list-group-item'>
+               <ng-bind-html ng-bind-html="faqEntry.answer | newline"></ng-bind-html>
+   			</p>
+ 		</div>
+	</div>
+   	<div class="card-columns" ng-if="current != 'home'">
+	   	<div class="card" ng-repeat="entry in entries" >
+			<div class="card-header pb-0"  ng-if="!entry.poly">
+				<h6 class="card-title"><i class="{{ entry.icon }}">
+					</i>&nbsp; {{ entry.title }}
+				</h6>
+			</div>
+			<img class="card-img-top border-bottom" ng-src="assets/images/{{ entry.thumbnail }}" ng-if="entry.poly">
+			<div class="card-body">
+			 	<h5 class="card-title" ng-if="entry.poly">
+			 		<i class="{{ entry.icon }}"></i>&nbsp; {{ entry.title }}
+			 	</h5>
+			 	<img class="card-img-top img-thumbnail mb-3" ng-src="assets/images/{{ entry.thumbnail }}" ng-if="!entry.poly">
+				<p class="card-text text-justify">{{ entry.description }}</p>
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item list-group-item-action p-1" ng-repeat="link in entry.links">
+						<a class="card-link" target="_blank" href="{{ link.url }}" ng-if="!link.download">
+							<i class="{{ link.icon }}"></i>&nbsp;{{ link.title }}
+						</a>
+						<a class="btn btn-outline-primary btn-sm" target="_blank" href="{{ link.url }}" ng-if="link.download">
+							<i class="{{ link.icon }}"></i>&nbsp;{{ link.title }}
+						</a>
+					</li>
+				</ul>
+				<div class="pt-3">
+					<a class="badge badge-pill badge-dark mr-1" ng-repeat="tag in entry.tags" href="https://www.google.com/search?q={{ tag }}" target="_blank">
+						{{ tag }}
+					</a>
+				</div>
+			</div> 
+			<div class="card-footer text-muted" ng-if="!entry.poly">
+				© Ambratolm
+			</div>
+	   	</div>
+   	</div>
+</div>

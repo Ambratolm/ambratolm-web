@@ -1,0 +1,44 @@
+{
+	"id" : "audio",
+	"title" : "AUDIO",
+	"description" : "Music, Sound Records, Sound Effects",
+	"icon" : "fas fa-volume-up",
+	"banner" : "audio.mp4",
+	"embed" : "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/116672289&color=%2367515c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true", 
+	"profiles" : [
+		{
+			"icon" : "fab fa-soundcloud",
+			"title" : "Soundcloud",
+			"description" : "Soundcloud Profile Page (Soundcloud.com/Ambratolm)",
+			"url" : "#"
+		},
+		{
+			"icon" : "fab fa-youtube",
+			"title" : "Youtube",
+			"description" : "Youtube Channel (Youtube.com/channel/UC90YiMGgUMGFsfzHXt2bLsQ)",
+			"url" : "https://www.youtube.com/channel/UC90YiMGgUMGFsfzHXt2bLsQ"
+		}
+	],
+	"entries" : [
+		{
+			"poly" : "true",
+			"title" : "Music",
+			"description" : "Free background music.",
+			"tags" : [ "BGM", "Melody" ],
+			"icon" : "fas fa-music",
+			"thumbnail" : "music.png",
+			"links" : [
+				{
+					"icon" : "fab fa-soundcloud",
+					"title" : "Tracks on Soundcloud",
+					"url" : "https://soundcloud.com/ambratolm/tracks"
+				},
+				{
+					"icon" : "fab fa-youtube",
+					"title" : "Tracks on Youtube",
+					"url" : "https://www.youtube.com/channel/UC90YiMGgUMGFsfzHXt2bLsQ/videos"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,112 @@
+<!-- ================================================== -->
+<!-- ♦ Home View -->
+<!-- ================================================== -->
+
+<!-- -------------------------------------------------- -->
+<!-- ♦ Navbar -->
+<!-- -------------------------------------------------- -->
+<amb-navbar></amb-navbar>
+
+<!-- -------------------------------------------------- -->
+<!-- ♦ Jumbotron --> 
+<!-- -------------------------------------------------- -->
+<div class="jumbotron border-top border-bottom rounded-0 pt-5 pb-4" style="margin-top: 58px;">
+	<div class="container-fluid" ng-mouseenter="autoNav = false" ng-mouseleave="autoNav = true">
+	    <div class="row">
+	    	<div class="col-sm-5">
+				<!-- Category Icon & Title -------------------------------------------------- -->
+				<h1 class="font-weight-light mb-3">
+					<a href="#creations/{{ creationsCategoriesNav.currentItem.name }}" class="card-link text-dark" title="{{ creationsCategoriesNav.currentItem.description }}">
+						<i id="creationsCategoriesNavIcon"></i> {{ creationsCategoriesNav.currentItem.title }} 
+					</a>
+				</h1>
+	    		<div style="height: 180px; overflow: auto;">
+		    		<!-- Category Links -------------------------------------------------- -->
+					<div class="nav nav-pills mb-2">
+		    			<li ng-if="creationsCategoriesNav.currentIndex" ng-repeat="link in creationsLinks | filter : { categories : creationsCategoriesNav.currentItem.name }" class="nav-item mr-1 mb-1">
+		    				<a ng-href="{{ link.url }}" target="_blank" class="btn btn-outline-dark" tooltip="{{ link.description }}">
+		    					<i class="{{ link.icon }}"></i> {{ link.title }}
+		    				</a>
+		    			</li>
+		    			<li ng-if="!creationsCategoriesNav.currentIndex" ng-repeat="link in contactLinks" class="nav-item mr-1 mb-1">
+		    				<a ng-href="{{ link.url }}" target="_blank" class="btn btn-outline-dark" tooltip="{{ link.description }}">
+		    					<i class="{{ link.icon }}"></i> {{ link.title }}
+		    				</a>
+		    			</li>
+		    		</div>
+		    		<!-- Category Descritption -------------------------------------------------- -->
+	    			<p class="lead text-justify" title="{{ creationsCategoriesNav.currentItem.description }}">{{ creationsCategoriesNav.currentItem.description }}.</p>
+	    		</div>
+	    		<!-- Categories Navigation Links -------------------------------------------------- -->
+    			<div class="nav nav-pills justify-content-start py-3 border-top">
+    				<li ng-repeat="creationsCategory in creationsCategoriesNav.array" class="nav-item">
+    					<a ng-mouseover="creationsCategoriesNav.current($index)" href="#creations/{{ creationsCategory.name }}" class="nav-link {{ creationsCategoriesNav.currentIndex == $index ? 'active bg-dark' : 'text-dark' }}" tooltip="{{ creationsCategory.title }}" data-placement="bottom">
+    						<i class="{{ creationsCategory.icon }}"></i>
+    					</a>
+    				</li>
+    			</div>
+	    	</div>
+	    	<div class="col-sm-7">
+	    		<!-- Category Video -------------------------------------------------- -->
+	    		<video class="border border-dark rounded bg-secondary" width="100%" height="300px" ng-src="{{ creationsCategoriesNav.currentItem.video }}" type="video/mp4" autoplay loop style="object-fit: cover;"></video>
+	    	</div>
+	    </div>
+  	</div>
+</div>
+
+<!-- -------------------------------------------------- -->
+<!-- ♦ Home Content -->
+<!-- -------------------------------------------------- -->
+<div class="container mb-5">
+	<div class="row">
+		<div class="col-sm-9">
+			<!-- Main Content -------------------------------------------------- -->
+			<div class="input-group mb-3">
+			    <div class="input-group-prepend">
+			      <i class="input-group-text"><i class="{{ currentPage.icon }}"></i></i>
+			    </div>
+			    <input type="text" class="form-control" placeholder="Search..." ng-model="entriesQuery">
+	  		</div>
+		 	<div class='list-group'>
+		 		<div ng-repeat="faq in faqEntries | filter : entriesQuery" class="mb-3">
+		   			<a class='list-group-item list-group-item-action list-group-item-light bg-light' data-toggle='collapse' data-target='#faq-{{ $index }}' href=''>
+		   				<i class="fas fa-question-circle"></i> {{ faq.question }}
+		   			</a>
+		   			<div id='faq-{{ $index }}' class="collapse show media border p-3">
+		   			  <img ng-src="{{ website.avatar }}" alt="Ambratolm" class="mr-3  border rounded-circle" style="width:60px;">
+		   			  <div class="media-body">
+		   			    <h6><a href="">Ambratolm</a> <small><i class="fas fa-check-circle text-secondary"></i></small></h6>
+		   			    <ng-bind-html ng-bind-html="faq.answer | html"></ng-bind-html>
+		   			  </div>
+		   			</div>
+		 		</div>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<!-- Sidebar -------------------------------------------------- --> 
+			<div class="card">
+				<div class="card-header">
+					<i class="{{ currentPage.icon }}"></i> {{ website.title }}
+				</div>
+				<img ng-src="{{ website.avatar }}" alt="{{ website.title }}" class="w-100">
+				<div class="card-body">
+					<h5 class="card-title">{{ website.title }} <small><i class="fas fa-check-circle text-secondary"></i></small></h5>
+					<p class="card-text">{{ website.description }}.</p>
+					<div class="h4 mb-0">
+						<i ng-repeat="link in contactLinks" class="">
+							<a class="card-link text-dark"  href="{{ link.url }}" target="_blank" tooltip="{{ link.description }}">
+								<i class="{{ link.icon }}"></i>
+							</a>
+						</i>
+					</div>
+				</div>
+			  	<div class="card-footer"></div>
+			</div>
+	    </div>
+	</div>
+</div>
+
+<!-- -------------------------------------------------- -->
+<!-- ♦ Footer -->
+<!-- -------------------------------------------------- -->
+<amb-footer></amb-footer>

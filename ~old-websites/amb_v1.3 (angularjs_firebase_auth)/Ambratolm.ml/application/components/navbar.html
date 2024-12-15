@@ -1,0 +1,47 @@
+<!-- ================================================== -->
+<!-- ♦ Navbar Template -->
+<!-- ================================================== -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+	<a class="navbar-brand" href="#{{ homePageName }}">
+		<img  ng-src="{{ brand }}" alt="{{ title }}" title="{{ description }}" class="mb-1" style="width:150px;">
+	</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu">
+		<i class="fas fa-bars"></i>
+	</button>
+	<div id="navbar-menu" class="collapse navbar-collapse">
+		<!-- Pages links -->
+		<ul class="navbar-nav mr-auto">
+			<li ng-repeat="page in pages" class="nav-item">
+				<a ng-href="#{{ page.name }}" title="{{ page.description }}" ng-class="isCurrentPage(page) ? 'nav-link active' : 'nav-link'">
+					<i ng-class="page.icon"></i> {{ page.title }}
+				</a>
+			</li>
+		</ul>
+		<ul class="navbar-nav ml-auto">
+			<!-- Actions links -->
+			<!-- <li ng-repeat="action in actions" class="nav-item">
+				<a ng-href="#{{ action.name }}" title="{{ action.description }}" ng-class="isCurrentPage(action) ? 'nav-link active' : 'nav-link'">
+					<i ng-class="action.icon"></i> {{ action.title }}
+				</a>
+			</li> -->
+			<!-- Login link -->
+			<li ng-hide="currentUser" class="nav-item">
+				<a ng-href="#{{ loginAction.name }}" title="{{ loginAction.description }}" ng-class="isCurrentPage(loginAction) ? 'nav-link active' : 'nav-link'">
+					<i class="fas fa-sign-in-alt"></i> {{ loginAction.title }}
+				</a>
+			</li>
+			<!-- User profile link -->
+			<li ng-show="currentUser" class="nav-item">
+				<a href="" class="nav-link" tooltip="{{ currentUser.email }}">
+					<i class="fas fa-user-circle"></i> {{ currentUser.name }}
+				</a>
+			</li>
+			<!-- Logout link -->
+			<li ng-show="currentUser" class="nav-item">
+				<a ng-click="logout()" href="" class="nav-link" title="Log out">
+					<i class="fas fa-sign-out-alt"></i> Log out
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>

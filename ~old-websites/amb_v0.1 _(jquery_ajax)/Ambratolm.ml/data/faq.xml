@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faq>
+	<entry>
+		<question>Who are you ?</question>
+		<answer>
+			I am Ambratolm.\n
+			I will create my own world.
+		</answer>
+	</entry>
+
+	<entry>
+		<question>What is your goal ?</question>
+		<answer>
+			Making cool things for cool multimedias.\n
+			Programs, games, audio, videos, images and documents.\n
+		</answer>
+	</entry>
+	
+	<entry>
+		<question>What are your latest creations ?</question>
+		<answer>
+			Created in 2018 :\n
+			• Android Mobile Games.\n
+			• League of Legends Videos and Images.
+		</answer>
+	</entry>
+
+	<entry>
+		<question>What are you making currently ?</question>
+		<answer>
+			Making this Website while Learning more about\n 
+			Web development using HTML, CSS, XML and JS. 
+		</answer>
+	</entry>
+</faq>

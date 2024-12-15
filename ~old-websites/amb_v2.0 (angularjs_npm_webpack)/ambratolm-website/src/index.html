@@ -1,0 +1,40 @@
+<!--=========================================================================-->
+<!-- ■ Application Index -->
+<!----------------------------------------------------------------------------->
+<!--        This file is the index page of the application website. -->
+<!--=========================================================================-->
+<!DOCTYPE html>
+<html lang="en" ng-app="ambratolmApp">
+
+<head>
+    <!------------------------------------------------------------------------->
+    <!-- ● Title -->
+    <!------------------------------------------------------------------------->
+    <title ng-bind="website.title"></title>
+    <!------------------------------------------------------------------------->
+    <!-- ● Favicon -->
+    <!------------------------------------------------------------------------->
+    <link rel="shortcut icon" ng-href="{{website.favicon.internalUrl || website.favicon.externalUrl || favicon}}" />
+    <!------------------------------------------------------------------------->
+    <!-- ● Meta Tags -->
+    <!------------------------------------------------------------------------->
+    <meta charset="utf-8" />
+    <meta name="description" content="{{website.description}}" />
+    <meta name="keywords" content="{{website.keywords}}" />
+    <meta name="author" content="{{website.author}}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!------------------------------------------------------------------------->
+    <!-- ● Base Tage (HTML5 Mode) -->
+    <!------------------------------------------------------------------------->
+    <base href="/" />
+</head>
+
+<body>
+    <!------------------------------------------------------------------------->
+    <!-- ● Main Routing States Views Container -->
+    <!------------------------------------------------------------------------->
+    <ui-view></ui-view>
+</body>
+
+</html>

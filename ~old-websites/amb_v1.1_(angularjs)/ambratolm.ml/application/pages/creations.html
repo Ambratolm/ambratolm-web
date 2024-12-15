@@ -1,0 +1,153 @@
+<!-- ================================================== -->
+<!-- ♦ Creations View -->
+<!-- ================================================== -->
+
+<!-- -------------------------------------------------- -->
+<!-- ♦ Navbar -->
+<!-- -------------------------------------------------- -->
+<amb-navbar></amb-navbar>
+
+<!-- -------------------------------------------------- -->
+<!-- ♦ Creations Content -->
+<!-- -------------------------------------------------- -->
+<div class="container-fluid px-5 mb-5" style="margin-top: 100px;">
+	<div class="row">
+	    <!-- Main Content -------------------------------------------------- -->
+		<div class="col-sm-8">
+			<!-- Creations Entries Search Bar -------------------------------------------------- -->
+			<div class="input-group mb-3 mr-auto">
+			    <div class="input-group-prepend">
+			      <i class="input-group-text"><i class="creationsCategoriesNavIcon"></i></i>
+			    </div>
+			    <input type="text" class="form-control" placeholder="Search in {{ creationsCategoriesNav.currentItem.title }}..." ng-model="entriesQuery">
+			    <div ng-if="entriesQuery" class="input-group-append">
+			    	<button ngclipboard data-clipboard-text="{{ absUrl(entriesQuery) }}" ngclipboard-success="setCopied(true)" class="btn btn-dark" type="button" title="Copy search URL">
+			    		<i class="fas fa-copy"></i>
+			    	</button>
+			    	<button ng-click="clearFilters();" class="btn btn-dark" type="button" title="Reset search">
+			    		<i class="fas fa-times"></i>
+			    	</button>
+  				</div>
+		  	</div>
+		  	<!-- Creations Entries Query Url Copy Result -------------------------------------------------- -->
+		  	<div ng-show="entriesQuery && copied" class="alert alert-info border" role="alert">
+		  		<button ng-click="setCopied(false)" type="button" class="close" data-dismiss="alert" aria-label="Close">
+	  		    	<i aria-hidden="true">&times;</i>
+	  		  	</button>
+		  		<i class="fas fa-clipboard"></i> &nbsp;&nbsp;<strong>{{ absUrl(entriesQuery) }}</strong> copied to clipboard.
+		  	</div>
+		  	<!-- Creations Categories Navigation Links -------------------------------------------------- -->
+		  	<div class="nav nav-pills justify-content-start p-1 mb-3 bg-light border rounded mr-auto">
+		  		<li ng-repeat="creationsCategory in creationsCategoriesNav.array" class="nav-item">
+		  			<a href="#creations{{  creationsCategory.name ? '/' + creationsCategory.name : '' }}{{ entriesQuery ? '/' + entriesQuery : '' }}" class="nav-link {{ creationsCategoriesNav.currentIndex == $index ? 'active bg-dark' : 'text-dark' }}" tooltip="{{ creationsCategory.title }}" data-placement="top">
+		  				<i class="{{ creationsCategory.icon }}"></i>
+		  				<span ng-if="creationsCategory.name == creationsCategoriesNav.currentItem.name" >
+		  					{{ creationsCategory.title }}
+		  				</span>
+		  				<span ng-if="entriesQuery && creationsEntries.$filter({ 'categories' : creationsCategory.name }).$filter(entriesQuery).length">
+		  					<span class="badge badge-pill badge-success">{{ creationsEntries.$filter({ 'categories' : creationsCategory.name }).$filter(entriesQuery).length }}</span>
+		  				</span>
+		  			</a>
+		  		</li>
+		  		<div class="dropdown ml-auto">
+		  			<i ng-if="entriesOrder == 'title'" ><i class="fas fa-sort-alpha-down" title="Ascending alphabetical order"></i></i>
+		  			<i ng-if="entriesOrder == '-title'"><i class="fas fa-sort-alpha-up" title="Descending alphabetical order"></i></i>
+					<button type="button" class="btn btn-link text-dark" data-toggle="dropdown">
+						<i class="fas fa-ellipsis-v"></i>
+					</button>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a ng-click="setEntriesOrder()" class="dropdown-item {{ entriesOrder == '' ? 'active bg-dark' : '' }}" href="">
+							No order
+						</a>
+						<a ng-click="setEntriesOrder('title')" class="dropdown-item {{ entriesOrder == 'title' ? 'active bg-dark' : '' }}" href="">
+							<i class="fas fa-sort-alpha-down"></i> Ascending alphabetical order
+						</a>
+						<a ng-click="setEntriesOrder('-title')" class="dropdown-item {{ entriesOrder == '-title' ? 'active bg-dark' : '' }}" href="">
+							<i class="fas fa-sort-alpha-up"></i> Descending alphabetical order
+						</a>
+					</div>
+		  		</div>
+		  	</div>
+		  	<!-- Creations Entries Filter Result -------------------------------------------------- -->
+		  	<div ng-if="entriesQuery" class="alert border {{ filteredCreationsEntries.length ? 'alert-success' : 'alert-danger' }}" role="alert">
+		  		<!-- <button ng-click="clearFilters()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+	  		    	<i aria-hidden="true">&times;</i>
+	  		  	</button> -->
+		  		<i class="fas fa-search"></i> &nbsp;&nbsp;<strong>{{ filteredCreationsEntries.length }} entries</strong> found for <strong>{{ entriesQuery }}</strong> in <a ng-click="clearFilters()" href="" class="alert-link">{{ creationsCategoriesNav.currentItem.title }}</a>.
+		  	</div>
+		  	<!-- Creations Entries -------------------------------------------------- -->
+			<div class="card-columns">
+				<div ng-repeat="entry in creationsEntries | filter : entriesQuery | filter : { categories : creationsCategoriesNav.currentItem.name } | orderBy : entriesOrder as filteredCreationsEntries" class="card">
+					<!-- Creations Entry Header -------------------------------------------------- -->
+					<div class="card-header pb-0">
+						<h6 class="card-title"><i class="{{ entry.icon }}"></i> {{ entry.title }}</h6>
+					</div>
+					<!-- Creations Entry Body -------------------------------------------------- -->
+					<div class="card-body">
+					 	<img ng-src="{{ entry.image }}" alt="{{ entry.title }}" class="card-img-top img-thumbnail mb-3">
+						<p class="card-text text-justify" title="{{ entry.description }}">{{ entry.description }}</p>
+						<!-- Creations Entry Links -------------------------------------------------- -->
+						<ul class="list-group list-group-flush">
+							<li ng-repeat="link in entry.links" class="list-group-item list-group-item-action p-1" tooltip="{{ link.description || link.title }}" data-placement="right">
+								<a ng-if="!link.download" class="card-link" target="_blank" href="{{ link.url }}">
+									<i class="{{ link.icon }}"></i> {{ link.title }}
+								</a>
+								<a ng-if="link.download" class="btn btn-outline-primary btn-sm" target="_blank" href="{{ link.url }}">
+									<i class="{{ link.icon }}"></i> {{ link.title }}
+								</a>
+							</li>
+						</ul>
+						<div class="pt-3">
+							<a ng-repeat="tag in entry.tags" class="badge badge-pill badge-light text-muted border font-italic mr-1" href="" ng-click="setEntriesQuery(tag)" target="_blank" title="{{ tag }}"><i class="fas fa-search"></i> {{ tag }}</a>
+						</div>
+					</div> 
+					<!-- Creations Entry Footer -------------------------------------------------- -->
+					<div class="card-footer text-muted">
+						© Ambratolm
+					</div>
+			   	</div>
+			</div>
+		</div>
+		<!-- Sidebar -------------------------------------------------- -->
+		<div class="col-sm-4 mb-3">
+			<!-- Creations Category Card -------------------------------------------------- -->
+			<div class="card mb-3">
+				<!-- Creations Category Image -------------------------------------------------- -->
+		        <img ng-src="{{ creationsCategoriesNav.currentItem.image }}" class="card-img-top border-bottom">
+		        <div class="card-body">
+		        	<!-- Creations Category Icon & Title -------------------------------------------------- -->
+		            <h5 class="card-title">
+		            	<i class="creationsCategoriesNavIcon"></i> {{ creationsCategoriesNav.currentItem.title }} <small class="text-muted font-italic"> {{ creationsEntries.$filter({ 'categories' : creationsCategoriesNav.currentItem.name}).length }} entries</small>
+		            </h5>
+		            <!-- Creations Category Description -------------------------------------------------- -->
+		            <p class="card-text lead text-justify " title="{{ creationsCategoriesNav.currentItem.description }}." style="max-height: 200px; overflow: auto;">
+		            	{{ creationsCategoriesNav.currentItem.description }}.
+		            </p>
+		            <!-- Creations Links Filter Result -------------------------------------------------- -->
+				  	<div ng-if="entriesQuery" class="alert border {{ filteredCreationsLinks.length ? 'alert-success' : 'alert-danger' }}" role="alert">
+				  		<!-- <button ng-click="clearFilters()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+			  		    	<i aria-hidden="true">&times;</i>
+			  		  	</button> -->
+				  		<i class="fas fa-search"></i> &nbsp;<strong>{{ filteredCreationsLinks.length }} social media links</strong> found for <strong>{{ entriesQuery }}</strong> in <a ng-click="clearFilters()" href="" class="alert-link">{{ creationsCategoriesNav.currentItem.title }}</a>.
+				  	</div>
+		            <!-- Creations Category Links -------------------------------------------------- -->
+		            <div class="text-justify" >
+	            	    <a ng-repeat="link in creationsLinks | filter:entriesQuery | filter : { categories : creationsCategoriesNav.currentItem.name } as filteredCreationsLinks" target="_blank" href="{{ link.url }}" class="btn btn-sm m-1 {{ entriesQuery ? 'btn-dark' : 'btn-outline-dark' }}" tooltip="{{ link.description }}" data-placement="top">
+	            	    	<i class="{{ link.icon }}"></i> <span ng-show="creationsCategoriesNav.currentItem.name">{{ link.title }}</span>
+	            	    </a>
+	            	</div>
+	            	<hr>
+		            <!-- Creations Category Tags -------------------------------------------------- -->
+		            <div ng-if="creationsCategoriesNav.currentItem.tags" class="">
+		                <a ng-repeat="tag in creationsCategoriesNav.currentItem.tags" class="badge badge-pill badge-light text-muted border font-italic mr-1" href="" ng-click="setEntriesQuery(tag)" title="{{ tag }}"><i class="fas fa-search"></i> {{ tag }}</a>
+		            </div>
+		        </div> 
+		    </div>
+	    </div>
+	</div>
+</div>
+
+<!-- -------------------------------------------------- -->
+<!-- ♦ Footer -->
+<!-- -------------------------------------------------- -->
+<amb-footer></amb-footer>

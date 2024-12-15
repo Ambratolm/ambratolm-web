@@ -1,0 +1,27 @@
+<!-- ================================================== -->
+<!-- ♦ Navbar Template -->
+<!-- ================================================== -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+	<a class="navbar-brand" href="#{{ website.pages.item('isHomePage', true).name }}">
+		<img  ng-src="{{ currentPage.isHomePage ? website.logo : website.logoLight }}" alt="{{ website.title }}" title="{{ website.description }}" class="mb-1" style="width:150px;">
+	</a>	  	
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu">
+		<i class="fas fa-bars"></i>
+	</button>
+	<div id="navbar-menu" class="collapse navbar-collapse">
+		<ul class="navbar-nav mr-auto">
+			<li ng-repeat="page in website.pages | filter : { 'isHomePage' : '!true', 'isHidden' : '!true', 'isAction' : '!true' }" class="nav-item">
+				<a href="#{{ page.name }}" title="{{ page.description }}" class="nav-link {{ page.name == currentPage.name ? 'active' : '' }}">
+					<i class="{{ page.icon }}"></i> {{ page.title }}
+				</a>
+			</li>
+		</ul>
+		<ul class="navbar-nav ml-auto">
+			<li ng-repeat="page in website.pages | filter : { 'isHidden' : '!true', 'isAction' : 'true' }" class="nav-item">
+				<a href="#{{ page.name }}" title="{{ page.description }}" class="nav-link {{ page.name == currentPage.name ? 'active' : '' }}">
+					<i class="{{ page.icon }}"></i> {{ page.title }}
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>

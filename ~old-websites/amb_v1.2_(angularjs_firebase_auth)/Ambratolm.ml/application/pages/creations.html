@@ -1,0 +1,179 @@
+<!-- ================================================== -->
+<!-- ♦ Creations View -->
+<!-- ================================================== -->
+
+<!-- -------------------------------------------------- -->
+<!-- ♦ Navbar -->
+<!-- -------------------------------------------------- -->
+<amb-navbar></amb-navbar>
+
+<!-- -------------------------------------------------- -->
+<!-- ♦ Container -->
+<!-- -------------------------------------------------- -->
+<div class="container-fluid px-5 mb-5" style="margin-top: 80px;">
+	<!-- -------------------------------------------------- -->
+	<!-- ♦ Row -->
+	<!-- -------------------------------------------------- -->
+	<div class="row">
+		<!-- -------------------------------------------------- -->
+		<!-- ♦ Left Column -->
+		<!-- -------------------------------------------------- -->
+		<div class="col-sm-3">
+			<!-- -------------------------------------------------- -->
+			<!-- ♦ Current Category Card -->
+			<!-- -------------------------------------------------- -->
+			<div class="card mb-3">
+				<img ng-src="{{ currentCategory().image }}" alt="{{ currentCategory().title }}" class="card-img-top">
+				<div class="card-body">
+					<!-- ♦ Title -------------------------------------------------- -->
+					<h4 class="card-title font-weight-light mb-3">
+	  					<i class="current-category-icon"></i> {{ currentCategory().title }}
+		  			</h4>
+		  			<!-- ♦ Description -------------------------------------------------- -->
+					<div class="" style="max-height: 100px; overflow: auto;">
+			  			<p class="card-text lead" title="{{ currentCategory().description }}.">{{ currentCategory().description }}.</p>
+			  			<a ng-repeat="tag in currentCategory().tags" class="badge badge-pill badge-light text-muted border font-italic mr-1" ng-href="{{ queryUrl(currentCategory(), tag) }}" ng-click="setEntriesQuery(tag)" target="_blank" tooltip="{{ tag }}"><i class="fas fa-search"></i> {{ tag }}</a>
+					</div>
+				</div>
+			</div>
+			<!-- -------------------------------------------------- -->
+			<!-- ♦ Social Media Links -->
+			<!-- -------------------------------------------------- -->
+			<div class="card entry-card mb-3">
+				<div class="card-header pb-0" collapse="#social-links" style="cursor: pointer;">
+					<h6 class="card-title d-flex justify-content-between align-items-center">
+						<span>
+							<i class="fas fa-user"></i> Social Links <span class="badge badge-pill" ng-class="query && linksChanged() ? (links(category).length ? 'badge-success' : 'badge-danger') : (links(category).length ? 'badge-light border border-secondary' : 'badge-secondary border border-secondary')">{{ links(category).length }}</span>
+						</span>
+					</h6>
+				</div>
+				<div id="social-links" class="card-body collapse show">
+					<div ng-if="!links().length" class="alert alert-danger" role="alert">
+						<i class="fas fa-search"></i> <i>No social links.</i>
+					</div>
+				 	<ul class="list-group list-group-flush">
+						<li ng-repeat="link in links() | orderBy : category" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action p-1" tooltip="{{ link.description || link.title }}" data-placement="right">
+							<a class="card-link" target="_blank" href="{{ link.url }}">
+								<i ng-class="link.icon"></i> {{ link.title }}
+							</a>
+							<span ng-class="query || !currentCategory().name ? 'visible' : 'invisible'">
+								<span ng-init="lim = 2" tooltip="{{ link.categories.join(', ') | capitalize }}" data-placement="left">
+									<i ng-if="link.categories.length <= lim" ng-repeat="category in link.categories" class="mr-1" ng-class="categoryIcon(category)"></i>
+									<i ng-if="link.categories.length > lim" >
+										<i ng-repeat="category in link.categories | limitTo : lim" class="mr-1" ng-class="categoryIcon(category)"></i>
+										<i class="fas fa-plus"></i>
+									</i>
+								</span>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- -------------------------------------------------- -->
+		<!-- ♦ Right Column -->
+		<!-- -------------------------------------------------- -->
+		<div class="col-sm-9">
+			<!-- -------------------------------------------------- -->
+			<!-- ♦ Categories Navigation Menu -->
+			<!-- -------------------------------------------------- -->
+			<div class="border rounded bg-light mb-3">
+				<ul class="nav nav-pills nav-fill">
+					<li ng-repeat="category in categories" ng-mouseover="categoryHover = true" ng-mouseleave="categoryHover = false" class="nav-item m-1" ng-class="categoryHover ? 'bg-white' : ''" popover="{{ category.title }}|{{ category.description }}" data-placement="bottom">
+						<a ng-click="currentCategoryIndex($index)" ng-href="{{ queryUrl() }}" class="nav-link" ng-class="currentCategoryIndex() == $index ? 'active bg-dark text-light' : 'text-dark'" >
+							<span>
+								<i ng-class="category.icon" style="font-size: 200%;"></i><br>
+								<span class="text-truncate">{{ category.title }}</span>
+							</span>
+							<span class="badge badge-pill" ng-class="query && entriesChanged(category) ? (entries(category).length ? 'badge-success' : 'badge-danger') : (entries(category).length ? 'badge-light border border-secondary' : 'badge-secondary border border-secondary')">{{ entries(category).length }}</span>
+						</a>
+					</li>
+				</ul>
+		  	</div>
+			<!-- -------------------------------------------------- -->
+			<!-- ♦ Search Bar -->
+			<!-- -------------------------------------------------- -->
+			<div class="input-group mb-3">
+			    <div class="input-group-prepend">
+			      <i class="input-group-text"><i class="fas fa-search"></i></i>
+			    </div>
+			    <input type="text" class="form-control" placeholder="Search in {{ currentCategory().title }}..." ng-model="query">
+			    <!-- -------------------------------------------------- -->
+				<!-- ♦ Search Bar Commands -->
+				<!-- -------------------------------------------------- -->
+			    <div ng-if="query" class="input-group-append">
+			    	<button ngclipboard data-clipboard-text="{{ queryUrl() }}" ngclipboard-success="copyQueryUrl()" class="btn" ng-class="queryUrlCopied ? 'btn-secondary' : 'btn-outline-secondary'" type="button" tooltip="Copy search query as URL">
+			    		<i class="fas fa-copy"></i> {{ queryUrlCopied ? 'Copied' : '' }}
+			    	</button>
+			    	<button ng-click="clearQuery()" class="btn btn-outline-secondary" type="button" tooltip="Clear search query">
+			    		<i class="fas fa-times"></i>
+			    	</button>
+			    </div>
+	  		</div>
+	  		<!-- -------------------------------------------------- -->
+			<!-- ♦ Tasks Bar -->
+			<!-- -------------------------------------------------- -->
+	  		<div ng-show="query" class="alert alert-light border mb-3" role="alert">
+	  			<div class="">
+		  			<i class="fas fa-search"></i> &nbsp;<i>Search in</i>&nbsp;
+		  			<span class="badge badge-light border border-secondary p-2" tooltip="Category">
+		  				<i class="current-category-icon"></i> {{ currentCategory().title }}
+		  			</span>
+		  			&nbsp;<i>for</i>&nbsp;
+		  			<span tooltip="Search query" class="badge border border-secondary p-2" ng-class="query && entriesChanged(category) ? (entries(category).length ? 'badge-success' : 'badge-danger') : (entries(category).length ? 'badge-light' : 'badge-secondary')">
+	  					<i class="fas fa-search"></i> {{ query }}
+	  				</span>
+	  			</div>
+  				<div ng-if="queryUrlCopied" class="mt-3">
+  					<i class="fas fa-clipboard"></i> &nbsp;<i>Search link copied to clipboard as</i>&nbsp;
+  					<a ng-href="{{ queryUrl() }}" target="_blank" tooltip="Search query URL" class="badge badge-primary border border-secondary p-2">
+  						<i class="fas fa-link"></i> {{ queryUrl() }}
+  					</a>
+  					&nbsp;<i></i>&nbsp;
+  				</div>
+	  		</div>
+	  		<!-- -------------------------------------------------- -->
+			<!-- ♦ Entries Board -->
+			<!-- -------------------------------------------------- -->
+			<div ng-if="!entries().length" class="alert alert-danger" role="alert" style="margin-bottom: 200px;">
+				<i class="fas fa-search"></i> <i>No entries.</i>
+			</div>
+			<div class="card-columns">
+				<div ng-repeat="entry in entries()" class="card entry-card">
+					<div collapse="#entry-{{ $index }}" class="card-header pb-0"  style="cursor: pointer;">
+						<h6 class="card-title">
+							<i ng-class="entry.icon"></i> {{ entry.title }}
+						</h6>
+					</div>
+					<div id="entry-{{ $index }}" class="card-body collapse show">
+					 	<img ng-src="{{ entry.image }}" alt="{{ entry.title }}" class="card-img-top img-thumbnail mb-3">
+						<p class="card-text text-justify" title="{{ entry.description }}">{{ entry.description }}</p>
+						<ul class="list-group list-group-flush">
+							<li ng-repeat="link in entry.links" class="list-group-item list-group-item-action p-1" tooltip="{{ link.description || link.title }}" data-placement="right">
+								<a ng-if="!link.download" class="card-link" target="_blank" href="{{ link.url }}">
+									<i class="{{ link.icon }}"></i> {{ link.title }}
+								</a>
+								<a ng-if="link.download" class="btn btn-outline-primary btn-sm" target="_blank" href="{{ link.url }}">
+									<i class="{{ link.icon }}"></i> {{ link.title }}
+								</a>
+							</li>
+						</ul>
+						<div class="pt-3">
+							<a ng-repeat="tag in entry.tags" class="badge badge-pill badge-light text-muted border font-italic mr-1" ng-href="{{ queryUrl(currentCategory(), tag) }}" ng-click="setEntriesQuery(tag)" target="_blank" tooltip="{{ tag }}"><i class="fas fa-search"></i> {{ tag }}</a>
+						</div>
+					</div> 
+					<div class="card-footer text-muted">
+						<i class="badge badge-dark" tooltip="{{ entry.categories.join(', ') | capitalize }}">{{ entry.categories.length }} categories</i>
+						<i class="badge badge-primary" tooltip="{{ entry.links.length ? entry.links[0].title + ', ...' : '' }}">{{ entry.links.length }} links</i>
+						<i class="badge badge-secondary" tooltip="{{ entry.tags.join(', ') }}">{{ entry.tags.length }} tags</i>
+					</div>
+			   	</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- -------------------------------------------------- -->
+<!-- ♦ Footer -->
+<!-- -------------------------------------------------- -->
+<amb-footer></amb-footer>

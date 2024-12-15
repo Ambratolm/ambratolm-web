@@ -1,0 +1,55 @@
+{
+	"id" : "documents",
+	"title" : "DOCUMENTS",
+	"description" : "Text, Documents, Articles, Books",
+	"icon" : "fas fa-file",
+	"banner" : "documents.mp4",
+	"profiles" : [
+		{
+			"icon" : "fab fa-facebook",
+			"title" : "Facebook",
+			"description" : "Facebook Page (Facebook.com/Ambratolm)",
+			"url" : "https://facebook.com/ambratolm2"
+		},
+		{
+			"icon" : "fab fa-twitter",
+			"title" : "Twitter",
+			"description" : "Twitter Page (Twitter.com/Ambratolm)",
+			"url" : "https://twitter.com/ambratolm"
+		}
+	],
+	"entries" : [
+		{
+			"poly" : "true",
+			"title" : "Documents",
+			"description" : "Variety documents, articles, stories and books.",
+			"icon" : "fas fa-file",
+			"thumbnail" : "documents.png",
+			"links" : [
+				{
+					"icon" : "fab fa-facebook",
+					"title" : "Posts on Facebook",
+					"url" : "https://facebook.com/ambratolm2"
+				},
+				{
+					"icon" : "fab fa-twitter",
+					"title" : "Posts on Twitter",
+					"url" : "https://twitter.com/ambratolm"
+				}
+			]
+		},
+		{
+			"title" : "Wracurd Artwork Book",
+			"description" : "An artworks compilation book.",
+			"icon" : "fas fa-file",
+			"thumbnail" : "wracurd.png",
+			"links" : [
+				{
+					"icon" : "fas fa-link",
+					"title" : "Book on Lulu",
+					"url" : "http://www.lulu.com/shop/ambratolm/wracurd/ebook/product-23263158.html"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Ambratolm</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png"/>
+	<link rel="stylesheet" type="text/css" href="assets/styles/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles/fontawesome.all.min.css">
+	<script type="text/javascript" src="assets/scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/popper.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/angular.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/angular-sanitize.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/angular-route.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/angular-animate.min.js"></script>
+	<script type="text/javascript" src="components/main.js"></script>
+	<script type="text/javascript" src="components/navbar/navbar.js"></script>
+	<script type="text/javascript" src="components/jumbotron/jumbotron.js"></script>
+	<script type="text/javascript" src="components/sidebar/sidebar.js"></script>
+	<script type="text/javascript" src="components/content/content.js"></script>
+	<script type="text/javascript" src="components/footer/footer.js"></script>
+</head>
+<body ng-app="ambratolm" ng-controller="mainCtrl">
+<!-- Header -------------------------------------------------- -->
+	<div ng-include="'components/navbar/navbar.html'"></div>
+	<div ng-include="'components/jumbotron/jumbotron.html'"></div>
+<!-- Body -------------------------------------------------- -->
+	<div class="container">
+  		<div class="row">
+  			<div class="col-sm-9" ng-include="'components/content/content.html'"></div>
+	    	<div class="col-sm-3" ng-include="'components/sidebar/sidebar.html'"></div>
+		</div>
+	</div>
+<!-- Footer -------------------------------------------------- -->
+	<div ng-include="'components/footer/footer.html'"></div>
+</body>
+</html>

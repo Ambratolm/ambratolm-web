@@ -1,0 +1,3 @@
+app.controller('jumbotronCtrl', function($scope) {
+	// code goes here...
+});

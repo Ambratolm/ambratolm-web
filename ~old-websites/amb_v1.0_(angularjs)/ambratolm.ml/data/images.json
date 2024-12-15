@@ -1,0 +1,69 @@
+{
+	"id" : "images",
+	"title" : "IMAGES",
+	"description" : "Photos, Graphic Designs, Drawings, Artworks",
+	"icon" : "fas fa-image",
+	"banner" : "images.mp4",
+	"profiles" : [
+		{
+			"icon" : "fab fa-instagram",
+			"title" : "Instagram",
+			"description" : "Instagram Profile (Instagram.com/Ambratolm)",
+			"url" : "https://instagram.com/ambratolm"
+		},
+		{
+			"icon" : "fab fa-deviantart",
+			"title" : "Deviantart",
+			"description" : "Deviantart Profile (Deviantart.com/Ambratolm)",
+			"url" : "https://deviantart.com/ambratolm"
+		},
+		{
+			"icon" : "fas fa-user",
+			"title" : "Artstation",
+			"description" : "Artstation Profile (Artstation.com/Ambratolm)",
+			"url" : "https://artstation.com/ambratolm"
+		},
+		{
+			"icon" : "fab fa-behance",
+			"title" : "Behance",
+			"description" : "Behance Profile (Behance.net/Ambratolm)",
+			"url" : "https://www.behance.net/ambratolm"
+		}
+	],
+	"entries" : [
+		{
+			"poly" : "true",
+			"title" : "Images",
+			"description" : "Variety images, photos and artworks.",
+			"icon" : "fas fa-file",
+			"thumbnail" : "images.png",
+			"links" : [
+				{
+					"icon" : "fab fa-blogger",
+					"title" : "Gallery on My Project's Artwork",
+					"url" : "https://instagram.com/ambratolm"
+				},
+				{
+					"icon" : "fab fa-instagram",
+					"title" : "Gallery on Instagram",
+					"url" : "https://instagram.com/ambratolm"
+				},
+				{
+					"icon" : "fab fa-deviantart",
+					"title" : "Gallery on Deviantart",
+					"url" : "https://deviantart.com/ambratolm"
+				},
+				{
+					"icon" : "fas fa-user",
+					"title" : "Gallery on Artstation",
+					"url" : "https://artstation.com/ambratolm"
+				},
+				{
+					"icon" : "fab fa-behance",
+					"title" : "Gallery on Behance",
+					"url" : "https://www.behance.net/ambratolm"
+				}
+			]
+		}
+	]
+}
