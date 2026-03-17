@@ -28,11 +28,11 @@
     "vuexfire": "^3.2.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.2.2",
-    "@vue/cli-plugin-eslint": "^4.2.2",
-    "@vue/cli-plugin-router": "^4.2.2",
-    "@vue/cli-plugin-vuex": "^4.2.2",
-    "@vue/cli-service": "^4.2.2",
+    "@vue/cli-plugin-babel": "^5.0.9",
+    "@vue/cli-plugin-eslint": "^5.0.9",
+    "@vue/cli-plugin-router": "^5.0.9",
+    "@vue/cli-plugin-vuex": "^5.0.9",
+    "@vue/cli-service": "^5.0.9",
     "@vue/eslint-config-prettier": "^5.0.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
